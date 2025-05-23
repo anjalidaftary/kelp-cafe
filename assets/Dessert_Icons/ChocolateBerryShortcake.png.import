@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://sjbojb0gkwt"
-path="res://.godot/imported/ChocolateBerryShortcake.png-53e992776bb9913cfc5b913ebbcce637.ctex"
+path="res://.godot/imported/ChocolateBerryShortcake.png-bf152263bc16b167ac20e505d0ab61b0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Dessert_Icons/ChocolateBerryShortcake.png"
-dest_files=["res://.godot/imported/ChocolateBerryShortcake.png-53e992776bb9913cfc5b913ebbcce637.ctex"]
+source_file="res://assets/Dessert_Icons/ChocolateBerryShortcake.png"
+dest_files=["res://.godot/imported/ChocolateBerryShortcake.png-bf152263bc16b167ac20e505d0ab61b0.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dx2ems4fad1k0"
-path="res://.godot/imported/CroissantAvocadoSandwich.png-e4d3d5e442befa56e440356da5a0dc56.ctex"
+path="res://.godot/imported/CroissantAvocadoSandwich.png-7114c05d0b0ffffaab7b6ef5ab38dd1d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Dessert_Icons/CroissantAvocadoSandwich.png"
-dest_files=["res://.godot/imported/CroissantAvocadoSandwich.png-e4d3d5e442befa56e440356da5a0dc56.ctex"]
+source_file="res://assets/Dessert_Icons/CroissantAvocadoSandwich.png"
+dest_files=["res://.godot/imported/CroissantAvocadoSandwich.png-7114c05d0b0ffffaab7b6ef5ab38dd1d.ctex"]
 
 [params]
 

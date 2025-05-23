@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwwlg08edkrt"
-path="res://.godot/imported/RaspberryCheesecakePot.png-e49819c4ba202c0bce59e10eb3065ecd.ctex"
+path="res://.godot/imported/RaspberryCheesecakePot.png-50231799ca7ace9fd1ba849adb3e405c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Dessert_Icons/RaspberryCheesecakePot.png"
-dest_files=["res://.godot/imported/RaspberryCheesecakePot.png-e49819c4ba202c0bce59e10eb3065ecd.ctex"]
+source_file="res://assets/Dessert_Icons/RaspberryCheesecakePot.png"
+dest_files=["res://.godot/imported/RaspberryCheesecakePot.png-50231799ca7ace9fd1ba849adb3e405c.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://conalcqv2a60u"
-path="res://.godot/imported/MintChocolatePot.png-e3eb80e266c6fa776e4d8d0c41c40450.ctex"
+path="res://.godot/imported/MintChocolatePot.png-48d510af1522b362949f72e8f6adb75e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Dessert_Icons/MintChocolatePot.png"
-dest_files=["res://.godot/imported/MintChocolatePot.png-e3eb80e266c6fa776e4d8d0c41c40450.ctex"]
+source_file="res://assets/Dessert_Icons/MintChocolatePot.png"
+dest_files=["res://.godot/imported/MintChocolatePot.png-48d510af1522b362949f72e8f6adb75e.ctex"]
 
 [params]
 

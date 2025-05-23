@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dkc1ubrlufdhj"
-path="res://.godot/imported/LemonCake.png-b6f86634537a254ec2905b9f2205ee90.ctex"
+path="res://.godot/imported/LemonCake.png-bb234848662d9af4b41232835bc12393.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Dessert_Icons/LemonCake.png"
-dest_files=["res://.godot/imported/LemonCake.png-b6f86634537a254ec2905b9f2205ee90.ctex"]
+source_file="res://assets/Dessert_Icons/LemonCake.png"
+dest_files=["res://.godot/imported/LemonCake.png-bb234848662d9af4b41232835bc12393.ctex"]
 
 [params]
 

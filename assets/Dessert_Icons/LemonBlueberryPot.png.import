@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dl7n7ege1lrx1"
-path="res://.godot/imported/LemonBlueberryPot.png-e0c1c7cbfbd0e4d5b51e08b9fa67365d.ctex"
+path="res://.godot/imported/LemonBlueberryPot.png-8b9ac4033b2496af98d5ee7d80b24de8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Dessert_Icons/LemonBlueberryPot.png"
-dest_files=["res://.godot/imported/LemonBlueberryPot.png-e0c1c7cbfbd0e4d5b51e08b9fa67365d.ctex"]
+source_file="res://assets/Dessert_Icons/LemonBlueberryPot.png"
+dest_files=["res://.godot/imported/LemonBlueberryPot.png-8b9ac4033b2496af98d5ee7d80b24de8.ctex"]
 
 [params]
 

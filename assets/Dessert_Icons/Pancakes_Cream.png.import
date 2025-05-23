@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bo351nl61k8r"
-path="res://.godot/imported/Pancakes_Cream.png-d7c1fc1e735722df23dc547b1a628ce2.ctex"
+path="res://.godot/imported/Pancakes_Cream.png-c53d1cdbc2fd271eb01c98fe310ec1dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Dessert_Icons/Pancakes_Cream.png"
-dest_files=["res://.godot/imported/Pancakes_Cream.png-d7c1fc1e735722df23dc547b1a628ce2.ctex"]
+source_file="res://assets/Dessert_Icons/Pancakes_Cream.png"
+dest_files=["res://.godot/imported/Pancakes_Cream.png-c53d1cdbc2fd271eb01c98fe310ec1dc.ctex"]
 
 [params]
 

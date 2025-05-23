@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cqjpsqvw67rym"
-path="res://.godot/imported/GreenJelly.png-eff201f9b6b9fe60061e0fbffd4ae5a9.ctex"
+path="res://.godot/imported/GreenJelly.png-54f683f1b5739dd40b53d2abea074519.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Dessert_Icons/GreenJelly.png"
-dest_files=["res://.godot/imported/GreenJelly.png-eff201f9b6b9fe60061e0fbffd4ae5a9.ctex"]
+source_file="res://assets/Dessert_Icons/GreenJelly.png"
+dest_files=["res://.godot/imported/GreenJelly.png-54f683f1b5739dd40b53d2abea074519.ctex"]
 
 [params]
 

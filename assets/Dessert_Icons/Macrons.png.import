@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bb8b5x2fqwmkj"
-path="res://.godot/imported/Macrons.png-fe2c48df678d1ff980512069a7b6fac0.ctex"
+path="res://.godot/imported/Macrons.png-3181020a96bc5c9373270590267730d9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Dessert_Icons/Macrons.png"
-dest_files=["res://.godot/imported/Macrons.png-fe2c48df678d1ff980512069a7b6fac0.ctex"]
+source_file="res://assets/Dessert_Icons/Macrons.png"
+dest_files=["res://.godot/imported/Macrons.png-3181020a96bc5c9373270590267730d9.ctex"]
 
 [params]
 
