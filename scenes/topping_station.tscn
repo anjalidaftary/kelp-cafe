@@ -5,9 +5,9 @@
 [ext_resource type="Script" path="res://scripts/blue_jelly.gd" id="3_v3mle"]
 [ext_resource type="Texture2D" uid="uid://cqjpsqvw67rym" path="res://assets/Dessert_Icons/GreenJelly.png" id="4_1yh1n"]
 [ext_resource type="Shader" path="res://scenes/topping_station.gdshader" id="5_50jxf"]
-[ext_resource type="Script" path="res://scenes/green_jelly.gd" id="5_oj2ua"]
+[ext_resource type="Script" path="res://scripts/green_jelly.gd" id="5_oj2ua"]
 [ext_resource type="Texture2D" uid="uid://dcrd1yyrocde1" path="res://assets/Dessert_Icons/PinkJelly.png" id="6_26myq"]
-[ext_resource type="Script" path="res://scenes/pink_jelly.gd" id="8_qsnc4"]
+[ext_resource type="Script" path="res://pink_jelly.gd" id="8_qsnc4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tkmk4"]
 
