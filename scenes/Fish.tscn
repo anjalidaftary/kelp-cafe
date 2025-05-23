@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://0sk6su1p8mq5"]
 
-[ext_resource type="Texture2D" uid="uid://sbe32lnuyyhi" path="res://assets/sprites/fish-PLACEHOLDER.png" id="1_w4uug"]
+[ext_resource type="Texture2D" uid="uid://b4n5pqusvwo6s" path="res://assets/sprites/Mackeral.PNG" id="1_dnxlb"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_uhm0a"]
 a = Vector2(0, -157)
@@ -9,10 +9,9 @@ b = Vector2(-2, 153)
 [node name="Fish" type="AnimatableBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-1, -2)
-rotation = -1.5865
-scale = Vector2(0.076842, 0.0764135)
-texture = ExtResource("1_w4uug")
+position = Vector2(2.99999, 7.62939e-06)
+scale = Vector2(0.224194, 0.221503)
+texture = ExtResource("1_dnxlb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("SegmentShape2D_uhm0a")

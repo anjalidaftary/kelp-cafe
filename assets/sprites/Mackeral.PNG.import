@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sbe32lnuyyhi"
-path="res://.godot/imported/fish-PLACEHOLDER.png-3c4a233c214034130155bf301274e18b.ctex"
+uid="uid://b4n5pqusvwo6s"
+path="res://.godot/imported/Mackeral.PNG-da6643141e4ed0a9811b86e523d7f49b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/fish-PLACEHOLDER.png"
-dest_files=["res://.godot/imported/fish-PLACEHOLDER.png-3c4a233c214034130155bf301274e18b.ctex"]
+source_file="res://assets/sprites/Mackeral.PNG"
+dest_files=["res://.godot/imported/Mackeral.PNG-da6643141e4ed0a9811b86e523d7f49b.ctex"]
 
 [params]
 

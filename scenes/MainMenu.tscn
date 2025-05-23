@@ -1,3 +1,23 @@
-[gd_scene format=3 uid="uid://b0pkxjmsehyw8"]
+[gd_scene load_steps=3 format=3 uid="uid://b0pkxjmsehyw8"]
+
+[ext_resource type="Texture2D" uid="uid://6yxmqiq3dsr0" path="res://assets/sprites/bg-PLACEHOLDER.jpg" id="1_h2r50"]
+[ext_resource type="Script" path="res://button.gd" id="2_xgj3w"]
 
 [node name="MainMenu" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Bg-placeholder" type="Sprite2D" parent="."]
+position = Vector2(-6, -4)
+scale = Vector2(2.23938, 1.67735)
+texture = ExtResource("1_h2r50")
+
+[node name="Button" type="Button" parent="."]
+offset_left = -281.0
+offset_top = 137.0
+offset_right = 286.0
+offset_bottom = 247.0
+text = "Start Game"
+script = ExtResource("2_xgj3w")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
