@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b0pkxjmsehyw8"]
 
 [ext_resource type="Texture2D" uid="uid://6yxmqiq3dsr0" path="res://assets/sprites/bg-PLACEHOLDER.jpg" id="1_h2r50"]
-[ext_resource type="Script" path="res://button.gd" id="2_xgj3w"]
+[ext_resource type="Script" path="res://scripts/button.gd" id="2_xgj3w"]
 
 [node name="MainMenu" type="Node2D"]
 

@@ -1,18 +1,16 @@
-[gd_scene load_steps=11 format=3 uid="uid://v2vpvfpoa45d"]
+[gd_scene load_steps=10 format=3 uid="uid://v2vpvfpoa45d"]
 
 [ext_resource type="Texture2D" uid="uid://bp6dl1w0xv6e8" path="res://assets/Restaurants and Cafes/Coffee 2.png" id="1_o7e87"]
 [ext_resource type="Texture2D" uid="uid://c5wpa2tny6qpv" path="res://assets/Dessert_Icons/BlueJelly.png" id="2_crvnc"]
 [ext_resource type="Script" path="res://scripts/blue_jelly.gd" id="3_v3mle"]
 [ext_resource type="Texture2D" uid="uid://cqjpsqvw67rym" path="res://assets/Dessert_Icons/GreenJelly.png" id="4_1yh1n"]
-[ext_resource type="Shader" path="res://scenes/topping_station.gdshader" id="5_50jxf"]
 [ext_resource type="Script" path="res://scripts/green_jelly.gd" id="5_oj2ua"]
 [ext_resource type="Texture2D" uid="uid://dcrd1yyrocde1" path="res://assets/Dessert_Icons/PinkJelly.png" id="6_26myq"]
-[ext_resource type="Script" path="res://pink_jelly.gd" id="8_qsnc4"]
+[ext_resource type="Script" path="res://scripts/pink_jelly.gd" id="8_qsnc4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tkmk4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8gkry"]
-shader = ExtResource("5_50jxf")
 
 [node name="ToppingStation" type="Node2D"]
 
