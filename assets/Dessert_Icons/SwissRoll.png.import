@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cfcnjls23rvvv"
-path="res://.godot/imported/SwissRoll.png-5c16595b06f7f7b3ded777560eb45087.ctex"
+path="res://.godot/imported/SwissRoll.png-e95da4bb6eca58714555b3abeafad5e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dessert_Icons/SwissRoll.png"
-dest_files=["res://.godot/imported/SwissRoll.png-5c16595b06f7f7b3ded777560eb45087.ctex"]
+source_file="res://assets/dessert_icons/SwissRoll.png"
+dest_files=["res://.godot/imported/SwissRoll.png-e95da4bb6eca58714555b3abeafad5e0.ctex"]
 
 [params]
 

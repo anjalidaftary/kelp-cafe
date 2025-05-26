@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dd5vwnrhrpnwl"
-path="res://.godot/imported/StrawberryWaffles.png-e84125c89327ebb4f79941b5f55af77e.ctex"
+path="res://.godot/imported/StrawberryWaffles.png-c86b088a0c2db2edc10f5d189ef185b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dessert_Icons/StrawberryWaffles.png"
-dest_files=["res://.godot/imported/StrawberryWaffles.png-e84125c89327ebb4f79941b5f55af77e.ctex"]
+source_file="res://assets/dessert_icons/StrawberryWaffles.png"
+dest_files=["res://.godot/imported/StrawberryWaffles.png-c86b088a0c2db2edc10f5d189ef185b4.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dfvyjr1fx3xyd"
-path="res://.godot/imported/VanillaCake.png-09a0b70804641ddfb5e750217f7dd52e.ctex"
+path="res://.godot/imported/VanillaCake.png-9afc539e5b2833425d8a6d75f20167d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dessert_Icons/VanillaCake.png"
-dest_files=["res://.godot/imported/VanillaCake.png-09a0b70804641ddfb5e750217f7dd52e.ctex"]
+source_file="res://assets/dessert_icons/VanillaCake.png"
+dest_files=["res://.godot/imported/VanillaCake.png-9afc539e5b2833425d8a6d75f20167d6.ctex"]
 
 [params]
 

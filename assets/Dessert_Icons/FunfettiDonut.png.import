@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b78qtr3n85rs6"
-path="res://.godot/imported/FunfettiDonut.png-f7846772607a3624f3dff27fd7e77ba5.ctex"
+path="res://.godot/imported/FunfettiDonut.png-ae5fd57a844e1948b0b518b1dda506b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dessert_Icons/FunfettiDonut.png"
-dest_files=["res://.godot/imported/FunfettiDonut.png-f7846772607a3624f3dff27fd7e77ba5.ctex"]
+source_file="res://assets/dessert_icons/FunfettiDonut.png"
+dest_files=["res://.godot/imported/FunfettiDonut.png-ae5fd57a844e1948b0b518b1dda506b9.ctex"]
 
 [params]
 

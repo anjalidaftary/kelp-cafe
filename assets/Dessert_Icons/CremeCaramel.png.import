@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dodq00mc6c31x"
-path="res://.godot/imported/CremeCaramel.png-ae311b1e8b0d12371a58e446518605dd.ctex"
+path="res://.godot/imported/CremeCaramel.png-ef10c0931133fa6207aba8bbed4c667c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dessert_Icons/CremeCaramel.png"
-dest_files=["res://.godot/imported/CremeCaramel.png-ae311b1e8b0d12371a58e446518605dd.ctex"]
+source_file="res://assets/dessert_icons/CremeCaramel.png"
+dest_files=["res://.godot/imported/CremeCaramel.png-ef10c0931133fa6207aba8bbed4c667c.ctex"]
 
 [params]
 

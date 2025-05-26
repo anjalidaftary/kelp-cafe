@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b20ajgstpr6s0"
-path="res://.godot/imported/BanoffeePot.png-2c16adc770f97a2f1c093f607d1ecb0b.ctex"
+path="res://.godot/imported/BanoffeePot.png-75372ab5d28dafad1c9a44b8d4b55c8d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dessert_Icons/BanoffeePot.png"
-dest_files=["res://.godot/imported/BanoffeePot.png-2c16adc770f97a2f1c093f607d1ecb0b.ctex"]
+source_file="res://assets/dessert_icons/BanoffeePot.png"
+dest_files=["res://.godot/imported/BanoffeePot.png-75372ab5d28dafad1c9a44b8d4b55c8d.ctex"]
 
 [params]
 

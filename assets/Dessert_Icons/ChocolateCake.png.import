@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b14fc2c8w3vj"
-path="res://.godot/imported/ChocolateCake.png-d915b6aab207d1c189952d85853c4cce.ctex"
+path="res://.godot/imported/ChocolateCake.png-a6c7256c9c7cc3e898257b203cba127f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dessert_Icons/ChocolateCake.png"
-dest_files=["res://.godot/imported/ChocolateCake.png-d915b6aab207d1c189952d85853c4cce.ctex"]
+source_file="res://assets/dessert_icons/ChocolateCake.png"
+dest_files=["res://.godot/imported/ChocolateCake.png-a6c7256c9c7cc3e898257b203cba127f.ctex"]
 
 [params]
 

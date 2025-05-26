@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dksy63laku7rs"
-path="res://.godot/imported/RedJelly.png-58849468d30e520d8e3e1c895e51909d.ctex"
+path="res://.godot/imported/RedJelly.png-64bf0c046073bc5cb236b2d87068c674.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dessert_Icons/RedJelly.png"
-dest_files=["res://.godot/imported/RedJelly.png-58849468d30e520d8e3e1c895e51909d.ctex"]
+source_file="res://assets/dessert_icons/RedJelly.png"
+dest_files=["res://.godot/imported/RedJelly.png-64bf0c046073bc5cb236b2d87068c674.ctex"]
 
 [params]
 

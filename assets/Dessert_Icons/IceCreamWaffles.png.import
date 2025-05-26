@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cr7qt8tew8din"
-path="res://.godot/imported/IceCreamWaffles.png-dc48e694c327abd7085ced9f0e695782.ctex"
+path="res://.godot/imported/IceCreamWaffles.png-39c7c4d9d16c6dacdce4fa32bbf14281.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dessert_Icons/IceCreamWaffles.png"
-dest_files=["res://.godot/imported/IceCreamWaffles.png-dc48e694c327abd7085ced9f0e695782.ctex"]
+source_file="res://assets/dessert_icons/IceCreamWaffles.png"
+dest_files=["res://.godot/imported/IceCreamWaffles.png-39c7c4d9d16c6dacdce4fa32bbf14281.ctex"]
 
 [params]
 

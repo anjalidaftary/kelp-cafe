@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://eca5b31vhrsp"
-path="res://.godot/imported/BerryWaffles.png-2dab23654f2d943bf6c08e42208ec084.ctex"
+path="res://.godot/imported/BerryWaffles.png-17666e83a926a43464bfc6a8feff1d4f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dessert_Icons/BerryWaffles.png"
-dest_files=["res://.godot/imported/BerryWaffles.png-2dab23654f2d943bf6c08e42208ec084.ctex"]
+source_file="res://assets/dessert_icons/BerryWaffles.png"
+dest_files=["res://.godot/imported/BerryWaffles.png-17666e83a926a43464bfc6a8feff1d4f.ctex"]
 
 [params]
 
