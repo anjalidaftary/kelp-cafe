@@ -24,21 +24,21 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="BlueJelly" type="Sprite2D" parent="."]
-position = Vector2(322, 1494)
+position = Vector2(530, 1484)
 scale = Vector2(10.75, 9.64063)
 texture = ExtResource("2_crvnc")
 script = ExtResource("3_v3mle")
 
 [node name="GreenJelly" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_tkmk4")
-position = Vector2(783, 1393)
+position = Vector2(1019, 1382)
 scale = Vector2(11.2656, 9.28906)
 texture = ExtResource("4_1yh1n")
 script = ExtResource("5_oj2ua")
 
 [node name="PinkJelly" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_8gkry")
-position = Vector2(1222, 1303)
+position = Vector2(1579, 1306)
 scale = Vector2(10.3438, 9.625)
 texture = ExtResource("6_26myq")
 script = ExtResource("8_qsnc4")

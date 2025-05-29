@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dse46hk1lgs0x"]
 
-[ext_resource type="PackedScene" uid="uid://0sk6su1p8mq5" path="res://scenes/Fish.tscn" id="1_hegpi"]
+[ext_resource type="PackedScene" uid="uid://0sk6su1p8mq5" path="res://scenes/fish.tscn" id="1_uj3bm"]
 
 [sub_resource type="Animation" id="Animation_hhnim"]
 length = 0.001
@@ -43,7 +43,7 @@ _data = {
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-2, 1)
 
-[node name="Fish" parent="." instance=ExtResource("1_hegpi")]
+[node name="Fish" parent="." instance=ExtResource("1_uj3bm")]
 position = Vector2(-257, 303)
 scale = Vector2(1.75, 1.75)
 
