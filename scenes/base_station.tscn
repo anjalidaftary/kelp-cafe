@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bi6nyd4hvg6cp"]
 
-[ext_resource type="Texture2D" uid="uid://b747wxxhb5e14" path="res://assets/ice-cream-background.PNG" id="1_m4ant"]
+[ext_resource type="Texture2D" uid="uid://sefkxrvfcq2g" path="res://assets/ice-cream-background.PNG" id="1_m4ant"]
 [ext_resource type="Texture2D" uid="uid://bg7vfeuvyeg3t" path="res://assets/ice-cream-bar.png" id="2_jxud5"]
 [ext_resource type="Script" path="res://scenes/moving_bar.gd" id="3_8qkiy"]
 
