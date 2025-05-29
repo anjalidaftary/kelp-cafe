@@ -20,9 +20,6 @@ position = Vector2(585, 374)
 scale = Vector2(0.504555, 0.609908)
 texture = ExtResource("2_jxud5")
 script = ExtResource("3_8qkiy")
-bar_speed = null
-left_limit = null
-right_limit = null
 
 [node name="SuccessZone" type="ColorRect" parent="."]
 offset_left = 274.0

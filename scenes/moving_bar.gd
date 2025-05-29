@@ -34,4 +34,4 @@ func _on_kelp_button_pressed() -> void:
 
 
 func _on_success_zone_entered() -> void:
-	if 
+	pass
