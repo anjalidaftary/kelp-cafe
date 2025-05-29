@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://bi6nyd4hvg6cp"]
+
+[ext_resource type="Texture2D" uid="uid://b747wxxhb5e14" path="res://assets/ice-cream-background.PNG" id="1_m4ant"]
+[ext_resource type="Texture2D" uid="uid://bg7vfeuvyeg3t" path="res://assets/ice-cream-bar.png" id="2_jxud5"]
+[ext_resource type="Script" path="res://scenes/moving_bar.gd" id="3_8qkiy"]
+
+[node name="BaseStation" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -2.0
+offset_top = -41.0
+offset_right = 1122.0
+offset_bottom = 760.237
+texture = ExtResource("1_m4ant")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="MovingBar" type="Sprite2D" parent="."]
+position = Vector2(585, 374)
+scale = Vector2(0.504555, 0.609908)
+texture = ExtResource("2_jxud5")
+script = ExtResource("3_8qkiy")
+
+[node name="SuccessZone" type="ColorRect" parent="."]
+offset_left = 274.0
+offset_top = 252.0
+offset_right = 370.0
+offset_bottom = 307.0
+color = Color(1, 1, 1, 0.207843)

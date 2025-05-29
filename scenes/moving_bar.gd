@@ -1,15 +1,18 @@
-extends Node2D
+extends Sprite2D
 
-@export var bar_speed := 20  # pixels per second
-@export var left_limit := -45
-@export var right_limit := 45
+@export var bar_speed := 100  # pixels per second
+@export var left_limit := 385
+@export var right_limit := 785
+
+var posOffset : Vector2
+@onready var bar = $"../MovingBar"
+@onready var success_zone = $"../SuccessZone"
 
 var direction := 1  # 1 = right, -1 = left
 var is_stopped := false
 
-@onready var bar = $MovingBar
-@onready var success_zone = $SuccessZone
-@onready var result_label = $StopButton
+
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -24,13 +27,3 @@ func _process(delta: float) -> void:
 	elif bar.position.x <= left_limit:
 		bar.position.x = left_limit
 		direction = 1
-		
-func _input(event):
-	continue
-	
-
-
-
-
-func _on_stop_button_pressed() -> void:
-	pass # Replace with function body.
