@@ -21,7 +21,6 @@ func canPurchase (num: int) -> bool:
 func _ready() -> void:
 	clam_label.text = str(clams)
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cey5rpfgqijdl"]
 
-[ext_resource type="Script" path="res://scenes/money.gd" id="1_ihvq1"]
+[ext_resource type="Script" path="res://scripts/money.gd" id="1_ihvq1"]
 [ext_resource type="Texture2D" uid="uid://cvgh4t4m5pd7y" path="res://assets/clam_icon.png" id="2_4tbm2"]
 
 [sub_resource type="SystemFont" id="SystemFont_deocm"]
