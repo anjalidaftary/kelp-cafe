@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dse46hk1lgs0x"]
 
-[ext_resource type="PackedScene" uid="uid://0sk6su1p8mq5" path="res://scenes/fish.tscn" id="1_uj3bm"]
+[ext_resource type="PackedScene" uid="uid://0sk6su1p8mq5" path="res://scenes/Fish.tscn" id="1_uj3bm"]
 
 [sub_resource type="Animation" id="Animation_hhnim"]
 length = 0.001

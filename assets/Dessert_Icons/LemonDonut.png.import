@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://kck34nnpwk6m"
-path="res://.godot/imported/LemonDonut.png-df06e4314009434c8e6fcce8baa67786.ctex"
+path="res://.godot/imported/LemonDonut.png-edc0be23adb147b15aa6cec60588d0a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/dessert_icons/LemonDonut.png"
-dest_files=["res://.godot/imported/LemonDonut.png-df06e4314009434c8e6fcce8baa67786.ctex"]
+source_file="res://assets/Dessert_Icons/LemonDonut.png"
+dest_files=["res://.godot/imported/LemonDonut.png-edc0be23adb147b15aa6cec60588d0a3.ctex"]
 
 [params]
 

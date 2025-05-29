@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://756wggken8l0"
-path="res://.godot/imported/PoachedPear.png-ac209fe74cf34a2d19d42590d095b0e5.ctex"
+path="res://.godot/imported/PoachedPear.png-3f5b34e049af9e6667cf234057a8db6d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/dessert_icons/PoachedPear.png"
-dest_files=["res://.godot/imported/PoachedPear.png-ac209fe74cf34a2d19d42590d095b0e5.ctex"]
+source_file="res://assets/Dessert_Icons/PoachedPear.png"
+dest_files=["res://.godot/imported/PoachedPear.png-3f5b34e049af9e6667cf234057a8db6d.ctex"]
 
 [params]
 
