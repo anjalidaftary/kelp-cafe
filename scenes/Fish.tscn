@@ -9,8 +9,8 @@ b = Vector2(-1, 39)
 [node name="Fish" type="AnimatableBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(2.99999, 7.62939e-06)
-scale = Vector2(0.224194, 0.221503)
+position = Vector2(4, 3.00001)
+scale = Vector2(0.210081, 0.204537)
 texture = ExtResource("1_dnxlb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
