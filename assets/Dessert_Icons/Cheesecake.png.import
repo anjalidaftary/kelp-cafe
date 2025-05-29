@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cexvtx8crmno5"
-path="res://.godot/imported/Cheesecake.png-6fc0c84e85a2052dc0f41b355f2f2ef8.ctex"
+path="res://.godot/imported/Cheesecake.png-333087d5b6976f4277197fece96ac7cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/dessert_icons/Cheesecake.png"
-dest_files=["res://.godot/imported/Cheesecake.png-6fc0c84e85a2052dc0f41b355f2f2ef8.ctex"]
+source_file="res://assets/Dessert_Icons/Cheesecake.png"
+dest_files=["res://.godot/imported/Cheesecake.png-333087d5b6976f4277197fece96ac7cf.ctex"]
 
 [params]
 

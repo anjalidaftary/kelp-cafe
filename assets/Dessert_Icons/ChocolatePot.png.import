@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://br61mixtf1gc1"
-path="res://.godot/imported/ChocolatePot.png-75074378296de240d2223cf0b187505c.ctex"
+path="res://.godot/imported/ChocolatePot.png-90c3df00666c229470b56ee5d0cea8e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/dessert_icons/ChocolatePot.png"
-dest_files=["res://.godot/imported/ChocolatePot.png-75074378296de240d2223cf0b187505c.ctex"]
+source_file="res://assets/Dessert_Icons/ChocolatePot.png"
+dest_files=["res://.godot/imported/ChocolatePot.png-90c3df00666c229470b56ee5d0cea8e8.ctex"]
 
 [params]
 

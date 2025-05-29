@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckxj1q8upxhre"
-path="res://.godot/imported/BakewellTart.png-ffdd1caea2cdc8e730cfde31dbbec5cf.ctex"
+path="res://.godot/imported/BakewellTart.png-ac45adecf022feda0904ecd26b77adda.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/dessert_icons/BakewellTart.png"
-dest_files=["res://.godot/imported/BakewellTart.png-ffdd1caea2cdc8e730cfde31dbbec5cf.ctex"]
+source_file="res://assets/Dessert_Icons/BakewellTart.png"
+dest_files=["res://.godot/imported/BakewellTart.png-ac45adecf022feda0904ecd26b77adda.ctex"]
 
 [params]
 

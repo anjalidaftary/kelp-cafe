@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b6juci30dcg42"
-path="res://.godot/imported/ChocolateSwissRoll.png-eb9ea74deef7ca1e86124331ca1de0a5.ctex"
+path="res://.godot/imported/ChocolateSwissRoll.png-c548d01cd3a490ce4fcce9d71078c8d5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/dessert_icons/ChocolateSwissRoll.png"
-dest_files=["res://.godot/imported/ChocolateSwissRoll.png-eb9ea74deef7ca1e86124331ca1de0a5.ctex"]
+source_file="res://assets/Dessert_Icons/ChocolateSwissRoll.png"
+dest_files=["res://.godot/imported/ChocolateSwissRoll.png-c548d01cd3a490ce4fcce9d71078c8d5.ctex"]
 
 [params]
 

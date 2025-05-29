@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ck66e76riqq5d"
-path="res://.godot/imported/DanishGlazed.png-a32f29fd354890b9c1808a803caf4fd1.ctex"
+path="res://.godot/imported/DanishGlazed.png-3d19906b76515112f9a72e1725bfbc94.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/dessert_icons/DanishGlazed.png"
-dest_files=["res://.godot/imported/DanishGlazed.png-a32f29fd354890b9c1808a803caf4fd1.ctex"]
+source_file="res://assets/Dessert_Icons/DanishGlazed.png"
+dest_files=["res://.godot/imported/DanishGlazed.png-3d19906b76515112f9a72e1725bfbc94.ctex"]
 
 [params]
 
