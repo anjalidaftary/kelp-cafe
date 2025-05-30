@@ -6,7 +6,9 @@ extends Sprite2D
 
 @onready var button = $"../KelpButton"
 @onready var bar = $"../MovingBar"
+@onready var intersection = $Intersection
 @onready var success_zone = $"../SuccessZone"
+
 
 var buttonPressed = false
 var direction := 1  # 1 = right, -1 = left
@@ -31,7 +33,14 @@ func _process(delta: float) -> void:
 
 func _on_kelp_button_pressed() -> void:
 	buttonPressed = true;
+	check_success()
 
 
-func _on_success_zone_entered() -> void:
-	pass
+func check_success() -> void:
+	var bar_rect = intersection.get_global_rect()
+	var zone_rect = success_zone.get_global_rect()
+	
+	if (bar_rect.intersects(zone_rect)):
+		print("success")
+	else:
+		print("missed")

@@ -21,11 +21,18 @@ scale = Vector2(0.504555, 0.609908)
 texture = ExtResource("2_jxud5")
 script = ExtResource("3_8qkiy")
 
+[node name="Intersection" type="ColorRect" parent="MovingBar"]
+offset_left = -523.0
+offset_top = -177.0
+offset_right = -517.0
+offset_bottom = -111.0
+color = Color(1, 1, 1, 0)
+
 [node name="SuccessZone" type="ColorRect" parent="."]
-offset_left = 274.0
-offset_top = 252.0
-offset_right = 370.0
-offset_bottom = 307.0
+offset_left = 276.0
+offset_top = 253.0
+offset_right = 372.0
+offset_bottom = 308.0
 color = Color(1, 1, 1, 0)
 
 [node name="KelpButton" type="TextureButton" parent="."]
