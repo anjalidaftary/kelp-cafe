@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://bi6nyd4hvg6cp"]
+[gd_scene load_steps=6 format=3 uid="uid://bi6nyd4hvg6cp"]
 
 [ext_resource type="Texture2D" uid="uid://sefkxrvfcq2g" path="res://assets/ice-cream-background.PNG" id="1_m4ant"]
 [ext_resource type="Texture2D" uid="uid://bg7vfeuvyeg3t" path="res://assets/ice-cream-bar.png" id="2_jxud5"]
 [ext_resource type="Script" path="res://scenes/moving_bar.gd" id="3_8qkiy"]
+[ext_resource type="Texture2D" uid="uid://bq87ufkf4htp0" path="res://assets/milk-bar.png" id="4_1tt8d"]
+[ext_resource type="Script" path="res://scenes/milk_bar.gd" id="5_xg4qp"]
 
 [node name="BaseStation" type="Node2D"]
 
@@ -14,19 +16,30 @@ offset_bottom = 760.237
 texture = ExtResource("1_m4ant")
 expand_mode = 5
 stretch_mode = 5
+metadata/_edit_lock_ = true
 
 [node name="MovingBar" type="Sprite2D" parent="."]
 position = Vector2(585, 374)
 scale = Vector2(0.504555, 0.609908)
 texture = ExtResource("2_jxud5")
 script = ExtResource("3_8qkiy")
+metadata/_edit_lock_ = true
+
+[node name="Intersection" type="ColorRect" parent="MovingBar"]
+offset_left = -523.0
+offset_top = -177.0
+offset_right = -517.0
+offset_bottom = -111.0
+color = Color(1, 1, 1, 0)
+metadata/_edit_lock_ = true
 
 [node name="SuccessZone" type="ColorRect" parent="."]
-offset_left = 274.0
-offset_top = 252.0
-offset_right = 370.0
-offset_bottom = 307.0
+offset_left = 276.0
+offset_top = 253.0
+offset_right = 372.0
+offset_bottom = 308.0
 color = Color(1, 1, 1, 0)
+metadata/_edit_lock_ = true
 
 [node name="KelpButton" type="TextureButton" parent="."]
 offset_left = 145.0
@@ -34,6 +47,22 @@ offset_top = 121.0
 offset_right = 235.0
 offset_bottom = 197.0
 action_mode = 0
+metadata/_edit_lock_ = true
+
+[node name="MilkButton" type="TextureButton" parent="."]
+offset_left = 799.0
+offset_top = 257.0
+offset_right = 880.0
+offset_bottom = 336.0
+metadata/_edit_lock_ = true
+
+[node name="MilkBar" type="Sprite2D" parent="."]
+position = Vector2(556, 359)
+scale = Vector2(0.488877, 0.497561)
+texture = ExtResource("4_1tt8d")
+script = ExtResource("5_xg4qp")
+metadata/_edit_lock_ = true
 
 [connection signal="focus_entered" from="SuccessZone" to="MovingBar" method="_on_success_zone_entered"]
 [connection signal="pressed" from="KelpButton" to="MovingBar" method="_on_kelp_button_pressed"]
+[connection signal="pressed" from="MilkButton" to="MilkBar" method="_on_milk_button_pressed"]

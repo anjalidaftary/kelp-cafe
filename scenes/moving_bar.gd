@@ -1,12 +1,14 @@
 extends Sprite2D
 
-@export var bar_speed := 200  # pixels per second
+@export var bar_speed := 350  # pixels per second
 @export var left_limit := 385
 @export var right_limit := 785
 
 @onready var button = $"../KelpButton"
 @onready var bar = $"../MovingBar"
+@onready var intersection = $Intersection
 @onready var success_zone = $"../SuccessZone"
+
 
 var buttonPressed = false
 var direction := 1  # 1 = right, -1 = left
@@ -15,7 +17,7 @@ var successful = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_action_pressed("spacebar"):
+	if Input.is_action_just_pressed("spacebar"):
 		buttonPressed = false;
 		
 	
@@ -31,7 +33,14 @@ func _process(delta: float) -> void:
 
 func _on_kelp_button_pressed() -> void:
 	buttonPressed = true;
+	check_success()
 
 
-func _on_success_zone_entered() -> void:
-	pass
+func check_success() -> void:
+	var bar_rect = intersection.get_global_rect()
+	var zone_rect = success_zone.get_global_rect()
+	
+	if (bar_rect.intersects(zone_rect)):
+		print("success")
+	else:
+		print("missed")
