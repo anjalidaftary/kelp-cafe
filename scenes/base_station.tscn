@@ -46,7 +46,7 @@ action_mode = 0
 position = Vector2(559, 369)
 zoom = Vector2(1.05, 0.9)
 
-[node name="MilkIntersection" type="ColorRect" parent="MilkBar"]
+[node name="MilkBar#MilkIntersection" type="ColorRect" parent="."]
 offset_left = 577.0
 offset_top = 12.0
 offset_right = 587.0
