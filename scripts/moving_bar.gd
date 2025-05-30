@@ -20,7 +20,6 @@ func _process(delta: float) -> void:
 	if Input.is_action_pressed("spacebar"):
 		buttonPressed = false;
 		
-	
 	if (buttonPressed):
 		bar.position.x += direction * bar_speed * delta
 		if bar.position.x >= right_limit:

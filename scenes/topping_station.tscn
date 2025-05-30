@@ -1,44 +1,45 @@
-[gd_scene load_steps=10 format=3 uid="uid://v2vpvfpoa45d"]
+[gd_scene load_steps=7 format=3 uid="uid://v2vpvfpoa45d"]
 
-[ext_resource type="Texture2D" uid="uid://bp6dl1w0xv6e8" path="res://assets/settings/Coffee 2.png" id="1_o7e87"]
-[ext_resource type="Texture2D" uid="uid://c5wpa2tny6qpv" path="res://assets/Dessert_Icons/BlueJelly.png" id="2_crvnc"]
-[ext_resource type="Script" path="res://scripts/blue_jelly.gd" id="3_v3mle"]
-[ext_resource type="Texture2D" uid="uid://cqjpsqvw67rym" path="res://assets/Dessert_Icons/GreenJelly.png" id="4_1yh1n"]
-[ext_resource type="Script" path="res://scripts/green_jelly.gd" id="5_oj2ua"]
-[ext_resource type="Texture2D" uid="uid://dcrd1yyrocde1" path="res://assets/Dessert_Icons/PinkJelly.png" id="6_26myq"]
-[ext_resource type="Script" path="res://scripts/pink_jelly.gd" id="8_qsnc4"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_tkmk4"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_8gkry"]
+[ext_resource type="Texture2D" uid="uid://cipw02sv1jmlt" path="res://assets/toppings-background.png" id="1_ytthe"]
+[ext_resource type="Texture2D" uid="uid://dos7lmb65xtr7" path="res://assets/pearl-bowl.png" id="2_uehvf"]
+[ext_resource type="Script" path="res://scripts/pearl.gd" id="3_ukxqc"]
+[ext_resource type="Texture2D" uid="uid://bbarnjjljdm58" path="res://assets/caramel-sauce.PNG" id="4_83r0r"]
+[ext_resource type="Texture2D" uid="uid://4pgv8bvgpoey" path="res://assets/sea-foam.PNG" id="5_o8rjr"]
+[ext_resource type="Texture2D" uid="uid://bbypjag50exk1" path="res://assets/shell-bowl.png" id="6_1ld0s"]
 
 [node name="ToppingStation" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -50.0
-offset_top = 3.0
-offset_right = 3119.0
-offset_bottom = 2058.0
-texture = ExtResource("1_o7e87")
+offset_left = -74.0
+offset_top = -64.0
+offset_right = 1224.0
+offset_bottom = 778.0
+texture = ExtResource("1_ytthe")
 expand_mode = 1
 stretch_mode = 5
+metadata/_edit_lock_ = true
 
-[node name="BlueJelly" type="Sprite2D" parent="."]
-position = Vector2(530, 1484)
-scale = Vector2(10.75, 9.64063)
-texture = ExtResource("2_crvnc")
-script = ExtResource("3_v3mle")
+[node name="Pearl" type="Sprite2D" parent="."]
+position = Vector2(-152, 378)
+scale = Vector2(0.532824, 0.567073)
+texture = ExtResource("2_uehvf")
+script = ExtResource("3_ukxqc")
+metadata/_edit_lock_ = true
 
-[node name="GreenJelly" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_tkmk4")
-position = Vector2(1019, 1382)
-scale = Vector2(11.2656, 9.28906)
-texture = ExtResource("4_1yh1n")
-script = ExtResource("5_oj2ua")
+[node name="Caramel-sauce" type="Sprite2D" parent="."]
+position = Vector2(505, 360)
+scale = Vector2(0.533537, 0.533537)
+texture = ExtResource("4_83r0r")
+metadata/_edit_lock_ = true
 
-[node name="PinkJelly" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_8gkry")
-position = Vector2(1579, 1306)
-scale = Vector2(10.3438, 9.625)
-texture = ExtResource("6_26myq")
-script = ExtResource("8_qsnc4")
+[node name="Sea-foam" type="Sprite2D" parent="."]
+position = Vector2(1522, 312)
+scale = Vector2(0.565854, 0.565854)
+texture = ExtResource("5_o8rjr")
+metadata/_edit_lock_ = true
+
+[node name="Shell-bowl" type="Sprite2D" parent="."]
+position = Vector2(1368, 391)
+scale = Vector2(0.606707, 0.606707)
+texture = ExtResource("6_1ld0s")
+metadata/_edit_lock_ = true

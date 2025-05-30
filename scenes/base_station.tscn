@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://sefkxrvfcq2g" path="res://assets/ice-cream-background.PNG" id="1_m4ant"]
 [ext_resource type="Texture2D" uid="uid://bg7vfeuvyeg3t" path="res://assets/ice-cream-bar.png" id="2_jxud5"]
-[ext_resource type="Script" path="res://scenes/moving_bar.gd" id="3_8qkiy"]
+[ext_resource type="Script" path="res://scripts/moving_bar.gd" id="3_8qkiy"]
 
 [node name="BaseStation" type="Node2D"]
 
@@ -41,6 +41,10 @@ offset_top = 121.0
 offset_right = 235.0
 offset_bottom = 197.0
 action_mode = 0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(559, 369)
+zoom = Vector2(1.05, 0.9)
 
 [connection signal="focus_entered" from="SuccessZone" to="MovingBar" method="_on_success_zone_entered"]
 [connection signal="pressed" from="KelpButton" to="MovingBar" method="_on_kelp_button_pressed"]
