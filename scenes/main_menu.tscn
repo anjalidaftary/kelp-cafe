@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b0pkxjmsehyw8"]
 
-[ext_resource type="Texture2D" uid="uid://6yxmqiq3dsr0" path="res://assets/sprites/bg-PLACEHOLDER.jpg" id="1_4du36"]
+[ext_resource type="Texture2D" uid="uid://cnvp2ftqqrf0n" path="res://assets/start-screen.png" id="1_v32in"]
 [ext_resource type="Script" path="res://scripts/button.gd" id="2_5jshd"]
 
 [node name="MainMenu" type="Node2D"]
@@ -8,15 +8,15 @@
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Bg-placeholder" type="Sprite2D" parent="."]
-position = Vector2(-6, -4)
-scale = Vector2(2.23938, 1.67735)
-texture = ExtResource("1_4du36")
+position = Vector2(-4, 22)
+scale = Vector2(0.488351, 0.477352)
+texture = ExtResource("1_v32in")
 
 [node name="Button" type="Button" parent="."]
-offset_left = -281.0
-offset_top = 137.0
-offset_right = 286.0
-offset_bottom = 247.0
+offset_left = -372.0
+offset_top = -466.0
+offset_right = 195.0
+offset_bottom = -356.0
 text = "Start Game"
 script = ExtResource("2_5jshd")
 
