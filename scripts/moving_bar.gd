@@ -1,6 +1,6 @@
 extends Sprite2D
 
-@export var bar_speed := 200  # pixels per second
+@export var bar_speed := 350  # pixels per second
 @export var left_limit := 385
 @export var right_limit := 785
 
@@ -17,7 +17,7 @@ var successful = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_action_pressed("spacebar"):
+	if Input.is_action_just_pressed("spacebar"):
 		buttonPressed = false;
 		
 	if (buttonPressed):
