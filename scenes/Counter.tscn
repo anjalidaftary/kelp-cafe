@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dse46hk1lgs0x"]
+[gd_scene load_steps=7 format=3 uid="uid://dse46hk1lgs0x"]
 
+[ext_resource type="Texture2D" uid="uid://c4e500lm4lncg" path="res://assets/order-background.PNG" id="1_tdlqi"]
 [ext_resource type="PackedScene" uid="uid://0sk6su1p8mq5" path="res://scenes/Fish.tscn" id="1_uj3bm"]
+[ext_resource type="Texture2D" uid="uid://y71anfhbimva" path="res://assets/order-counter.PNG" id="3_cnauo"]
 
 [sub_resource type="Animation" id="Animation_hhnim"]
 length = 0.001
@@ -40,6 +42,11 @@ _data = {
 
 [node name="Game" type="Node2D"]
 
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(-2, 22)
+scale = Vector2(0.489872, 0.490854)
+texture = ExtResource("1_tdlqi")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-2, 1)
 
@@ -53,3 +60,8 @@ libraries = {
 }
 autoplay = "pop-up"
 speed_scale = 0.91
+
+[node name="Bar" type="Sprite2D" parent="."]
+position = Vector2(1, -31)
+scale = Vector2(0.496646, 0.496646)
+texture = ExtResource("3_cnauo")
