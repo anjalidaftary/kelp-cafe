@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b0pkxjmsehyw8"]
 
 [ext_resource type="Texture2D" uid="uid://cnvp2ftqqrf0n" path="res://assets/start-screen.png" id="1_v32in"]
-[ext_resource type="Script" path="res://scenes/texture_button.gd" id="2_5isph"]
+[ext_resource type="Script" path="res://scripts/texture_button.gd" id="2_5isph"]
 
 [node name="MainMenu" type="Node2D"]
 
