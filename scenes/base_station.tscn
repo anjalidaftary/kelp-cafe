@@ -78,6 +78,12 @@ func _on_milk_button_pressed() -> void:
 
 func _on_move_to_milk_button_pressed() -> void:
 	isReady = true
+
+
+func _on_change_scene_button_pressed() -> void:
+	KelpMilkCup.queue_free()
+	get_tree().change_scene_to_file(\"res://scenes/topping_station.tscn\")
+	
 "
 
 [node name="BaseStation" type="Node2D"]
@@ -187,8 +193,16 @@ texture = ExtResource("10_qrlqx")
 script = ExtResource("11_8vlas")
 metadata/_edit_lock_ = true
 
+[node name="ChangeSceneButton" type="TextureButton" parent="."]
+offset_left = 803.0
+offset_top = 478.0
+offset_right = 870.0
+offset_bottom = 574.0
+metadata/_edit_lock_ = true
+
 [connection signal="focus_entered" from="SuccessZone" to="MovingBar" method="_on_success_zone_entered"]
 [connection signal="pressed" from="KelpButton" to="MovingBar" method="_on_kelp_button_pressed"]
 [connection signal="pressed" from="MoveToMilkButton" to="KelpBaseCup" method="_on_move_to_milk_button_pressed"]
 [connection signal="pressed" from="MoveToMilkButton" to="MilkBar" method="_on_move_to_milk_button_pressed"]
 [connection signal="pressed" from="MilkButton" to="MilkBar" method="_on_milk_button_pressed"]
+[connection signal="pressed" from="ChangeSceneButton" to="MilkBar" method="_on_change_scene_button_pressed"]
