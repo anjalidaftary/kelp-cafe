@@ -1,7 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://b0pkxjmsehyw8"]
 
 [ext_resource type="Texture2D" uid="uid://cnvp2ftqqrf0n" path="res://assets/start-screen.png" id="1_v32in"]
-[ext_resource type="Script" path="res://scripts/texture_button.gd" id="2_5isph"]
+
+[sub_resource type="GDScript" id="GDScript_q3aq3"]
+script/source = "extends TextureButton
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://scenes/Counter.tscn\")
+"
 
 [node name="MainMenu" type="Node2D"]
 
@@ -17,6 +23,6 @@ offset_left = -98.0
 offset_top = 98.0
 offset_right = 116.0
 offset_bottom = 168.0
-script = ExtResource("2_5isph")
+script = SubResource("GDScript_q3aq3")
 
 [connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]

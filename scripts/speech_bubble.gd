@@ -23,6 +23,5 @@ func show_order() -> void:
 	
 	show()
 
-
-func _on_ready() -> void:
+func _ready() -> void:
 	hide()
