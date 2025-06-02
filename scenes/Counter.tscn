@@ -1,12 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://dse46hk1lgs0x"]
+[gd_scene load_steps=15 format=3 uid="uid://dse46hk1lgs0x"]
 
 [ext_resource type="Texture2D" uid="uid://c4e500lm4lncg" path="res://assets/order-background.PNG" id="1_tdlqi"]
 [ext_resource type="PackedScene" uid="uid://0sk6su1p8mq5" path="res://scenes/Fish.tscn" id="1_uj3bm"]
 [ext_resource type="Texture2D" uid="uid://y71anfhbimva" path="res://assets/order-counter.PNG" id="3_cnauo"]
 [ext_resource type="Script" path="res://scripts/fish.gd" id="3_ejy3u"]
 [ext_resource type="Script" path="res://scripts/speech_bubble.gd" id="4_dkpgr"]
-[ext_resource type="Script" path="res://scripts/fish_button.gd" id="4_t0quw"]
 [ext_resource type="Texture2D" uid="uid://bmahanl3jhi7v" path="res://assets/Order_symbols-1.png" id="6_880uu"]
+[ext_resource type="Texture2D" uid="uid://djmxlmlkum6bi" path="res://assets/kelp-order-symbol.png" id="7_md0bu"]
+[ext_resource type="Texture2D" uid="uid://dehj5b7ncm5m8" path="res://assets/foam-order-symbol.png" id="8_b0lxp"]
+[ext_resource type="Texture2D" uid="uid://cfvl5nifi2wad" path="res://assets/pearl-order-symbol.png" id="9_5yxfq"]
 
 [sub_resource type="Animation" id="Animation_hhnim"]
 length = 0.001
@@ -44,6 +46,11 @@ _data = {
 "pop-up": SubResource("Animation_blqn8")
 }
 
+[sub_resource type="GDScript" id="GDScript_wh78x"]
+script/source = "extends TextureButton"
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_twxvo"]
+
 [node name="Game" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
@@ -73,7 +80,7 @@ offset_left = -79.0
 offset_top = -120.0
 offset_right = 51.0
 offset_bottom = 40.0
-script = ExtResource("4_t0quw")
+script = SubResource("GDScript_wh78x")
 
 [node name="Bar" type="Sprite2D" parent="."]
 position = Vector2(1, -31)
@@ -84,25 +91,35 @@ metadata/_edit_lock_ = true
 [node name="SpeechBubble" type="Panel" parent="."]
 offset_left = 10.0
 offset_top = -246.0
-offset_right = 465.0
-offset_bottom = -148.0
+offset_right = 328.0
+offset_bottom = -163.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_twxvo")
 script = ExtResource("4_dkpgr")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpeechBubble"]
+position = Vector2(147, 83)
+scale = Vector2(0.281388, 0.227591)
+texture = ExtResource("6_880uu")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="SpeechBubble"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 102.0
+offset_bottom = 94.0
 
 [node name="FlavorSymbol" type="TextureRect" parent="SpeechBubble/HBoxContainer"]
 layout_mode = 2
+texture = ExtResource("7_md0bu")
+expand_mode = 2
 
 [node name="FoamSymbol" type="TextureRect" parent="SpeechBubble/HBoxContainer"]
 layout_mode = 2
+texture = ExtResource("8_b0lxp")
+expand_mode = 2
 
 [node name="ToppingSymbol" type="TextureRect" parent="SpeechBubble/HBoxContainer"]
 layout_mode = 2
+texture = ExtResource("9_5yxfq")
+expand_mode = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="SpeechBubble"]
-position = Vector2(160, 75)
-scale = Vector2(0.308221, 0.248171)
-texture = ExtResource("6_880uu")
+[connection signal="pressed" from="Fish/FishButton2" to="SpeechBubble" method="_on_fish_button_2_pressed"]
+[connection signal="ready" from="SpeechBubble" to="SpeechBubble" method="_on_ready"]

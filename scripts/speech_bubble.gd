@@ -9,7 +9,8 @@ extends Panel
 
 @onready var random_symbols = [
 	preload("res://assets/pearl-order-symbol.png"),
-	preload("res://assets/clam-order-symbol.png")
+	preload("res://assets/clam-order-symbol.png"),
+	preload("res://assets/caramel-order-symbol.png")
 ]
 
 func show_order() -> void:
@@ -23,5 +24,10 @@ func show_order() -> void:
 	
 	show()
 
-func _ready() -> void:
+
+func _on_fish_button_2_pressed() -> void:
+	show_order()
+	
+
+func _on_ready() -> void:
 	hide()
