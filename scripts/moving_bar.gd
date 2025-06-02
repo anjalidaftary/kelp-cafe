@@ -21,7 +21,7 @@ var successful = false
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("spacebar"):
 		buttonPressed = false;
-		check_success()
+		check_success1()
 		
 	if (buttonPressed):
 		bar.position.x += direction * bar_speed * delta
@@ -38,12 +38,12 @@ func _on_kelp_button_pressed() -> void:
 	emptyCup.visible = true
 
 
-func check_success() -> void:
+func check_success1() -> void:
 	var bar_rect = intersection.get_global_rect()
 	var zone_rect = success_zone.get_global_rect()
 	
 	if (bar_rect.intersects(zone_rect)):
-		emptyCup.visible = false
+		emptyCup.queue_free()
 		kelpBaseCup.visible = true
 		print("success")
 	else:
