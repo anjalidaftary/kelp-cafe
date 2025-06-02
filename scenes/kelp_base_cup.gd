@@ -13,5 +13,5 @@ func _process(delta: float) -> void:
 
 func _on_move_to_milk_button_pressed() -> void:
 	print("button pressed!!")
-	visible = false
+	queue_free()
 	newKelpCup.visible = true

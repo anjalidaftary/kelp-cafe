@@ -10,3 +10,7 @@ func _on_pearl_button_pressed() -> void:
 	else: 
 		toggled = false;
 		topping.position.y += 50
+
+
+func _on_drink_pressed() -> void:
+	pass # Replace with function body.
