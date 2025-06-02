@@ -11,6 +11,7 @@ extends Sprite2D
 @onready var emptyCup = $"../EmptyBaseCup"
 @onready var kelpBaseCup = $"../KelpBaseCup"
 
+var done = false
 
 var buttonPressed = false
 var direction := 1  # 1 = right, -1 = left
@@ -43,8 +44,10 @@ func check_success1() -> void:
 	var zone_rect = success_zone.get_global_rect()
 	
 	if (bar_rect.intersects(zone_rect)):
-		emptyCup.queue_free()
-		kelpBaseCup.visible = true
-		print("success")
+		if (!done):
+			emptyCup.queue_free()
+			kelpBaseCup.visible = true
+			print("success")
+			done = true
 	else:
 		print("missed")

@@ -40,5 +40,6 @@ func check_success() -> void:
 	
 	if (bar_rect.intersects(zone_rect)):
 		print("success")
+		
 	else:
 		print("missed")
