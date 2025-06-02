@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://v2vpvfpoa45d"]
+[gd_scene load_steps=11 format=3 uid="uid://v2vpvfpoa45d"]
 
 [ext_resource type="Texture2D" uid="uid://cipw02sv1jmlt" path="res://assets/toppings-background.png" id="1_ytthe"]
 [ext_resource type="Texture2D" uid="uid://dos7lmb65xtr7" path="res://assets/pearl-bowl.png" id="2_uehvf"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bbypjag50exk1" path="res://assets/shell-bowl.png" id="6_1ld0s"]
 [ext_resource type="Script" path="res://scripts/caramel_sauce.gd" id="7_6rr1q"]
 [ext_resource type="Script" path="res://scenes/sea_foam.gd" id="9_nnfgs"]
+[ext_resource type="Texture2D" uid="uid://buik1jbkmky50" path="res://assets/cup-kelp-milk.PNG" id="10_dw0le"]
 
 [node name="ToppingStation" type="Node2D"]
 
@@ -20,6 +21,11 @@ offset_bottom = 778.0
 texture = ExtResource("1_ytthe")
 expand_mode = 1
 stretch_mode = 5
+metadata/_edit_lock_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(573, 345)
+zoom = Vector2(1, 0.8)
 metadata/_edit_lock_ = true
 
 [node name="Pearl" type="Sprite2D" parent="."]
@@ -74,11 +80,22 @@ offset_top = -57.0
 offset_right = -871.0
 offset_bottom = 501.0
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(573, 345)
-zoom = Vector2(1, 0.8)
+[node name="Cup-kelp-milk" type="Sprite2D" parent="."]
+position = Vector2(605, 441)
+scale = Vector2(0.377281, 0.373018)
+texture = ExtResource("10_dw0le")
+
+[node name="drink" type="TextureButton" parent="Cup-kelp-milk"]
+offset_left = -381.679
+offset_top = -581.741
+offset_right = 146.321
+offset_bottom = 380.259
 
 [connection signal="pressed" from="Pearl/pearlButton" to="Pearl" method="_on_pearl_button_pressed"]
 [connection signal="pressed" from="Shell-bowl/shellButton" to="Shell-bowl" method="_on_shell_button_pressed"]
 [connection signal="pressed" from="Caramel-sauce/caramelButton" to="Caramel-sauce" method="_on_caramel_button_pressed"]
 [connection signal="pressed" from="Sea-foam/foamButton" to="Sea-foam" method="_on_foam_button_pressed"]
+[connection signal="pressed" from="Cup-kelp-milk/drink" to="Pearl" method="_on_drink_pressed"]
+[connection signal="pressed" from="Cup-kelp-milk/drink" to="Shell-bowl" method="_on_drink_pressed"]
+[connection signal="pressed" from="Cup-kelp-milk/drink" to="Caramel-sauce" method="_on_drink_pressed"]
+[connection signal="pressed" from="Cup-kelp-milk/drink" to="Sea-foam" method="_on_drink_pressed"]

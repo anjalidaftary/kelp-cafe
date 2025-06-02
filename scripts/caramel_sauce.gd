@@ -11,3 +11,6 @@ func _on_caramel_button_pressed() -> void:
 		toggled = false;
 		topping.position.y += 50
 		
+
+func _on_drink_pressed() -> void:
+	pass # Replace with function body.
