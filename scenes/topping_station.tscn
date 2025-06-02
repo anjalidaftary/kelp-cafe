@@ -1,15 +1,18 @@
-[gd_scene load_steps=7 format=3 uid="uid://v2vpvfpoa45d"]
+[gd_scene load_steps=10 format=3 uid="uid://v2vpvfpoa45d"]
 
 [ext_resource type="Texture2D" uid="uid://cipw02sv1jmlt" path="res://assets/toppings-background.png" id="1_ytthe"]
 [ext_resource type="Texture2D" uid="uid://dos7lmb65xtr7" path="res://assets/pearl-bowl.png" id="2_uehvf"]
 [ext_resource type="Script" path="res://scripts/pearl.gd" id="3_ukxqc"]
 [ext_resource type="Texture2D" uid="uid://bbarnjjljdm58" path="res://assets/caramel-sauce.PNG" id="4_83r0r"]
 [ext_resource type="Texture2D" uid="uid://4pgv8bvgpoey" path="res://assets/sea-foam.PNG" id="5_o8rjr"]
+[ext_resource type="Script" path="res://scripts/shell_bowl.gd" id="5_t564b"]
 [ext_resource type="Texture2D" uid="uid://bbypjag50exk1" path="res://assets/shell-bowl.png" id="6_1ld0s"]
+[ext_resource type="Script" path="res://scripts/caramel_sauce.gd" id="7_6rr1q"]
+[ext_resource type="Script" path="res://scenes/sea_foam.gd" id="9_nnfgs"]
 
 [node name="ToppingStation" type="Node2D"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="BG" type="TextureRect" parent="."]
 offset_left = -74.0
 offset_top = -64.0
 offset_right = 1224.0
@@ -26,20 +29,56 @@ texture = ExtResource("2_uehvf")
 script = ExtResource("3_ukxqc")
 metadata/_edit_lock_ = true
 
+[node name="pearlButton" type="TextureButton" parent="Pearl"]
+offset_left = 442.923
+offset_top = -664.817
+offset_right = 917.923
+offset_bottom = -426.817
+
+[node name="Shell-bowl" type="Sprite2D" parent="."]
+position = Vector2(1270, 334)
+scale = Vector2(0.48132, 0.48628)
+texture = ExtResource("6_1ld0s")
+script = ExtResource("5_t564b")
+metadata/_edit_lock_ = true
+
+[node name="shellButton" type="TextureButton" parent="Shell-bowl"]
+offset_left = -959.861
+offset_top = -713.58
+offset_right = -476.861
+offset_bottom = -433.58
+
 [node name="Caramel-sauce" type="Sprite2D" parent="."]
 position = Vector2(505, 360)
 scale = Vector2(0.533537, 0.533537)
 texture = ExtResource("4_83r0r")
+script = ExtResource("7_6rr1q")
 metadata/_edit_lock_ = true
+
+[node name="caramelButton" type="TextureButton" parent="Caramel-sauce"]
+offset_left = -707.0
+offset_top = -144.0
+offset_right = -544.0
+offset_bottom = 414.0
 
 [node name="Sea-foam" type="Sprite2D" parent="."]
 position = Vector2(1522, 312)
 scale = Vector2(0.565854, 0.565854)
 texture = ExtResource("5_o8rjr")
+script = ExtResource("9_nnfgs")
 metadata/_edit_lock_ = true
 
-[node name="Shell-bowl" type="Sprite2D" parent="."]
-position = Vector2(1368, 391)
-scale = Vector2(0.606707, 0.606707)
-texture = ExtResource("6_1ld0s")
-metadata/_edit_lock_ = true
+[node name="foamButton" type="TextureButton" parent="Sea-foam"]
+offset_left = -1062.0
+offset_top = -57.0
+offset_right = -871.0
+offset_bottom = 501.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(573, 345)
+zoom = Vector2(1, 0.8)
+
+[connection signal="pressed" from="Pearl/pearlButton" to="Pearl" method="_on_pearl_button_pressed"]
+[connection signal="pressed" from="Shell-bowl/shellButton" to="Shell-bowl" method="_on_shell_button_pressed"]
+[connection signal="pressed" from="Caramel-sauce/caramelButton" to="Caramel-sauce" method="_on_caramel_button_pressed"]
+[connection signal="pressed" from="Sea-foam/foamButton" to="Sea-foam" method="_on_foam_button_pressed"]

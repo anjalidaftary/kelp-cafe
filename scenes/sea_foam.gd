@@ -3,7 +3,7 @@ extends Sprite2D
 var toggled = false;
 @onready var topping = $"."
 
-func _on_pearl_button_pressed() -> void:
+func _on_foam_button_pressed() -> void:
 	if (toggled != true): 
 		toggled = true;
 		topping.position.y -= 50

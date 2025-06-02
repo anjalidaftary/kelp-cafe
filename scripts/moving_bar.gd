@@ -8,6 +8,8 @@ extends Sprite2D
 @onready var bar = $"../MovingBar"
 @onready var intersection = $Intersection
 @onready var success_zone = $"../SuccessZone"
+@onready var emptyCup = $"../EmptyBaseCup"
+@onready var kelpBaseCup = $"../KelpBaseCup"
 
 
 var buttonPressed = false
@@ -19,6 +21,7 @@ var successful = false
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("spacebar"):
 		buttonPressed = false;
+		check_success()
 		
 	if (buttonPressed):
 		bar.position.x += direction * bar_speed * delta
@@ -32,7 +35,7 @@ func _process(delta: float) -> void:
 
 func _on_kelp_button_pressed() -> void:
 	buttonPressed = true;
-	check_success()
+	emptyCup.visible = true
 
 
 func check_success() -> void:
@@ -40,6 +43,8 @@ func check_success() -> void:
 	var zone_rect = success_zone.get_global_rect()
 	
 	if (bar_rect.intersects(zone_rect)):
+		emptyCup.visible = false
+		kelpBaseCup.visible = true
 		print("success")
 	else:
 		print("missed")
