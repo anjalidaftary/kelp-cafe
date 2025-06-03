@@ -95,4 +95,6 @@ offset_bottom = 213.429
 [connection signal="pressed" from="Caramel-sauce/caramelButton" to="Caramel-sauce" method="_on_caramel_button_pressed"]
 [connection signal="pressed" from="Sea-foam/foamButton" to="Sea-foam" method="_on_foam_button_pressed"]
 [connection signal="pressed" from="Cup-kelp-milk/drinkButton" to="Pearl" method="_on_drink_button_pressed"]
+[connection signal="pressed" from="Cup-kelp-milk/drinkButton" to="Shell-bowl" method="_on_drink_button_pressed"]
+[connection signal="pressed" from="Cup-kelp-milk/drinkButton" to="Caramel-sauce" method="_on_drink_button_pressed"]
 [connection signal="pressed" from="Cup-kelp-milk/drinkButton" to="Sea-foam" method="_on_drink_button_pressed"]

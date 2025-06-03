@@ -8,4 +8,5 @@ func add_topping(texture: Texture, offset := Vector2.ZERO):
 	topping.position = offset
 	topping.scale = Vector2(0.50, 0.50)
 	toppings_node.add_child(topping)
+	toppings_node.move_child(topping, toppings_node.get_child_count() - 1)
 	

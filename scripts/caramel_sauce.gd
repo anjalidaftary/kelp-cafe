@@ -2,6 +2,7 @@ extends Sprite2D
 
 var toggled = false;
 @onready var topping = $"."
+@onready var drink = $"../Cup-kelp-milk"
 
 func _on_caramel_button_pressed() -> void:
 	if (toggled != true): 
@@ -12,5 +13,7 @@ func _on_caramel_button_pressed() -> void:
 		topping.position.y += 50
 		
 
-func _on_drink_pressed() -> void:
-	pass # Replace with function body.
+func _on_drink_button_pressed() -> void:
+	if (toggled):
+		var caramelTexture = load("res://assets/caramel-sauce-topping.PNG")
+		drink.add_topping(caramelTexture, Vector2(43, -10))
