@@ -2,6 +2,8 @@ extends Panel
 
 @onready var symbol_container: HBoxContainer = $HBoxContainer
 @onready var scene_button: TextureButton = $"../ChangeSceneButton"
+var order
+var order_success = [false, false, false]
 
 @onready var fixed_symbols = [
 	preload("res://items/kelp.tres"),
@@ -22,6 +24,7 @@ func show_order() -> void:
 	
 	var third_symbol = random_symbols.pick_random()
 	symbol_container.get_child(2).texture = third_symbol.order_symbol
+	order = [fixed_symbols[0], fixed_symbols[1], third_symbol]
 	
 	show()
 
