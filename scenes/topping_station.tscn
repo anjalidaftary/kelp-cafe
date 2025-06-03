@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bbypjag50exk1" path="res://assets/shell-bowl.png" id="6_1ld0s"]
 [ext_resource type="Script" path="res://scripts/caramel_sauce.gd" id="7_6rr1q"]
 [ext_resource type="Script" path="res://scripts/sea_foam.gd" id="9_nnfgs"]
-[ext_resource type="PackedScene" path="res://scenes/Cup-kelp-milk.tscn" id="10_m5bov"]
+[ext_resource type="PackedScene" uid="uid://b4e5ml1ft8jss" path="res://scenes/Cup-kelp-milk.tscn" id="10_m5bov"]
 
 [node name="ToppingStation" type="Node2D"]
 

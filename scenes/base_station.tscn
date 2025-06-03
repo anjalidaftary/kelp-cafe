@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bq87ufkf4htp0" path="res://assets/milk-bar.png" id="9_o4r2r"]
 [ext_resource type="Texture2D" uid="uid://buik1jbkmky50" path="res://assets/cup-kelp-milk.PNG" id="10_qrlqx"]
 [ext_resource type="Script" path="res://scripts/kelp_milk_cup.gd" id="11_8vlas"]
-[ext_resource type="Texture2D" uid="uid://db7pr8mexfrmx" path="res://assets/uglyarrow.png" id="12_0slrv"]
+[ext_resource type="Texture2D" uid="uid://duosi2tl6ckol" path="res://assets/uglyarrow.png" id="12_0slrv"]
 
 [sub_resource type="GDScript" id="GDScript_434wb"]
 script/source = "extends Sprite2D

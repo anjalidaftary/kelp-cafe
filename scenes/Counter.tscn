@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dehj5b7ncm5m8" path="res://assets/foam-order-symbol.png" id="8_b0lxp"]
 [ext_resource type="Texture2D" uid="uid://cfvl5nifi2wad" path="res://assets/pearl-order-symbol.png" id="9_5yxfq"]
 [ext_resource type="Script" path="res://scenes/arrow.gd" id="11_suvdv"]
-[ext_resource type="Texture2D" uid="uid://db7pr8mexfrmx" path="res://assets/uglyarrow.png" id="11_tqxoo"]
+[ext_resource type="Texture2D" uid="uid://duosi2tl6ckol" path="res://assets/uglyarrow.png" id="11_tqxoo"]
 
 [sub_resource type="Animation" id="Animation_hhnim"]
 length = 0.001
