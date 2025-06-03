@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b4e5ml1ft8jss"]
 
 [ext_resource type="Texture2D" uid="uid://buik1jbkmky50" path="res://assets/cup-kelp-milk.PNG" id="1_wwdxu"]
-[ext_resource type="Script" path="res://scenes/cup_kelp_milk.gd" id="1_xtusw"]
+[ext_resource type="Script" path="res://scripts/cup_kelp_milk.gd" id="1_xtusw"]
 
 [node name="Cup-kelp-milk" type="Node2D"]
 script = ExtResource("1_xtusw")
