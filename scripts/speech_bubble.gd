@@ -1,7 +1,7 @@
 extends Panel
 
 @onready var symbol_container: HBoxContainer = $HBoxContainer
-@onready var scene_button: Button = $"../SceneSwitch"
+@onready var scene_button: TextureButton = $"../ChangeSceneButton"
 
 @onready var fixed_symbols = [
 	preload("res://items/kelp.tres"),
@@ -28,7 +28,6 @@ func show_order() -> void:
 
 func _on_fish_button_2_pressed() -> void:
 	show_order()
-	scene_button.show()
 	
 
 func _on_ready() -> void:
