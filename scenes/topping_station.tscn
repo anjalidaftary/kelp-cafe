@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bbypjag50exk1" path="res://assets/shell-bowl.png" id="6_1ld0s"]
 [ext_resource type="Script" path="res://scripts/caramel_sauce.gd" id="7_6rr1q"]
 [ext_resource type="Script" path="res://scripts/sea_foam.gd" id="9_nnfgs"]
-[ext_resource type="Texture2D" uid="uid://buik1jbkmky50" path="res://assets/cup-kelp-milk.PNG" id="10_dw0le"]
+[ext_resource type="PackedScene" uid="uid://b4e5ml1ft8jss" path="res://scenes/Cup-kelp-milk.tscn" id="10_m5bov"]
 
 [node name="ToppingStation" type="Node2D"]
 
@@ -80,22 +80,19 @@ offset_top = -57.0
 offset_right = -871.0
 offset_bottom = 501.0
 
-[node name="Cup-kelp-milk" type="Sprite2D" parent="."]
-position = Vector2(605, 441)
-scale = Vector2(0.377281, 0.373018)
-texture = ExtResource("10_dw0le")
+[node name="Cup-kelp-milk" parent="." instance=ExtResource("10_m5bov")]
+position = Vector2(567, 444)
+scale = Vector2(0.7, 0.7)
 
-[node name="drink" type="TextureButton" parent="Cup-kelp-milk"]
-offset_left = -381.679
-offset_top = -581.741
-offset_right = 146.321
-offset_bottom = 380.259
+[node name="drinkButton" type="TextureButton" parent="Cup-kelp-milk"]
+offset_left = -140.0
+offset_top = -178.571
+offset_right = 120.0
+offset_bottom = 213.429
 
 [connection signal="pressed" from="Pearl/pearlButton" to="Pearl" method="_on_pearl_button_pressed"]
 [connection signal="pressed" from="Shell-bowl/shellButton" to="Shell-bowl" method="_on_shell_button_pressed"]
 [connection signal="pressed" from="Caramel-sauce/caramelButton" to="Caramel-sauce" method="_on_caramel_button_pressed"]
 [connection signal="pressed" from="Sea-foam/foamButton" to="Sea-foam" method="_on_foam_button_pressed"]
-[connection signal="pressed" from="Cup-kelp-milk/drink" to="Pearl" method="_on_drink_pressed"]
-[connection signal="pressed" from="Cup-kelp-milk/drink" to="Shell-bowl" method="_on_drink_pressed"]
-[connection signal="pressed" from="Cup-kelp-milk/drink" to="Caramel-sauce" method="_on_drink_pressed"]
-[connection signal="pressed" from="Cup-kelp-milk/drink" to="Sea-foam" method="_on_drink_pressed"]
+[connection signal="pressed" from="Cup-kelp-milk/drinkButton" to="Pearl" method="_on_drink_button_pressed"]
+[connection signal="pressed" from="Cup-kelp-milk/drinkButton" to="Sea-foam" method="_on_drink_button_pressed"]
