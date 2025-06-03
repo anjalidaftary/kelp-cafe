@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Topping" load_steps=4 format=3 uid="uid://byge6ss878y4c"]
+
+[ext_resource type="Texture2D" uid="uid://ed4aa3shrmkm" path="res://assets/caramel-sauce-topping.PNG" id="1_48tqe"]
+[ext_resource type="Script" path="res://items/topppings.gd" id="1_qud6c"]
+[ext_resource type="Texture2D" uid="uid://7qx1yisentoj" path="res://assets/caramel-order-symbol.png" id="2_yr4gh"]
+
+[resource]
+script = ExtResource("1_qud6c")
+name = "caramel"
+order_symbol = ExtResource("2_yr4gh")
+base_station_symbol = ExtResource("1_48tqe")

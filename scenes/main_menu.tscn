@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b0pkxjmsehyw8"]
 
-[ext_resource type="Texture2D" uid="uid://cnvp2ftqqrf0n" path="res://assets/start-screen.png" id="1_v32in"]
+[ext_resource type="Texture2D" uid="uid://c6ojp647n4ipb" path="res://assets/Start_screen.png" id="1_v32in"]
 
 [sub_resource type="GDScript" id="GDScript_q3aq3"]
 script/source = "extends TextureButton
