@@ -15,4 +15,6 @@ func _on_shell_button_pressed() -> void:
 func _on_drink_button_pressed() -> void:
 	if (toggled):
 		var shellTexture = load("res://assets/seashells-topping.png")
-		drink.add_topping(shellTexture, Vector2(43, -10))
+		drink.add_topping(shellTexture, Vector2(43, -5))
+		toggled = false;
+		topping.position.y += 50
