@@ -16,3 +16,6 @@ func _on_drink_button_pressed() -> void:
 	if (toggled):
 		var pearlTexture = load("res://assets/pearls-topping.PNG")
 		drink.add_topping(pearlTexture, Vector2(43, -10))
+		toggled = false;
+		topping.position.y += 50
+	
