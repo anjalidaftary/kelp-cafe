@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bi6nyd4hvg6cp"]
+[gd_scene load_steps=14 format=3 uid="uid://bi6nyd4hvg6cp"]
 
 [ext_resource type="Texture2D" uid="uid://sefkxrvfcq2g" path="res://assets/ice-cream-background.PNG" id="1_m4ant"]
 [ext_resource type="Texture2D" uid="uid://bg7vfeuvyeg3t" path="res://assets/ice-cream-bar.png" id="2_jxud5"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bq87ufkf4htp0" path="res://assets/milk-bar.png" id="9_o4r2r"]
 [ext_resource type="Texture2D" uid="uid://buik1jbkmky50" path="res://assets/cup-kelp-milk.PNG" id="10_qrlqx"]
 [ext_resource type="Script" path="res://scripts/kelp_milk_cup.gd" id="11_8vlas"]
+[ext_resource type="Texture2D" uid="uid://db7pr8mexfrmx" path="res://assets/uglyarrow.png" id="12_0slrv"]
 
 [sub_resource type="GDScript" id="GDScript_434wb"]
 script/source = "extends Sprite2D
@@ -193,10 +194,16 @@ texture = ExtResource("10_qrlqx")
 script = ExtResource("11_8vlas")
 
 [node name="ChangeSceneButton" type="TextureButton" parent="."]
-offset_left = 803.0
-offset_top = 478.0
-offset_right = 870.0
-offset_bottom = 574.0
+offset_left = 971.0
+offset_top = 631.0
+offset_right = 1101.0
+offset_bottom = 689.0
+metadata/_edit_lock_ = true
+
+[node name="Arrow" type="Sprite2D" parent="."]
+position = Vector2(1038, 664)
+scale = Vector2(0.0395062, 0.0365217)
+texture = ExtResource("12_0slrv")
 metadata/_edit_lock_ = true
 
 [connection signal="focus_entered" from="SuccessZone" to="MovingBar" method="_on_success_zone_entered"]

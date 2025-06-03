@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dse46hk1lgs0x"]
+[gd_scene load_steps=17 format=3 uid="uid://dse46hk1lgs0x"]
 
 [ext_resource type="Texture2D" uid="uid://c4e500lm4lncg" path="res://assets/order-background.PNG" id="1_tdlqi"]
 [ext_resource type="PackedScene" uid="uid://0sk6su1p8mq5" path="res://scenes/Fish.tscn" id="1_uj3bm"]
@@ -9,7 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://djmxlmlkum6bi" path="res://assets/kelp-order-symbol.png" id="7_md0bu"]
 [ext_resource type="Texture2D" uid="uid://dehj5b7ncm5m8" path="res://assets/foam-order-symbol.png" id="8_b0lxp"]
 [ext_resource type="Texture2D" uid="uid://cfvl5nifi2wad" path="res://assets/pearl-order-symbol.png" id="9_5yxfq"]
-[ext_resource type="Script" path="res://scripts/scene_switch.gd" id="10_3aaan"]
+[ext_resource type="Script" path="res://scenes/arrow.gd" id="11_suvdv"]
+[ext_resource type="Texture2D" uid="uid://db7pr8mexfrmx" path="res://assets/uglyarrow.png" id="11_tqxoo"]
 
 [sub_resource type="Animation" id="Animation_hhnim"]
 length = 0.001
@@ -122,14 +123,20 @@ layout_mode = 2
 texture = ExtResource("9_5yxfq")
 expand_mode = 2
 
-[node name="SceneSwitch" type="Button" parent="."]
-offset_left = 239.0
-offset_top = 204.0
-offset_right = 479.0
-offset_bottom = 293.0
-text = "Okay (someone make this art)"
-script = ExtResource("10_3aaan")
+[node name="Arrow" type="Sprite2D" parent="."]
+position = Vector2(416, 282)
+scale = Vector2(0.042963, 0.0391304)
+texture = ExtResource("11_tqxoo")
+script = ExtResource("11_suvdv")
+metadata/_edit_lock_ = true
+
+[node name="ChangeSceneButton" type="TextureButton" parent="."]
+offset_left = 341.0
+offset_top = 245.0
+offset_right = 477.0
+offset_bottom = 319.0
+metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="Fish/FishButton2" to="SpeechBubble" method="_on_fish_button_2_pressed"]
 [connection signal="ready" from="SpeechBubble" to="SpeechBubble" method="_on_ready"]
-[connection signal="pressed" from="SceneSwitch" to="SceneSwitch" method="_on_pressed"]
+[connection signal="pressed" from="ChangeSceneButton" to="Arrow" method="_on_change_scene_button_pressed"]
