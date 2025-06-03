@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Topping" load_steps=4 format=3 uid="uid://bgj4jo6phpua7"]
+
+[ext_resource type="Script" path="res://items/topppings.gd" id="1_5c6ni"]
+[ext_resource type="Texture2D" uid="uid://dlxa0jhyv5jit" path="res://assets/sea-foam-topping.PNG" id="1_x88em"]
+[ext_resource type="Texture2D" uid="uid://dehj5b7ncm5m8" path="res://assets/foam-order-symbol.png" id="2_efea3"]
+
+[resource]
+script = ExtResource("1_5c6ni")
+name = "Seafoam"
+order_symbol = ExtResource("2_efea3")
+base_station_symbol = ExtResource("1_x88em")
