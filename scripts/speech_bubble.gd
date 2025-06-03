@@ -25,7 +25,6 @@ func show_order() -> void:
 	
 	show()
 
-
 func _on_fish_button_2_pressed() -> void:
 	show_order()
 	

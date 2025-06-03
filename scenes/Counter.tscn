@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dse46hk1lgs0x"]
+[gd_scene load_steps=18 format=3 uid="uid://dse46hk1lgs0x"]
 
 [ext_resource type="Texture2D" uid="uid://c4e500lm4lncg" path="res://assets/order-background.PNG" id="1_tdlqi"]
 [ext_resource type="PackedScene" uid="uid://0sk6su1p8mq5" path="res://scenes/Fish.tscn" id="1_uj3bm"]
@@ -42,9 +42,25 @@ tracks/0/keys = {
 "values": [Vector2(0, 500), Vector2(0, 142)]
 }
 
+[sub_resource type="Animation" id="Animation_ltqjv"]
+resource_name = "exit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.366667, 0.7),
+"transitions": PackedFloat32Array(0.353553, 1, 1),
+"update": 0,
+"values": [Vector2(0, 130), Vector2(0, 110), Vector2(0, 500)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_q1yw7"]
 _data = {
 "RESET": SubResource("Animation_hhnim"),
+"exit": SubResource("Animation_ltqjv"),
 "pop-up": SubResource("Animation_blqn8")
 }
 
