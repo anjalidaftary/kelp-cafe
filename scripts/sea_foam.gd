@@ -18,3 +18,5 @@ func _on_drink_button_pressed() -> void:
 	if (toggled):
 		var foamTexture = load("res://assets/sea-foam-topping.PNG")
 		drink.add_topping(foamTexture, Vector2(43, -10))
+		toggled = false;
+		topping.position.y += 50
