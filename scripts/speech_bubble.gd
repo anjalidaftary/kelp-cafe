@@ -3,8 +3,10 @@ extends Panel
 @onready var symbol_container: HBoxContainer = $HBoxContainer
 @onready var scene_button: TextureButton = $"../ChangeSceneButton"
 var order
-var order_success = [false, false, false]
 
+var order_success = [false, false, false]
+#var kelpBase = fixed_symbols[0]
+#var seafoamBase = fixed_symbols[1]
 @onready var fixed_symbols = [
 	preload("res://items/kelp.tres"),
 	preload("res://items/seafoam.tres")
