@@ -4,12 +4,14 @@ extends Sprite2D
 @export var left_limit := 385
 @export var right_limit := 785
 
-@onready var button = $"../KelpButton"
+#@onready var button = $"../KelpButton"
 @onready var bar = $"../MovingBar"
 @onready var intersection = $Intersection
 @onready var success_zone = $"../SuccessZone"
 @onready var emptyCup = $"../EmptyBaseCup"
 @onready var kelpBaseCup = $"../KelpBaseCup"
+@onready var sandBaseCup = $"../SandBaseCup"
+@onready var jellyBaseCup = $"../JellyBaseCup"
 
 var done = false
 
@@ -47,7 +49,12 @@ func check_success1() -> void:
 	if (bar_rect.intersects(zone_rect)):
 		if (!done):
 			emptyCup.queue_free()
-			kelpBaseCup.visible = true
+			if (kelpPressed):
+				kelpBaseCup.visible = true
+			if (sandPressed):
+				sandBaseCup.visible = true
+			if (moonjellyPressed):
+				jellyBaseCup.visible = true
 			print("success")
 			successful = true
 			done = true
@@ -65,15 +72,15 @@ func _on_kelp_button_pressed() -> void:
 	
 func _on_sand_button_pressed() -> void:
 	if(!sandPressed):
-		buttonPressed = true;
-		emptyCup.visible = true 
 		print("sand pressed")
+		buttonPressed = true
+		emptyCup.visible = true
 	sandPressed = true;
 
 
 func _on_moon_jelly_button_pressed() -> void:
 	if(!moonjellyPressed):
+		print("moonjelly pressed")
 		buttonPressed = true;
 		emptyCup.visible = true 
-		print("moonjelly pressed")
 	moonjellyPressed = true;
