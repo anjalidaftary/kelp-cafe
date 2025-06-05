@@ -1,5 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://bi6nyd4hvg6cp"]
+[gd_scene load_steps=15 format=3 uid="uid://bi6nyd4hvg6cp"]
 
+[ext_resource type="Script" path="res://scenes/base_station.gd" id="1_2mmx2"]
 [ext_resource type="Texture2D" uid="uid://sefkxrvfcq2g" path="res://assets/ice-cream-background.PNG" id="1_m4ant"]
 [ext_resource type="Texture2D" uid="uid://bg7vfeuvyeg3t" path="res://assets/ice-cream-bar.png" id="2_jxud5"]
 [ext_resource type="Script" path="res://scripts/moving_bar.gd" id="3_8qkiy"]
@@ -91,6 +92,7 @@ func _on_change_scene_button_pressed() -> void:
 "
 
 [node name="BaseStation" type="Node2D"]
+script = ExtResource("1_2mmx2")
 metadata/_edit_lock_ = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -210,6 +212,7 @@ texture = ExtResource("12_0slrv")
 metadata/_edit_lock_ = true
 
 [connection signal="focus_entered" from="SuccessZone" to="MovingBar" method="_on_success_zone_entered"]
+[connection signal="pressed" from="KelpButton" to="." method="_on_kelp_button_pressed"]
 [connection signal="pressed" from="KelpButton" to="MovingBar" method="_on_kelp_button_pressed"]
 [connection signal="pressed" from="MoveToMilkButton" to="KelpBaseCup" method="_on_move_to_milk_button_pressed"]
 [connection signal="pressed" from="MoveToMilkButton" to="MilkBar" method="_on_move_to_milk_button_pressed"]
