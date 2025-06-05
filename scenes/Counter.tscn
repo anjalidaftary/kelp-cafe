@@ -65,7 +65,8 @@ _data = {
 }
 
 [sub_resource type="GDScript" id="GDScript_wh78x"]
-script/source = "extends TextureButton"
+script/source = "extends TextureButton
+"
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_twxvo"]
 

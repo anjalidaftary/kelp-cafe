@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://0sk6su1p8mq5"]
 
-[ext_resource type="Texture2D" uid="uid://b4n5pqusvwo6s" path="res://assets/sprites/Mackeral.PNG" id="1_dnxlb"]
+[ext_resource type="Texture2D" uid="uid://b4n5pqusvwo6s" path="res://assets/Mackeral.PNG" id="1_dnxlb"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_uhm0a"]
 a = Vector2(1, -119)
