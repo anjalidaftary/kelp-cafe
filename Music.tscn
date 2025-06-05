@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwlqo0pgtmq1m"]
+
+[ext_resource type="AudioStream" uid="uid://cxndrf873kbnt" path="res://assets/When-I-Was-A-Boy(chosic.com).mp3" id="1_dgusn"]
+[ext_resource type="Script" path="res://scripts/music.gd" id="2_uehxb"]
+
+[node name="Music" type="AudioStreamPlayer"]
+stream = ExtResource("1_dgusn")
+autoplay = true
+script = ExtResource("2_uehxb")

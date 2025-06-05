@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://bi6nyd4hvg6cp"]
 
-[ext_resource type="Script" path="res://scenes/base_station.gd" id="1_2mmx2"]
+[ext_resource type="Script" path="res://scripts/base_station.gd" id="1_2mmx2"]
 [ext_resource type="Texture2D" uid="uid://sefkxrvfcq2g" path="res://assets/ice-cream-background.PNG" id="1_m4ant"]
 [ext_resource type="Texture2D" uid="uid://bg7vfeuvyeg3t" path="res://assets/ice-cream-bar.png" id="2_jxud5"]
 [ext_resource type="Script" path="res://scripts/moving_bar.gd" id="3_8qkiy"]
@@ -12,10 +12,10 @@
 [ext_resource type="Texture2D" uid="uid://tcxo8a44y01p" path="res://assets/cup-jelly.png" id="9_cyydd"]
 [ext_resource type="Texture2D" uid="uid://t1j3dqe4xvyt" path="res://assets/cup-sand.png" id="9_josrt"]
 [ext_resource type="Texture2D" uid="uid://bq87ufkf4htp0" path="res://assets/milk-bar.png" id="9_o4r2r"]
-[ext_resource type="Script" path="res://scenes/sand_base_cup.gd" id="10_23ahr"]
+[ext_resource type="Script" path="res://scripts/sand_base_cup.gd" id="10_23ahr"]
 [ext_resource type="Texture2D" uid="uid://buik1jbkmky50" path="res://assets/cup-kelp-milk.PNG" id="10_qrlqx"]
 [ext_resource type="Script" path="res://scripts/kelp_milk_cup.gd" id="11_8vlas"]
-[ext_resource type="Script" path="res://scenes/jelly_base_cup.gd" id="12_ulx4w"]
+[ext_resource type="Script" path="res://scripts/jelly_base_cup.gd" id="12_ulx4w"]
 [ext_resource type="Texture2D" uid="uid://cxsuis410lrv2" path="res://assets/sand-ice-cream-button.png" id="14_qeomv"]
 [ext_resource type="Texture2D" uid="uid://d3xbvobd04h8u" path="res://assets/white-arrow.png" id="17_k4qom"]
 

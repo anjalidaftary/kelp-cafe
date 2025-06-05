@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://b0pkxjmsehyw8"]
+[gd_scene load_steps=4 format=3 uid="uid://b0pkxjmsehyw8"]
 
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_teuvf"]
 [ext_resource type="Texture2D" uid="uid://c6ojp647n4ipb" path="res://assets/Start_screen.png" id="1_v32in"]
 
 [sub_resource type="GDScript" id="GDScript_q3aq3"]
@@ -10,6 +11,7 @@ func _on_pressed() -> void:
 "
 
 [node name="MainMenu" type="Node2D"]
+script = ExtResource("1_teuvf")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 

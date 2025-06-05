@@ -1,5 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://v2vpvfpoa45d"]
+[gd_scene load_steps=16 format=3 uid="uid://v2vpvfpoa45d"]
 
+[ext_resource type="Script" path="res://scripts/topping_station.gd" id="1_fltki"]
 [ext_resource type="Texture2D" uid="uid://cipw02sv1jmlt" path="res://assets/toppings-background.png" id="1_ytthe"]
 [ext_resource type="Texture2D" uid="uid://dos7lmb65xtr7" path="res://assets/pearl-bowl.png" id="2_uehvf"]
 [ext_resource type="Script" path="res://scripts/pearl.gd" id="3_ukxqc"]
@@ -16,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://dgthtmw0ua24j" path="res://assets/locked-topping-2.PNG" id="14_0j0ap"]
 
 [node name="ToppingStation" type="Node2D"]
+script = ExtResource("1_fltki")
 
 [node name="BG" type="TextureRect" parent="."]
 offset_left = -74.0
