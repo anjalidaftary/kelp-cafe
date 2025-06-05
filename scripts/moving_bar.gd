@@ -39,7 +39,6 @@ func _on_kelp_button_pressed() -> void:
 	if(!kelpPressed):
 		buttonPressed = true;
 		emptyCup.visible = true 
-	
 	kelpPressed = true;
 
 
