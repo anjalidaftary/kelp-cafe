@@ -15,7 +15,8 @@ var done = false
 
 var buttonPressed = false
 var direction := 1  # 1 = right, -1 = left
-var successful = false
+var kelpPressed = false;
+var successful = false;
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -35,8 +36,11 @@ func _process(delta: float) -> void:
 
 
 func _on_kelp_button_pressed() -> void:
-	buttonPressed = true;
-	emptyCup.visible = true
+	if(!kelpPressed):
+		buttonPressed = true;
+		emptyCup.visible = true 
+	
+	kelpPressed = true;
 
 
 func check_success1() -> void:
@@ -48,6 +52,9 @@ func check_success1() -> void:
 			emptyCup.queue_free()
 			kelpBaseCup.visible = true
 			print("success")
+			successful = true
 			done = true
 	else:
 		print("missed")
+		bar.position.x = (385+785)/2
+		buttonPressed = true

@@ -62,8 +62,10 @@ func check_success2() -> void:
 		KelpMilkCup.visible = true
 	else:
 		print(\"missed\")
+		bar.position.x = (left_limit+right_limit)/2
+		buttonPressed = true
 	
-	buttonPressed = false
+	
 
 
 
