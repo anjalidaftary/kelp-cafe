@@ -51,9 +51,9 @@ func check_success1() -> void:
 			emptyCup.queue_free()
 			if (kelpPressed):
 				kelpBaseCup.visible = true
-			if (sandPressed):
+			elif (sandPressed):
 				sandBaseCup.visible = true
-			if (moonjellyPressed):
+			elif (moonjellyPressed):
 				jellyBaseCup.visible = true
 			print("success")
 			successful = true
@@ -61,7 +61,7 @@ func check_success1() -> void:
 	else:
 		print("missed")
 		bar.position.x = (385+785)/2
-		buttonPressed = true
+		buttonPressed = false
 
 func _on_kelp_button_pressed() -> void:
 	if(!kelpPressed):

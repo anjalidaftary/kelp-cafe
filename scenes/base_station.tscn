@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bi6nyd4hvg6cp"]
+[gd_scene load_steps=27 format=3 uid="uid://bi6nyd4hvg6cp"]
 
 [ext_resource type="Script" path="res://scenes/base_station.gd" id="1_2mmx2"]
 [ext_resource type="Texture2D" uid="uid://sefkxrvfcq2g" path="res://assets/ice-cream-background.PNG" id="1_m4ant"]
@@ -17,11 +17,19 @@
 [ext_resource type="Script" path="res://scripts/kelp_milk_cup.gd" id="11_8vlas"]
 [ext_resource type="Texture2D" uid="uid://duosi2tl6ckol" path="res://assets/uglyarrow.png" id="12_0slrv"]
 [ext_resource type="Script" path="res://scenes/jelly_base_cup.gd" id="12_ulx4w"]
+[ext_resource type="Script" path="res://scenes/jelly_base_cup_at_milk.gd" id="14_8b2dr"]
 [ext_resource type="Texture2D" uid="uid://cxsuis410lrv2" path="res://assets/sand-ice-cream-button.png" id="14_qeomv"]
+[ext_resource type="Script" path="res://scenes/sand_base_cup_at_milk.gd" id="15_5sw0v"]
 [ext_resource type="Texture2D" uid="uid://cwel8vvk6ru7r" path="res://assets/jelly-ice-cream-button.png" id="15_58g63"]
+[ext_resource type="Texture2D" uid="uid://qrtsnn1wgigi" path="res://assets/cup-sand-milk.png" id="19_xp6x4"]
+[ext_resource type="Script" path="res://scenes/sand_milk_cup.gd" id="20_2hfes"]
+[ext_resource type="Texture2D" uid="uid://bttjglxb7wqyn" path="res://assets/cup-jelly-milk.png" id="21_8kawm"]
+[ext_resource type="Script" path="res://scenes/jelly_milk_cup.gd" id="22_h68l2"]
 
 [sub_resource type="GDScript" id="GDScript_434wb"]
 script/source = "extends Sprite2D
+
+
 
 var bar_speed := 500  # pixels per second
 var left_limit := 410
@@ -34,6 +42,24 @@ var right_limit := 650
 
 @onready var KelpBaseCup = $\"../KelpBaseCupAtMilk\"
 @onready var KelpMilkCup = $\"../KelpMilkCup\"
+
+
+@onready var JellyBaseCup = $\"../JellyBaseCupAtMilk\"
+@onready var JellyMilkCup = $\"../JellyMilkCup\"
+
+@onready var SandBaseCup = $\"../SandBaseCupAtMilk\"
+@onready var SandMilkCup = $\"../SandMilkCup\"
+
+@onready var movingBar = $\"../MovingBar\"
+
+
+#@onready var isKelp = movingBar.kelpPressed
+#@onready var isJelly = movingBar.moonjellyPressed
+#@onready var isSand = movingBar.sandPressed
+var kelpChosen = false
+var jellyChosen = false
+var sandChosen = false
+
 
 var isReady = false
 
@@ -65,8 +91,16 @@ func check_success2() -> void:
 	
 	if (bar_rect.intersects(zone_rect)):
 		print(\"success\")
-		KelpBaseCup.queue_free()
-		KelpMilkCup.visible = true
+		if (kelpChosen):
+			KelpBaseCup.queue_free()
+			KelpMilkCup.visible = true
+		elif (jellyChosen):
+			JellyBaseCup.queue_free()
+			JellyMilkCup.visible = true
+		elif (sandChosen):
+			SandBaseCup.queue_free()
+			SandMilkCup.visible = true
+		
 	else:
 		print(\"missed\")
 		bar.position.x = (left_limit+right_limit)/2
@@ -87,14 +121,21 @@ func _on_milk_button_pressed() -> void:
 	isReady = true
 
 
-func _on_move_to_milk_button_pressed() -> void:
-	pass
-
-
 func _on_change_scene_button_pressed() -> void:
 	KelpMilkCup.queue_free()
 	get_tree().change_scene_to_file(\"res://scenes/topping_station.tscn\")
-	
+
+
+func _on_sand_button_pressed() -> void:
+	sandChosen = true
+
+
+func _on_jelly_button_pressed() -> void:
+	jellyChosen = true
+
+
+func _on_kelp_button_pressed() -> void:
+	kelpChosen = true
 "
 
 [node name="BaseStation" type="Node2D"]
@@ -136,6 +177,7 @@ offset_top = 121.0
 offset_right = 235.0
 offset_bottom = 197.0
 action_mode = 0
+metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(559, 369)
@@ -190,6 +232,20 @@ texture = ExtResource("6_4jkjp")
 script = ExtResource("8_kf7bq")
 metadata/_edit_lock_ = true
 
+[node name="JellyBaseCupAtMilk" type="Sprite2D" parent="."]
+position = Vector2(858.5, 520)
+scale = Vector2(0.166525, 0.147561)
+texture = ExtResource("9_cyydd")
+script = ExtResource("14_8b2dr")
+metadata/_edit_lock_ = true
+
+[node name="SandBaseCupAtMilk" type="Sprite2D" parent="."]
+position = Vector2(860, 520.5)
+scale = Vector2(0.167797, 0.145732)
+texture = ExtResource("9_josrt")
+script = ExtResource("15_5sw0v")
+metadata/_edit_lock_ = true
+
 [node name="MilkBar" type="Sprite2D" parent="."]
 position = Vector2(534, 361)
 scale = Vector2(0.527119, 0.462195)
@@ -217,6 +273,20 @@ position = Vector2(860, 521)
 scale = Vector2(0.169227, 0.146303)
 texture = ExtResource("10_qrlqx")
 script = ExtResource("11_8vlas")
+
+[node name="SandMilkCup" type="Sprite2D" parent="."]
+position = Vector2(861.5, 520)
+scale = Vector2(0.174153, 0.145122)
+texture = ExtResource("19_xp6x4")
+script = ExtResource("20_2hfes")
+metadata/_edit_lock_ = true
+
+[node name="JellyMilkCup" type="Sprite2D" parent="."]
+position = Vector2(861.5, 520.5)
+scale = Vector2(0.176695, 0.148171)
+texture = ExtResource("21_8kawm")
+script = ExtResource("22_h68l2")
+metadata/_edit_lock_ = true
 
 [node name="ChangeSceneButton" type="TextureButton" parent="."]
 offset_left = 971.0
@@ -280,9 +350,16 @@ metadata/_edit_lock_ = true
 [connection signal="focus_entered" from="SuccessZone" to="MovingBar" method="_on_success_zone_entered"]
 [connection signal="pressed" from="KelpButton" to="." method="_on_kelp_button_pressed"]
 [connection signal="pressed" from="KelpButton" to="MovingBar" method="_on_kelp_button_pressed"]
+[connection signal="pressed" from="KelpButton" to="KelpBaseCup" method="_on_kelp_button_pressed"]
+[connection signal="pressed" from="KelpButton" to="MilkBar" method="_on_kelp_button_pressed"]
 [connection signal="pressed" from="MoveToMilkButton" to="KelpBaseCup" method="_on_move_to_milk_button_pressed"]
-[connection signal="pressed" from="MoveToMilkButton" to="MilkBar" method="_on_move_to_milk_button_pressed"]
+[connection signal="pressed" from="MoveToMilkButton" to="SandBaseCup" method="_on_move_to_milk_button_pressed"]
+[connection signal="pressed" from="MoveToMilkButton" to="JellyBaseCup" method="_on_move_to_milk_button_pressed"]
 [connection signal="pressed" from="MilkButton" to="MilkBar" method="_on_milk_button_pressed"]
 [connection signal="pressed" from="ChangeSceneButton" to="MilkBar" method="_on_change_scene_button_pressed"]
 [connection signal="pressed" from="SandButton" to="MovingBar" method="_on_sand_button_pressed"]
+[connection signal="pressed" from="SandButton" to="MilkBar" method="_on_sand_button_pressed"]
+[connection signal="pressed" from="SandButton" to="SandBaseCup" method="_on_sand_button_pressed"]
 [connection signal="pressed" from="JellyButton" to="MovingBar" method="_on_moon_jelly_button_pressed"]
+[connection signal="pressed" from="JellyButton" to="MilkBar" method="_on_jelly_button_pressed"]
+[connection signal="pressed" from="JellyButton" to="JellyBaseCup" method="_on_jelly_button_pressed"]
