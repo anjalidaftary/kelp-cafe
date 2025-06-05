@@ -148,7 +148,6 @@ position = Vector2(445, 270)
 scale = Vector2(0.660899, 0.601942)
 texture = ExtResource("10_7clfu")
 script = ExtResource("11_suvdv")
-metadata/_edit_lock_ = true
 
 [node name="ChangeSceneButton" type="TextureButton" parent="."]
 offset_left = 341.0

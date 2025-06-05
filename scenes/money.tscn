@@ -6,6 +6,7 @@
 [sub_resource type="SystemFont" id="SystemFont_deocm"]
 font_names = PackedStringArray("Arial Black")
 font_weight = 375
+subpixel_positioning = 0
 
 [node name="Money" type="Control"]
 layout_mode = 3

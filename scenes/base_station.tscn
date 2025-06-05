@@ -227,10 +227,9 @@ offset_bottom = 689.0
 metadata/_edit_lock_ = true
 
 [node name="Arrow" type="Sprite2D" parent="."]
-position = Vector2(1038, 664)
-scale = Vector2(0.0395062, 0.0365217)
+position = Vector2(1010, 655)
+scale = Vector2(0.57993, 0.536119)
 texture = ExtResource("17_k4qom")
-metadata/_edit_lock_ = true
 
 [node name="SandCover" type="ColorRect" parent="."]
 offset_left = 284.0
