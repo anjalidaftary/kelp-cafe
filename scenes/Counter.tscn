@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dse46hk1lgs0x"]
+[gd_scene load_steps=19 format=3 uid="uid://dse46hk1lgs0x"]
 
 [ext_resource type="Texture2D" uid="uid://c4e500lm4lncg" path="res://assets/order-background.PNG" id="1_tdlqi"]
 [ext_resource type="PackedScene" uid="uid://0sk6su1p8mq5" path="res://scenes/Fish.tscn" id="1_uj3bm"]
@@ -9,8 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://djmxlmlkum6bi" path="res://assets/kelp-order-symbol.png" id="7_md0bu"]
 [ext_resource type="Texture2D" uid="uid://dehj5b7ncm5m8" path="res://assets/foam-order-symbol.png" id="8_b0lxp"]
 [ext_resource type="Texture2D" uid="uid://cfvl5nifi2wad" path="res://assets/pearl-order-symbol.png" id="9_5yxfq"]
+[ext_resource type="Texture2D" uid="uid://d3xbvobd04h8u" path="res://assets/white-arrow.png" id="10_7clfu"]
 [ext_resource type="Script" path="res://scripts/arrow.gd" id="11_suvdv"]
-[ext_resource type="Texture2D" uid="uid://duosi2tl6ckol" path="res://assets/uglyarrow.png" id="11_tqxoo"]
+[ext_resource type="PackedScene" uid="uid://cey5rpfgqijdl" path="res://scenes/money.tscn" id="12_pi2lv"]
 
 [sub_resource type="Animation" id="Animation_hhnim"]
 length = 0.001
@@ -143,7 +144,7 @@ expand_mode = 2
 [node name="Arrow" type="Sprite2D" parent="."]
 position = Vector2(416, 282)
 scale = Vector2(0.042963, 0.0391304)
-texture = ExtResource("11_tqxoo")
+texture = ExtResource("10_7clfu")
 script = ExtResource("11_suvdv")
 metadata/_edit_lock_ = true
 
@@ -152,6 +153,18 @@ offset_left = 341.0
 offset_top = 245.0
 offset_right = 477.0
 offset_bottom = 319.0
+metadata/_edit_lock_ = true
+
+[node name="Money" parent="." instance=ExtResource("12_pi2lv")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -490.0
+offset_top = -315.0
+offset_right = -490.0
+offset_bottom = -315.0
+grow_horizontal = 1
+grow_vertical = 1
 metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="Fish/FishButton2" to="Fish" method="_on_fish_button_2_pressed"]
