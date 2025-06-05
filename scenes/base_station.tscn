@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bi6nyd4hvg6cp"]
+[gd_scene load_steps=21 format=3 uid="uid://bi6nyd4hvg6cp"]
 
 [ext_resource type="Script" path="res://scenes/base_station.gd" id="1_2mmx2"]
 [ext_resource type="Texture2D" uid="uid://sefkxrvfcq2g" path="res://assets/ice-cream-background.PNG" id="1_m4ant"]
@@ -9,11 +9,16 @@
 [ext_resource type="Texture2D" uid="uid://w114cx6xj60i" path="res://assets/cup-kelp.PNG" id="6_4jkjp"]
 [ext_resource type="Script" path="res://scripts/kelp_base_cup.gd" id="7_fxih7"]
 [ext_resource type="Script" path="res://scripts/kelp_base_cup_at_milk.gd" id="8_kf7bq"]
+[ext_resource type="Texture2D" uid="uid://tcxo8a44y01p" path="res://assets/cup-jelly.png" id="9_cyydd"]
+[ext_resource type="Texture2D" uid="uid://t1j3dqe4xvyt" path="res://assets/cup-sand.png" id="9_josrt"]
 [ext_resource type="Texture2D" uid="uid://bq87ufkf4htp0" path="res://assets/milk-bar.png" id="9_o4r2r"]
+[ext_resource type="Script" path="res://scenes/sand_base_cup.gd" id="10_23ahr"]
 [ext_resource type="Texture2D" uid="uid://buik1jbkmky50" path="res://assets/cup-kelp-milk.PNG" id="10_qrlqx"]
 [ext_resource type="Script" path="res://scripts/kelp_milk_cup.gd" id="11_8vlas"]
 [ext_resource type="Texture2D" uid="uid://duosi2tl6ckol" path="res://assets/uglyarrow.png" id="12_0slrv"]
+[ext_resource type="Script" path="res://scenes/jelly_base_cup.gd" id="12_ulx4w"]
 [ext_resource type="Texture2D" uid="uid://cxsuis410lrv2" path="res://assets/sand-ice-cream-button.png" id="14_qeomv"]
+[ext_resource type="Texture2D" uid="uid://cwel8vvk6ru7r" path="res://assets/jelly-ice-cream-button.png" id="15_58g63"]
 
 [sub_resource type="GDScript" id="GDScript_434wb"]
 script/source = "extends Sprite2D
@@ -157,6 +162,20 @@ texture = ExtResource("6_4jkjp")
 script = ExtResource("7_fxih7")
 metadata/_edit_lock_ = true
 
+[node name="SandBaseCup" type="Sprite2D" parent="."]
+position = Vector2(356.5, 486.5)
+scale = Vector2(0.222458, 0.19939)
+texture = ExtResource("9_josrt")
+script = ExtResource("10_23ahr")
+metadata/_edit_lock_ = true
+
+[node name="JellyBaseCup" type="Sprite2D" parent="."]
+position = Vector2(355.5, 489)
+scale = Vector2(0.225, 0.202439)
+texture = ExtResource("9_cyydd")
+script = ExtResource("12_ulx4w")
+metadata/_edit_lock_ = true
+
 [node name="MoveToMilkButton" type="TextureButton" parent="."]
 offset_left = 276.0
 offset_top = 419.0
@@ -212,24 +231,51 @@ scale = Vector2(0.0395062, 0.0365217)
 texture = ExtResource("12_0slrv")
 metadata/_edit_lock_ = true
 
-[node name="SandButton" type="TextureButton" parent="."]
-offset_left = 281.0
-offset_top = 118.0
-offset_right = 370.0
-offset_bottom = 195.0
+[node name="SandCover" type="ColorRect" parent="."]
+offset_left = 284.0
+offset_top = 119.0
+offset_right = 366.0
+offset_bottom = 193.0
 metadata/_edit_lock_ = true
 
-[node name="MoonJellyButton" type="TextureButton" parent="."]
+[node name="SandSymbol" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(541, 354)
+scale = Vector2(0.438983, 0.475)
+texture = ExtResource("14_qeomv")
+metadata/_edit_lock_ = true
+
+[node name="SandButton" type="TextureButton" parent="."]
+top_level = true
+z_index = 2
+offset_left = 282.0
+offset_top = 117.0
+offset_right = 371.0
+offset_bottom = 196.0
+action_mode = 0
+metadata/_edit_lock_ = true
+
+[node name="JellyCover" type="ColorRect" parent="."]
+offset_left = 422.0
+offset_top = 117.0
+offset_right = 500.0
+offset_bottom = 189.0
+metadata/_edit_lock_ = true
+
+[node name="JellySymbol" type="Sprite2D" parent="."]
+position = Vector2(564, 358)
+scale = Vector2(0.489672, 0.485823)
+texture = ExtResource("15_58g63")
+metadata/_edit_lock_ = true
+
+[node name="JellyButton" type="TextureButton" parent="."]
+z_index = 2
 offset_left = 419.0
 offset_top = 114.0
 offset_right = 506.0
 offset_bottom = 194.0
+action_mode = 0
 metadata/_edit_lock_ = true
-
-[node name="SandSymbol" type="Sprite2D" parent="."]
-position = Vector2(541, 355)
-scale = Vector2(0.438983, 0.475)
-texture = ExtResource("14_qeomv")
 
 [connection signal="focus_entered" from="SuccessZone" to="MovingBar" method="_on_success_zone_entered"]
 [connection signal="pressed" from="KelpButton" to="." method="_on_kelp_button_pressed"]
@@ -239,4 +285,4 @@ texture = ExtResource("14_qeomv")
 [connection signal="pressed" from="MilkButton" to="MilkBar" method="_on_milk_button_pressed"]
 [connection signal="pressed" from="ChangeSceneButton" to="MilkBar" method="_on_change_scene_button_pressed"]
 [connection signal="pressed" from="SandButton" to="MovingBar" method="_on_sand_button_pressed"]
-[connection signal="pressed" from="MoonJellyButton" to="MovingBar" method="_on_moon_jelly_button_pressed"]
+[connection signal="pressed" from="JellyButton" to="MovingBar" method="_on_moon_jelly_button_pressed"]
