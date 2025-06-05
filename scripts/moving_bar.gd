@@ -15,8 +15,10 @@ var done = false
 
 var buttonPressed = false
 var direction := 1  # 1 = right, -1 = left
-var kelpPressed = false;
-var successful = false;
+var kelpPressed = false
+var successful = false
+var sandPressed = false
+var moonjellyPressed = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -35,11 +37,7 @@ func _process(delta: float) -> void:
 			direction = 1
 
 
-func _on_kelp_button_pressed() -> void:
-	if(!kelpPressed):
-		buttonPressed = true;
-		emptyCup.visible = true 
-	kelpPressed = true;
+
 
 
 func check_success1() -> void:
@@ -57,3 +55,25 @@ func check_success1() -> void:
 		print("missed")
 		bar.position.x = (385+785)/2
 		buttonPressed = true
+
+func _on_kelp_button_pressed() -> void:
+	if(!kelpPressed):
+		buttonPressed = true;
+		emptyCup.visible = true 
+		print("kelp pressed")
+	kelpPressed = true;
+	
+func _on_sand_button_pressed() -> void:
+	if(!sandPressed):
+		buttonPressed = true;
+		emptyCup.visible = true 
+		print("sand pressed")
+	sandPressed = true;
+
+
+func _on_moon_jelly_button_pressed() -> void:
+	if(!moonjellyPressed):
+		buttonPressed = true;
+		emptyCup.visible = true 
+		print("moonjelly pressed")
+	moonjellyPressed = true;
