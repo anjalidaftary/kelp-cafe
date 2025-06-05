@@ -15,9 +15,9 @@
 [ext_resource type="Script" path="res://scenes/sand_base_cup.gd" id="10_23ahr"]
 [ext_resource type="Texture2D" uid="uid://buik1jbkmky50" path="res://assets/cup-kelp-milk.PNG" id="10_qrlqx"]
 [ext_resource type="Script" path="res://scripts/kelp_milk_cup.gd" id="11_8vlas"]
-[ext_resource type="Texture2D" uid="uid://duosi2tl6ckol" path="res://assets/uglyarrow.png" id="12_0slrv"]
 [ext_resource type="Script" path="res://scenes/jelly_base_cup.gd" id="12_ulx4w"]
 [ext_resource type="Texture2D" uid="uid://cxsuis410lrv2" path="res://assets/sand-ice-cream-button.png" id="14_qeomv"]
+[ext_resource type="Texture2D" uid="uid://d3xbvobd04h8u" path="res://assets/white-arrow.png" id="17_k4qom"]
 
 [sub_resource type="GDScript" id="GDScript_434wb"]
 script/source = "extends Sprite2D
@@ -35,6 +35,8 @@ var right_limit := 650
 @onready var KelpMilkCup = $\"../KelpMilkCup\"
 
 var isReady = false
+
+
 
 
 var buttonPressed = false
@@ -227,7 +229,7 @@ metadata/_edit_lock_ = true
 [node name="Arrow" type="Sprite2D" parent="."]
 position = Vector2(1038, 664)
 scale = Vector2(0.0395062, 0.0365217)
-texture = ExtResource("12_0slrv")
+texture = ExtResource("17_k4qom")
 metadata/_edit_lock_ = true
 
 [node name="SandCover" type="ColorRect" parent="."]

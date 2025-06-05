@@ -9,8 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://djmxlmlkum6bi" path="res://assets/kelp-order-symbol.png" id="7_md0bu"]
 [ext_resource type="Texture2D" uid="uid://dehj5b7ncm5m8" path="res://assets/foam-order-symbol.png" id="8_b0lxp"]
 [ext_resource type="Texture2D" uid="uid://cfvl5nifi2wad" path="res://assets/pearl-order-symbol.png" id="9_5yxfq"]
+[ext_resource type="Texture2D" uid="uid://d3xbvobd04h8u" path="res://assets/white-arrow.png" id="10_7clfu"]
 [ext_resource type="Script" path="res://scripts/arrow.gd" id="11_suvdv"]
-[ext_resource type="Texture2D" uid="uid://duosi2tl6ckol" path="res://assets/uglyarrow.png" id="11_tqxoo"]
 
 [sub_resource type="Animation" id="Animation_hhnim"]
 length = 0.001
@@ -143,7 +143,7 @@ expand_mode = 2
 [node name="Arrow" type="Sprite2D" parent="."]
 position = Vector2(416, 282)
 scale = Vector2(0.042963, 0.0391304)
-texture = ExtResource("11_tqxoo")
+texture = ExtResource("10_7clfu")
 script = ExtResource("11_suvdv")
 metadata/_edit_lock_ = true
 
