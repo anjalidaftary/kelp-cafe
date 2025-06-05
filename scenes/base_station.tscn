@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bi6nyd4hvg6cp"]
+[gd_scene load_steps=21 format=3 uid="uid://bi6nyd4hvg6cp"]
 
 [ext_resource type="Script" path="res://scripts/base_station.gd" id="1_2mmx2"]
 [ext_resource type="Texture2D" uid="uid://sefkxrvfcq2g" path="res://assets/ice-cream-background.PNG" id="1_m4ant"]
@@ -18,6 +18,7 @@
 [ext_resource type="Script" path="res://scripts/jelly_base_cup.gd" id="12_ulx4w"]
 [ext_resource type="Texture2D" uid="uid://cxsuis410lrv2" path="res://assets/sand-ice-cream-button.png" id="14_qeomv"]
 [ext_resource type="Texture2D" uid="uid://d3xbvobd04h8u" path="res://assets/white-arrow.png" id="17_k4qom"]
+[ext_resource type="Script" path="res://scenes/arrow.gd" id="18_0lvl8"]
 
 [sub_resource type="GDScript" id="GDScript_434wb"]
 script/source = "extends Sprite2D
@@ -33,6 +34,8 @@ var right_limit := 650
 
 @onready var KelpBaseCup = $\"../KelpBaseCupAtMilk\"
 @onready var KelpMilkCup = $\"../KelpMilkCup\"
+@onready var arrow = $\"../Arrow\"
+@onready var sceneButton = $\"../ChangeSceneButton\"
 
 var isReady = false
 
@@ -68,6 +71,8 @@ func check_success2() -> void:
 		print(\"success\")
 		KelpBaseCup.queue_free()
 		KelpMilkCup.visible = true
+		arrow.visible = true
+		sceneButton.disabled = false
 	else:
 		print(\"missed\")
 		bar.position.x = (left_limit+right_limit)/2
@@ -224,12 +229,14 @@ offset_left = 971.0
 offset_top = 631.0
 offset_right = 1101.0
 offset_bottom = 689.0
+disabled = true
 metadata/_edit_lock_ = true
 
 [node name="Arrow" type="Sprite2D" parent="."]
 position = Vector2(1010, 655)
 scale = Vector2(0.57993, 0.536119)
 texture = ExtResource("17_k4qom")
+script = ExtResource("18_0lvl8")
 
 [node name="SandCover" type="ColorRect" parent="."]
 offset_left = 284.0
