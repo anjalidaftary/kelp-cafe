@@ -3,7 +3,7 @@ var order_progress
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	Music.play_music_level()
 	#var order_progress = get_tree().get_root().get_node("SpeechBubble").get("order_progress")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
