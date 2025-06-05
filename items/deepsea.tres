@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Topping" load_steps=4 format=3 uid="uid://854rehbmfagu"]
+
+[ext_resource type="Texture2D" uid="uid://bykm24a7pi6tv" path="res://assets/deep-sea-sauce-topping.png" id="1_fn2oe"]
+[ext_resource type="Script" path="res://items/topppings.gd" id="1_wwdgs"]
+[ext_resource type="Texture2D" uid="uid://b3fqjfg0iiheg" path="res://assets/deep-sea-order-symbol.png" id="2_6vqul"]
+
+[resource]
+script = ExtResource("1_wwdgs")
+name = ""
+order_symbol = ExtResource("2_6vqul")
+base_station_symbol = ExtResource("1_fn2oe")

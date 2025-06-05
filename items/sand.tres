@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Topping" load_steps=3 format=3 uid="uid://cvtllyj1txndx"]
+
+[ext_resource type="Script" path="res://items/topppings.gd" id="1_ko0a2"]
+[ext_resource type="Texture2D" uid="uid://b4vb264ewcd6f" path="res://assets/sand-order-symbol.png" id="1_tdrrq"]
+
+[resource]
+script = ExtResource("1_ko0a2")
+name = "sand"
+order_symbol = ExtResource("1_tdrrq")
