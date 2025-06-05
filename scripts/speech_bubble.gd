@@ -8,20 +8,17 @@ var order
 @onready var order_success = []
 @onready var order_progress = ["idk", "idk", "idk"]
 
-@onready var fixed_symbols = [
-	preload("res://items/kelp.tres"),
-	preload("res://items/seafoam.tres")
-]
+@onready var foam_symbol = preload("res://items/seafoam.tres")
 
-@onready var fixed_symbols_string = [
-	"kelp",
-	"seafoam"
-]
-
-@onready var random_symbols = [
+@onready var random_toppings = [
 	preload("res://items/pearl.tres"),
 	preload("res://items/seashell.tres"),
-	preload("res://items/caramel.tres")
+	preload("res://items/caramel.tres"),
+	
+]
+
+@onready var random_flavors = [
+	
 ]
 
 @onready var random_symbols_string = [
