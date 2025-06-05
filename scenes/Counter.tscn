@@ -154,5 +154,6 @@ offset_bottom = 319.0
 metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="Fish/FishButton2" to="SpeechBubble" method="_on_fish_button_2_pressed"]
+[connection signal="pressed" from="Fish/FishButton2" to="Arrow" method="_on_fish_button_2_pressed"]
 [connection signal="ready" from="SpeechBubble" to="SpeechBubble" method="_on_ready"]
 [connection signal="pressed" from="ChangeSceneButton" to="Arrow" method="_on_change_scene_button_pressed"]
