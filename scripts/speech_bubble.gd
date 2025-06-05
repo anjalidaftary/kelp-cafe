@@ -30,9 +30,13 @@ var order
 	"caramel"
 ]
 
+func _on_ready() -> void:
+	hide()
+
 func show_order() -> void:
 	for child in symbol_container.get_children():
 		child.texture = null
+		
 	symbol_container.get_child(0).texture = fixed_symbols[0].order_symbol
 	symbol_container.get_child(1).texture = fixed_symbols[1].order_symbol
 	
@@ -44,12 +48,4 @@ func show_order() -> void:
 	var index = random_symbols.find(third_symbol)
 	order_success = [fixed_symbols_string[0], fixed_symbols_string[1], random_symbols_string[index]]
 	
-	
 	show()
-
-func _on_fish_button_2_pressed() -> void:
-	show_order()
-	
-
-func _on_ready() -> void:
-	hide()
