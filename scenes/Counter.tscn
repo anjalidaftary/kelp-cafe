@@ -142,8 +142,8 @@ texture = ExtResource("9_5yxfq")
 expand_mode = 2
 
 [node name="Arrow" type="Sprite2D" parent="."]
-position = Vector2(416, 282)
-scale = Vector2(0.042963, 0.0391304)
+position = Vector2(445, 270)
+scale = Vector2(0.660899, 0.601942)
 texture = ExtResource("10_7clfu")
 script = ExtResource("11_suvdv")
 metadata/_edit_lock_ = true
