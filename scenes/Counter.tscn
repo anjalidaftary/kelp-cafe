@@ -27,21 +27,6 @@ tracks/0/keys = {
 "values": [Vector2(0, 142)]
 }
 
-[sub_resource type="Animation" id="Animation_blqn8"]
-resource_name = "pop-up"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.666667),
-"transitions": PackedFloat32Array(0.406126, 1),
-"update": 0,
-"values": [Vector2(0, 500), Vector2(0, 142)]
-}
-
 [sub_resource type="Animation" id="Animation_ltqjv"]
 resource_name = "exit"
 tracks/0/type = "value"
@@ -55,6 +40,21 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(0.353553, 1, 1),
 "update": 0,
 "values": [Vector2(0, 130), Vector2(0, 110), Vector2(0, 500)]
+}
+
+[sub_resource type="Animation" id="Animation_blqn8"]
+resource_name = "pop-up"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.666667),
+"transitions": PackedFloat32Array(0.406126, 1),
+"update": 0,
+"values": [Vector2(0, 500), Vector2(0, 142)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_q1yw7"]
