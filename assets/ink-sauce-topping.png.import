@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6yxmqiq3dsr0"
-path="res://.godot/imported/bg-PLACEHOLDER.jpg-90bab299edafba3656b1beacee5632b8.ctex"
+uid="uid://budkna7by6eb6"
+path="res://.godot/imported/ink-sauce-topping.png-ca6b3193f443ea72e3239b93b7caa1ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/bg-PLACEHOLDER.jpg"
-dest_files=["res://.godot/imported/bg-PLACEHOLDER.jpg-90bab299edafba3656b1beacee5632b8.ctex"]
+source_file="res://assets/ink-sauce-topping.png"
+dest_files=["res://.godot/imported/ink-sauce-topping.png-ca6b3193f443ea72e3239b93b7caa1ee.ctex"]
 
 [params]
 
