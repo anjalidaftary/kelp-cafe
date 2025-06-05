@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bi6nyd4hvg6cp"]
+[gd_scene load_steps=20 format=3 uid="uid://bi6nyd4hvg6cp"]
 
 [ext_resource type="Script" path="res://scenes/base_station.gd" id="1_2mmx2"]
 [ext_resource type="Texture2D" uid="uid://sefkxrvfcq2g" path="res://assets/ice-cream-background.PNG" id="1_m4ant"]
@@ -18,7 +18,6 @@
 [ext_resource type="Texture2D" uid="uid://duosi2tl6ckol" path="res://assets/uglyarrow.png" id="12_0slrv"]
 [ext_resource type="Script" path="res://scenes/jelly_base_cup.gd" id="12_ulx4w"]
 [ext_resource type="Texture2D" uid="uid://cxsuis410lrv2" path="res://assets/sand-ice-cream-button.png" id="14_qeomv"]
-[ext_resource type="Texture2D" uid="uid://cwel8vvk6ru7r" path="res://assets/jelly-ice-cream-button.png" id="15_58g63"]
 
 [sub_resource type="GDScript" id="GDScript_434wb"]
 script/source = "extends Sprite2D
@@ -265,7 +264,6 @@ metadata/_edit_lock_ = true
 [node name="JellySymbol" type="Sprite2D" parent="."]
 position = Vector2(564, 358)
 scale = Vector2(0.489672, 0.485823)
-texture = ExtResource("15_58g63")
 metadata/_edit_lock_ = true
 
 [node name="JellyButton" type="TextureButton" parent="."]
