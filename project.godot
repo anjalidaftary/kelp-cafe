@@ -21,11 +21,7 @@ Music="*res://scenes/Music.tscn"
 Global="*res://scenes/Global.tscn"
 GlobalTopping="*res://scripts/global_topping.gd"
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
 GlobalUnlockables="*res://scripts/global_unlockables.gd"
-=======
-GlobalScript="*res://scripts/global_script.gd"
->>>>>>> Stashed changes
 =======
 GlobalScript="*res://scripts/global_script.gd"
 >>>>>>> Stashed changes

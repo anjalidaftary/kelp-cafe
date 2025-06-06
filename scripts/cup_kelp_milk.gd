@@ -16,10 +16,6 @@ func add_topping(texture: Texture, offset := Vector2.ZERO):
 	topping.scale = Vector2(0.50, 0.50)
 	toppings_node.add_child(topping)
 	toppings_node.move_child(topping, toppings_node.get_child_count() - 1)
-	
-	Global.madeOrder.append(topping_name)
-	print("Added topping: ", topping_name)
-	print("Current madeOrder: ", Global.madeOrder)
 
 func _ready() -> void:
 	if (GlobalTopping.isKelp):
