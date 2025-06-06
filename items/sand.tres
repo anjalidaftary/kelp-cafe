@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Topping" load_steps=3 format=3 uid="uid://dhlqqk4mnnds"]
+[gd_resource type="Resource" script_class="Topping" load_steps=3 format=3 uid="uid://y2dqdbfm6ig0"]
 
 [ext_resource type="Script" path="res://scripts/toppings.gd" id="1_b7o1j"]
 [ext_resource type="Texture2D" uid="uid://b4vb264ewcd6f" path="res://assets/sand-order-symbol.png" id="1_tdrrq"]
