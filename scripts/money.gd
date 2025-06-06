@@ -9,7 +9,7 @@ func add (num: int):
 
 func remove (num: int):
 	Global.currMoney -= num;
-	clam_label.txt = str(clams)
+	clam_label.text = str(clams)
 
 func balance () -> int:
 	return clams

@@ -1,14 +1,14 @@
 extends Sprite2D
 
 var toggled = false
-var unlocked = false
+var unlocked = GlobalUnlockables.deepUnlocked
 var new_texture = load("res://assets/deep-sea-sauce.png")
 @onready var topping = $"."
 @onready var drink = $"../Cup-kelp-milk"
 
-func unlock():
-	texture = new_texture
-	unlocked = true
+func _ready():
+	if (unlocked):
+		texture = new_texture
 
 func _on_deep_button_pressed() -> void:
 	if unlocked:

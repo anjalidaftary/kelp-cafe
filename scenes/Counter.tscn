@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://d3xbvobd04h8u" path="res://assets/white-arrow.png" id="10_7clfu"]
 [ext_resource type="Script" path="res://scripts/arrow.gd" id="11_suvdv"]
 [ext_resource type="PackedScene" uid="uid://cey5rpfgqijdl" path="res://scenes/money.tscn" id="12_pi2lv"]
-[ext_resource type="PackedScene" path="res://scenes/Shop.tscn" id="14_pmqf2"]
+[ext_resource type="PackedScene" uid="uid://ce73od5eae84" path="res://scenes/Shop.tscn" id="14_pmqf2"]
 [ext_resource type="Script" path="res://scripts/shop.gd" id="15_3moky"]
 
 [sub_resource type="Animation" id="Animation_hhnim"]
@@ -178,6 +178,38 @@ offset_right = -528.0
 offset_bottom = -210.0
 script = ExtResource("15_3moky")
 
+[node name="deepPurchaseButton" type="TextureButton" parent="Shop"]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 120.0
+offset_right = 155.0
+offset_bottom = 137.0
+metadata/_edit_lock_ = true
+
+[node name="inkPurchaseButton" type="TextureButton" parent="Shop"]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 109.0
+offset_right = 277.0
+offset_bottom = 126.0
+metadata/_edit_lock_ = true
+
+[node name="sandPurchaseButton" type="TextureButton" parent="Shop"]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 184.0
+offset_right = 155.0
+offset_bottom = 201.0
+metadata/_edit_lock_ = true
+
+[node name="moonPurchaseButton" type="TextureButton" parent="Shop"]
+layout_mode = 0
+offset_left = 245.0
+offset_top = 190.0
+offset_right = 278.0
+offset_bottom = 204.0
+metadata/_edit_lock_ = true
+
 [node name="ShopButton" type="Button" parent="."]
 z_index = -1
 offset_left = -503.0
@@ -190,4 +222,6 @@ offset_bottom = 270.0
 [connection signal="pressed" from="Fish/FishButton2" to="Arrow" method="_on_fish_button_2_pressed"]
 [connection signal="ready" from="SpeechBubble" to="SpeechBubble" method="_on_ready"]
 [connection signal="pressed" from="ChangeSceneButton" to="Arrow" method="_on_change_scene_button_pressed"]
+[connection signal="pressed" from="Shop/deepPurchaseButton" to="Shop" method="_on_deep_purchase_button_pressed"]
+[connection signal="pressed" from="Shop/inkPurchaseButton" to="Shop" method="_on_ink_purchase_button_pressed"]
 [connection signal="pressed" from="ShopButton" to="Shop" method="_on_shop_button_pressed"]

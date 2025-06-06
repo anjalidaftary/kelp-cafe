@@ -1,14 +1,14 @@
 extends Sprite2D
 
 var toggled = false
-var unlocked = false
+var unlocked = GlobalUnlockables.inkUnlocked
 var new_texture = load("res://assets/ink-sauce.png")
 @onready var topping = $"."
 @onready var drink = $"../Cup-kelp-milk"
 
-func unlock():
-	texture = new_texture
-	unlocked = true
+func _ready() -> void:
+	if unlocked:
+		texture = new_texture
 
 func _on_ink_button_pressed() -> void:
 	if unlocked:
