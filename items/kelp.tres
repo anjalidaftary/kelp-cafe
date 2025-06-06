@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Topping" load_steps=3 format=3 uid="uid://6ncs0qomomoc"]
 
-[ext_resource type="Script" path="res://items/topppings.gd" id="1_h3ksk"]
+[ext_resource type="Script" path="res://items/toppings.gd" id="1_h3ksk"]
 [ext_resource type="Texture2D" uid="uid://djmxlmlkum6bi" path="res://assets/kelp-order-symbol.png" id="1_ri08f"]
 
 [resource]

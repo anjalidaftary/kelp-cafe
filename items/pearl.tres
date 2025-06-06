@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Topping" load_steps=4 format=3 uid="uid://c7sfcw7g0sia0"]
 
-[ext_resource type="Script" path="res://items/topppings.gd" id="1_63w54"]
+[ext_resource type="Script" path="res://items/toppings.gd" id="1_63w54"]
 [ext_resource type="Texture2D" uid="uid://djuvoysamdj72" path="res://assets/pearls-topping.PNG" id="1_ih2r5"]
 [ext_resource type="Texture2D" uid="uid://cfvl5nifi2wad" path="res://assets/pearl-order-symbol.png" id="2_rwr2d"]
 
