@@ -1,5 +1,4 @@
-extends Node2D
-
+extends Sprite2D
 var hasFoam = false
 var hasPearl = false
 var hasShell = false
@@ -17,16 +16,11 @@ func add_topping(texture: Texture, offset := Vector2.ZERO):
 	toppings_node.add_child(topping)
 	toppings_node.move_child(topping, toppings_node.get_child_count() - 1)
 
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
 func _ready() -> void:
 	if (GlobalTopping.isKelp):
-		$"Cup-kelp-milk".visible = true
-		$"Cup-jelly-milk".visible = false
-		$"Cup-sand-milk".visible = false
-	elif (GlobalTopping.isJelly):
-		$"Cup-kelp-milk".visible = false
-		$"Cup-jelly-milk".visible = true
-		$"Cup-sand-milk".visible = false
-	elif (GlobalTopping.isSand):
-		$"Cup-kelp-milk".visible = false
-		$"Cup-jelly-milk".visible = false
-		$"Cup-sand-milk".visible = true
+		texture = 
