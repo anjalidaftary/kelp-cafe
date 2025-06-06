@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Music="*res://scenes/Music.tscn"
 Global="*res://scripts/Global.gd"
+GlobalTopping="*res://scripts/global_topping.gd"
 
 [display]
 

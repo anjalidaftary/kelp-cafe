@@ -22,3 +22,4 @@ func _on_move_to_milk_button_pressed() -> void:
 
 func _on_jelly_button_pressed() -> void:
 	jellyChosen = true
+	GlobalTopping.isJelly = true

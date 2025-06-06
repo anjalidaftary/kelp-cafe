@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Topping" load_steps=4 format=3 uid="uid://b5qfl144fv7bq"]
+[gd_resource type="Resource" script_class="Topping" load_steps=4 format=3 uid="uid://b248wn3q7mj8b"]
 
 [ext_resource type="Texture2D" uid="uid://budkna7by6eb6" path="res://assets/ink-sauce-topping.png" id="1_f6qkf"]
 [ext_resource type="Script" path="res://scripts/toppings.gd" id="1_tt23d"]
