@@ -16,6 +16,5 @@ func _on_drink_button_pressed() -> void:
 	if (toggled):
 		var caramelTexture = load("res://assets/caramel-sauce-topping.PNG")
 		drink.add_topping(caramelTexture, Vector2(43, -10))
-		drink.hasCaramel = true
 		toggled = false;
 		topping.position.y += 50
