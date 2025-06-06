@@ -68,8 +68,7 @@ func check_success1() -> void:
 			done = true
 	else:
 		print("missed")
-		bar.position.x = (385+785)/2
-		buttonPressed = false
+		buttonPressed = true
 
 func _on_kelp_button_pressed() -> void:
 	if(!kelpPressed):
