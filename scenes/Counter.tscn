@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://d3xbvobd04h8u" path="res://assets/white-arrow.png" id="10_7clfu"]
 [ext_resource type="Script" path="res://scripts/arrow.gd" id="11_suvdv"]
 [ext_resource type="PackedScene" uid="uid://cey5rpfgqijdl" path="res://scenes/money.tscn" id="12_pi2lv"]
-[ext_resource type="PackedScene" uid="uid://ce73od5eae84" path="res://scenes/Shop.tscn" id="14_pmqf2"]
+[ext_resource type="PackedScene" path="res://scenes/Shop.tscn" id="14_pmqf2"]
 [ext_resource type="Script" path="res://scripts/shop.gd" id="15_3moky"]
 
 [sub_resource type="Animation" id="Animation_hhnim"]

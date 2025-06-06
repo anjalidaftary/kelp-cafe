@@ -20,8 +20,8 @@ scale = Vector2(0.561017, 0.505488)
 texture = ExtResource("3_l47hg")
 
 [node name="Cup-sand-milk" type="Sprite2D" parent="."]
-position = Vector2(59, 15)
-scale = Vector2(0.559746, 0.506707)
+position = Vector2(60.75, 15)
+scale = Vector2(0.558263, 0.506707)
 texture = ExtResource("4_slvwl")
 
 [node name="Toppings node" type="Node2D" parent="."]
