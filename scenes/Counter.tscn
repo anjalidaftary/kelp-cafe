@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://d3xbvobd04h8u" path="res://assets/white-arrow.png" id="10_7clfu"]
 [ext_resource type="Script" path="res://scripts/arrow.gd" id="11_suvdv"]
 [ext_resource type="PackedScene" uid="uid://cey5rpfgqijdl" path="res://scenes/money.tscn" id="12_pi2lv"]
-[ext_resource type="PackedScene" path="res://scenes/Shop.tscn" id="14_pmqf2"]
+[ext_resource type="PackedScene" uid="uid://ce73od5eae84" path="res://scenes/Shop.tscn" id="14_pmqf2"]
 [ext_resource type="Script" path="res://scripts/shop.gd" id="15_3moky"]
 
 [sub_resource type="Animation" id="Animation_hhnim"]
@@ -172,10 +172,10 @@ grow_vertical = 1
 metadata/_edit_lock_ = true
 
 [node name="Shop" parent="." instance=ExtResource("14_pmqf2")]
-offset_left = -528.0
-offset_top = -210.0
-offset_right = -528.0
-offset_bottom = -210.0
+offset_left = -505.0
+offset_top = -335.0
+offset_right = -505.0
+offset_bottom = -335.0
 script = ExtResource("15_3moky")
 
 [node name="ShopButton" type="Button" parent="."]
