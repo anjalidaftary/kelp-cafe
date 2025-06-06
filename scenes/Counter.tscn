@@ -105,6 +105,7 @@ offset_top = -120.0
 offset_right = 51.0
 offset_bottom = 40.0
 script = SubResource("GDScript_wh78x")
+metadata/_edit_lock_ = true
 
 [node name="Bar" type="Sprite2D" parent="."]
 position = Vector2(1, -31)
@@ -172,10 +173,10 @@ grow_vertical = 1
 metadata/_edit_lock_ = true
 
 [node name="Shop" parent="." instance=ExtResource("14_pmqf2")]
-offset_left = -528.0
-offset_top = -210.0
-offset_right = -528.0
-offset_bottom = -210.0
+offset_left = -461.0
+offset_top = -329.0
+offset_right = -461.0
+offset_bottom = -329.0
 script = ExtResource("15_3moky")
 
 [node name="ShopButton" type="Button" parent="."]
