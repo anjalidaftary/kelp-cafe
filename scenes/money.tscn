@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cey5rpfgqijdl"]
 
 [ext_resource type="Script" path="res://scripts/money.gd" id="1_ihvq1"]
-[ext_resource type="Texture2D" uid="uid://cvgh4t4m5pd7y" path="res://assets/clam_icon.png" id="2_4tbm2"]
+[ext_resource type="Texture2D" uid="uid://txtneh1ay22r" path="res://assets/sand-dollar.PNG" id="2_v8ikt"]
 
 [sub_resource type="SystemFont" id="SystemFont_deocm"]
 font_names = PackedStringArray("Arial Black")
@@ -13,16 +13,16 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -1087.0
-offset_bottom = -624.0
+offset_right = -1017.0
+offset_bottom = -598.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ihvq1")
 
 [node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(53, 10)
-scale = Vector2(0.0283369, 0.0283369)
-texture = ExtResource("2_4tbm2")
+position = Vector2(148, 35)
+scale = Vector2(0.214952, 0.214952)
+texture = ExtResource("2_v8ikt")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
@@ -31,5 +31,5 @@ offset_top = -4.0
 offset_right = 62.0
 offset_bottom = 40.0
 theme_override_fonts/font = SubResource("SystemFont_deocm")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 50
 text = "100"

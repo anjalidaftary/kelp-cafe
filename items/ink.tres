@@ -1,11 +1,3 @@
-[gd_resource type="Resource" script_class="Topping" load_steps=4 format=3 uid="uid://ccf720qn5htsa"]
-
-[ext_resource type="Texture2D" uid="uid://budkna7by6eb6" path="res://assets/ink-sauce-topping.png" id="1_f6qkf"]
-[ext_resource type="Script" path="res://items/topppings.gd" id="1_pudvo"]
-[ext_resource type="Texture2D" uid="uid://e7lhrv2nvxa7" path="res://assets/ink-order-symbol.png" id="2_bh2wu"]
+[gd_resource type="Resource" format=3 uid="uid://ccf720qn5htsa"]
 
 [resource]
-script = ExtResource("1_pudvo")
-name = ""
-order_symbol = ExtResource("2_bh2wu")
-base_station_symbol = ExtResource("1_f6qkf")

@@ -160,13 +160,12 @@ metadata/_edit_lock_ = true
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = -490.0
-offset_top = -315.0
-offset_right = -490.0
-offset_bottom = -315.0
+offset_left = -543.0
+offset_top = -311.0
+offset_right = -543.0
+offset_bottom = -311.0
 grow_horizontal = 1
 grow_vertical = 1
-metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="Fish/FishButton2" to="Fish" method="_on_fish_button_2_pressed"]
 [connection signal="pressed" from="Fish/FishButton2" to="SpeechBubble" method="_on_fish_button_2_pressed"]
