@@ -21,3 +21,4 @@ func _on_move_to_milk_button_pressed() -> void:
 
 func _on_sand_button_pressed() -> void:
 	sandChosen = true
+	GlobalTopping.isSand = true

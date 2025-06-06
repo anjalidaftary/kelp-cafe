@@ -1,5 +1,7 @@
 extends Node2D
 
+var currentDrink = []
+
 @onready var toppings_node = $"Toppings node"
 
 func add_topping(texture: Texture, offset := Vector2.ZERO):

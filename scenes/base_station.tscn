@@ -105,7 +105,6 @@ func check_success2() -> void:
 			sceneButton.disabled = false
 	else:
 		print(\"missed\")
-		bar.position.x = (left_limit+right_limit)/2
 		buttonPressed = true
 	
 	
