@@ -1,6 +1,6 @@
 extends Sprite2D
 
-@export var bar_speed := 700  # pixels per second
+@export var bar_speed := 850  # pixels per second
 @export var left_limit := 385
 @export var right_limit := 785
 
