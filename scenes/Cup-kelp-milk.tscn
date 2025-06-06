@@ -12,15 +12,17 @@ script = ExtResource("1_xtusw")
 position = Vector2(60, 14)
 scale = Vector2(0.559322, 0.504268)
 texture = ExtResource("1_wwdxu")
+metadata/_edit_lock_ = true
 
 [node name="Cup-jelly-milk" type="Sprite2D" parent="."]
-position = Vector2(59.5, 11.5)
-scale = Vector2(0.579237, 0.509146)
+position = Vector2(56, 15)
+scale = Vector2(0.561017, 0.505488)
 texture = ExtResource("3_l47hg")
 
 [node name="Cup-sand-milk" type="Sprite2D" parent="."]
-position = Vector2(63, 12.5)
-scale = Vector2(0.586441, 0.510366)
+position = Vector2(59, 15)
+scale = Vector2(0.559746, 0.506707)
 texture = ExtResource("4_slvwl")
 
 [node name="Toppings node" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
