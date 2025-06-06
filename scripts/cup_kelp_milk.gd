@@ -1,11 +1,6 @@
 extends Node2D
 
-var hasFoam = false
-var hasPearl = false
-var hasShell = false
-var hasCaramel = false
-var hasInk = false
-var hasDeep = false
+var currentDrink = []
 
 @onready var toppings_node = $"Toppings node"
 

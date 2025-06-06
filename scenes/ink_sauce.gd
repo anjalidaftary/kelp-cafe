@@ -24,6 +24,5 @@ func _on_drink_button_pressed() -> void:
 	if (toggled):
 		var sauce = load("res://assets/ink-sauce-topping.png")
 		drink.add_topping(sauce, Vector2(43, -10))
-		drink.hasInk = true
 		toggled = false;
 		topping.position.y += 50
