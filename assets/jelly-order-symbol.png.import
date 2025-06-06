@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnvp2ftqqrf0n"
-path="res://.godot/imported/Start-screen.png-4bd411ebc05d71e7586c327e1d7b4df4.ctex"
+uid="uid://dxx25e5hdw3k4"
+path="res://.godot/imported/jelly-order-symbol.png-fe056dfd9b49e6278f5d0ce373d1ca19.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Start-screen.png"
-dest_files=["res://.godot/imported/Start-screen.png-4bd411ebc05d71e7586c327e1d7b4df4.ctex"]
+source_file="res://assets/jelly-order-symbol.png"
+dest_files=["res://.godot/imported/jelly-order-symbol.png-fe056dfd9b49e6278f5d0ce373d1ca19.ctex"]
 
 [params]
 

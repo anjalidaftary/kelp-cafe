@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnvp2ftqqrf0n"
-path="res://.godot/imported/Start-screen.png-4bd411ebc05d71e7586c327e1d7b4df4.ctex"
+uid="uid://txtneh1ay22r"
+path="res://.godot/imported/sand-dollar.PNG-c59926e3962f1c9d3b36a939fcf3484c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Start-screen.png"
-dest_files=["res://.godot/imported/Start-screen.png-4bd411ebc05d71e7586c327e1d7b4df4.ctex"]
+source_file="res://assets/sand-dollar.PNG"
+dest_files=["res://.godot/imported/sand-dollar.PNG-c59926e3962f1c9d3b36a939fcf3484c.ctex"]
 
 [params]
 

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Topping" load_steps=3 format=3 uid="uid://b518e0323r60b"]
+
+[ext_resource type="Script" path="res://scripts/toppings.gd" id="1_uwn8o"]
+[ext_resource type="Texture2D" uid="uid://dxx25e5hdw3k4" path="res://assets/jelly-order-symbol.png" id="1_wqfnd"]
+
+[resource]
+script = ExtResource("1_uwn8o")
+name = ""
+order_symbol = ExtResource("1_wqfnd")

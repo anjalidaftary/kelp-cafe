@@ -1,5 +1,6 @@
-[gd_scene load_steps=18 format=3 uid="uid://dse46hk1lgs0x"]
+[gd_scene load_steps=20 format=3 uid="uid://dse46hk1lgs0x"]
 
+[ext_resource type="Script" path="res://scripts/counter.gd" id="1_f17y4"]
 [ext_resource type="Texture2D" uid="uid://c4e500lm4lncg" path="res://assets/order-background.PNG" id="1_tdlqi"]
 [ext_resource type="PackedScene" uid="uid://0sk6su1p8mq5" path="res://scenes/Fish.tscn" id="1_uj3bm"]
 [ext_resource type="Texture2D" uid="uid://y71anfhbimva" path="res://assets/order-counter.PNG" id="3_cnauo"]
@@ -9,8 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://djmxlmlkum6bi" path="res://assets/kelp-order-symbol.png" id="7_md0bu"]
 [ext_resource type="Texture2D" uid="uid://dehj5b7ncm5m8" path="res://assets/foam-order-symbol.png" id="8_b0lxp"]
 [ext_resource type="Texture2D" uid="uid://cfvl5nifi2wad" path="res://assets/pearl-order-symbol.png" id="9_5yxfq"]
+[ext_resource type="Texture2D" uid="uid://d3xbvobd04h8u" path="res://assets/white-arrow.png" id="10_7clfu"]
 [ext_resource type="Script" path="res://scripts/arrow.gd" id="11_suvdv"]
-[ext_resource type="Texture2D" uid="uid://duosi2tl6ckol" path="res://assets/uglyarrow.png" id="11_tqxoo"]
+[ext_resource type="PackedScene" uid="uid://cey5rpfgqijdl" path="res://scenes/money.tscn" id="12_pi2lv"]
 
 [sub_resource type="Animation" id="Animation_hhnim"]
 length = 0.001
@@ -71,6 +73,7 @@ script/source = "extends TextureButton
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_twxvo"]
 
 [node name="Game" type="Node2D"]
+script = ExtResource("1_f17y4")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(-2, 22)
@@ -141,17 +144,29 @@ texture = ExtResource("9_5yxfq")
 expand_mode = 2
 
 [node name="Arrow" type="Sprite2D" parent="."]
-position = Vector2(416, 282)
-scale = Vector2(0.042963, 0.0391304)
-texture = ExtResource("11_tqxoo")
+position = Vector2(445, 270)
+scale = Vector2(0.660899, 0.601942)
+texture = ExtResource("10_7clfu")
 script = ExtResource("11_suvdv")
 metadata/_edit_lock_ = true
 
 [node name="ChangeSceneButton" type="TextureButton" parent="."]
-offset_left = 341.0
-offset_top = 245.0
-offset_right = 477.0
-offset_bottom = 319.0
+offset_left = 343.0
+offset_top = 231.0
+offset_right = 539.0
+offset_bottom = 305.0
+metadata/_edit_lock_ = true
+
+[node name="Money" parent="." instance=ExtResource("12_pi2lv")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -561.0
+offset_top = -305.0
+offset_right = -561.0
+offset_bottom = -305.0
+grow_horizontal = 1
+grow_vertical = 1
 metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="Fish/FishButton2" to="Fish" method="_on_fish_button_2_pressed"]

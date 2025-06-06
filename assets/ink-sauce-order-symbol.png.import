@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnvp2ftqqrf0n"
-path="res://.godot/imported/Start-screen.png-4bd411ebc05d71e7586c327e1d7b4df4.ctex"
+uid="uid://djcd8tj7630th"
+path="res://.godot/imported/ink-sauce-order-symbol.png-023fb1d00a6bdaa9732420d620ad13b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Start-screen.png"
-dest_files=["res://.godot/imported/Start-screen.png-4bd411ebc05d71e7586c327e1d7b4df4.ctex"]
+source_file="res://assets/ink-sauce-order-symbol.png"
+dest_files=["res://.godot/imported/ink-sauce-order-symbol.png-023fb1d00a6bdaa9732420d620ad13b7.ctex"]
 
 [params]
 

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Topping" load_steps=4 format=3 uid="uid://b1oeoy3jf0pdw"]
 
-[ext_resource type="Script" path="res://items/topppings.gd" id="1_6porn"]
+[ext_resource type="Script" path="res://scripts/toppings.gd" id="1_6porn"]
 [ext_resource type="Texture2D" uid="uid://bk3do218rym54" path="res://assets/seashells-topping.png" id="1_fieej"]
 [ext_resource type="Texture2D" uid="uid://cil53fkewwclw" path="res://assets/clam-order-symbol.png" id="2_j0uvm"]
 

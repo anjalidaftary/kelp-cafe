@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnvp2ftqqrf0n"
-path="res://.godot/imported/Start-screen.png-4bd411ebc05d71e7586c327e1d7b4df4.ctex"
+uid="uid://b4vb264ewcd6f"
+path="res://.godot/imported/sand-order-symbol.png-3c951e05a2fbe170894bcd5526d8c56a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Start-screen.png"
-dest_files=["res://.godot/imported/Start-screen.png-4bd411ebc05d71e7586c327e1d7b4df4.ctex"]
+source_file="res://assets/sand-order-symbol.png"
+dest_files=["res://.godot/imported/sand-order-symbol.png-3c951e05a2fbe170894bcd5526d8c56a.ctex"]
 
 [params]
 

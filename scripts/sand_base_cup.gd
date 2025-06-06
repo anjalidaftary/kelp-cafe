@@ -1,9 +1,8 @@
 extends Sprite2D
-@onready var newKelpCup = $"../KelpBaseCupAtMilk"
-@onready var isKelp = $"../MovingBar"
+@onready var newSandCup = $"../SandBaseCupAtMilk"
+@onready var isSand = $"../MovingBar"
 
-var kelpChosen = false
-
+var sandChosen = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	visible = false
@@ -15,10 +14,10 @@ func _process(delta: float) -> void:
 
 
 func _on_move_to_milk_button_pressed() -> void:
-	if (kelpChosen):
+	if (sandChosen):
 		queue_free()
-		newKelpCup.visible = true
+		newSandCup.visible = true
 
 
-func _on_kelp_button_pressed() -> void:
-	kelpChosen = true
+func _on_sand_button_pressed() -> void:
+	sandChosen = true
