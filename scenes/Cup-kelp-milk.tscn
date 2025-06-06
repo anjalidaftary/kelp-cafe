@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://b4e5ml1ft8jss"]
+[gd_scene load_steps=5 format=3 uid="uid://cbi1af05qxhv1"]
 
 [ext_resource type="Texture2D" uid="uid://buik1jbkmky50" path="res://assets/cup-kelp-milk.PNG" id="1_wwdxu"]
 [ext_resource type="Script" path="res://scripts/cup_kelp_milk.gd" id="1_xtusw"]
+[ext_resource type="Texture2D" uid="uid://bttjglxb7wqyn" path="res://assets/cup-jelly-milk.png" id="3_l47hg"]
+[ext_resource type="Texture2D" uid="uid://qrtsnn1wgigi" path="res://assets/cup-sand-milk.png" id="4_slvwl"]
 
 [node name="Cup-kelp-milk" type="Node2D"]
 script = ExtResource("1_xtusw")
@@ -10,5 +12,15 @@ script = ExtResource("1_xtusw")
 position = Vector2(60, 14)
 scale = Vector2(0.559322, 0.504268)
 texture = ExtResource("1_wwdxu")
+
+[node name="Cup-jelly-milk" type="Sprite2D" parent="."]
+position = Vector2(59.5, 11.5)
+scale = Vector2(0.579237, 0.509146)
+texture = ExtResource("3_l47hg")
+
+[node name="Cup-sand-milk" type="Sprite2D" parent="."]
+position = Vector2(63, 12.5)
+scale = Vector2(0.586441, 0.510366)
+texture = ExtResource("4_slvwl")
 
 [node name="Toppings node" type="Node2D" parent="."]
