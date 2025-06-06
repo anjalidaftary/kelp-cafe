@@ -2,11 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/money.gd" id="1_ihvq1"]
 [ext_resource type="Texture2D" uid="uid://txtneh1ay22r" path="res://assets/sand-dollar.PNG" id="2_v8ikt"]
-
-[sub_resource type="SystemFont" id="SystemFont_deocm"]
-font_names = PackedStringArray("Arial Black")
-font_weight = 375
-subpixel_positioning = 0
+[ext_resource type="FontFile" uid="uid://cqc2ex81t5lxg" path="res://assets/shooting-star-personal-use/Shooting Star.ttf" id="3_r3j0g"]
 
 [node name="Money" type="Control"]
 layout_mode = 3
@@ -26,10 +22,10 @@ texture = ExtResource("2_v8ikt")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 77.0
-offset_top = -2.0
-offset_right = 177.0
-offset_bottom = 70.0
-theme_override_fonts/font = SubResource("SystemFont_deocm")
+offset_left = 83.0
+offset_top = -20.0
+offset_right = 183.0
+offset_bottom = 92.0
+theme_override_fonts/font = ExtResource("3_r3j0g")
 theme_override_font_sizes/font_size = 50
 text = "100"
