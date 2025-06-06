@@ -6,6 +6,6 @@
 
 [resource]
 script = ExtResource("1_5c6ni")
-name = "Seafoam"
+name = "seafoam"
 order_symbol = ExtResource("2_efea3")
 base_station_symbol = ExtResource("1_x88em")

@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://ce73od5eae84"]
+
+[ext_resource type="Script" path="res://scenes/shop.gd" id="1_ltbus"]
+[ext_resource type="Texture2D" uid="uid://cg4sr48cvfle5" path="res://assets/shop.PNG" id="1_qnws0"]
+
+[node name="Shop" type="Control"]
+layout_mode = 3
+anchor_left = 0.013
+anchor_right = 0.482
+anchor_bottom = 0.593
+offset_left = -10.976
+offset_right = -0.264038
+offset_bottom = 10.736
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ltbus")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(167.13, 142)
+scale = Vector2(0.141636, 0.15122)
+texture = ExtResource("1_qnws0")
+
+[node name="CloseButton" type="Button" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.02
+anchor_bottom = 0.02
+offset_left = 293.0
+offset_top = 33.0
+offset_right = 310.98
+offset_bottom = 57.1
+
+[connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]

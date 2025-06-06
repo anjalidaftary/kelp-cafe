@@ -11,7 +11,6 @@ func _on_caramel_button_pressed() -> void:
 	else: 
 		toggled = false;
 		topping.position.y += 50
-		
 
 func _on_drink_button_pressed() -> void:
 	if (toggled):

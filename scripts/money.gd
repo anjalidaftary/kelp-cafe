@@ -1,14 +1,14 @@
 extends Control
 
 @onready var clam_label: Label = $Label
-var clams = 50
+var clams = Global.currMoney
 
 func add (num: int):
-	clams += num
+	Global.currMoney += num
 	clam_label.text = str(clams)
 
 func remove (num: int):
-	clams -= num;
+	Global.currMoney -= num;
 	clam_label.txt = str(clams)
 
 func balance () -> int:
@@ -23,4 +23,5 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	clam_label.text = str(clams)
+	clams = Global.currMoney

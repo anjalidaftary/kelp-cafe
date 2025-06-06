@@ -6,6 +6,6 @@
 
 [resource]
 script = ExtResource("1_63w54")
-name = "Pearl"
+name = "pearl"
 order_symbol = ExtResource("2_rwr2d")
 base_station_symbol = ExtResource("1_ih2r5")
