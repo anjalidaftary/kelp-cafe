@@ -18,13 +18,9 @@ config/icon="res://icon.svg"
 [autoload]
 
 Music="*res://scenes/Music.tscn"
-Global="*res://scenes/Global.tscn"
+Global="*res://scripts/Global.gd"
 GlobalTopping="*res://scripts/global_topping.gd"
-<<<<<<< Updated upstream
 GlobalUnlockables="*res://scripts/global_unlockables.gd"
-=======
-GlobalScript="*res://scripts/global_script.gd"
->>>>>>> Stashed changes
 
 [display]
 

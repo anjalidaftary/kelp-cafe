@@ -10,13 +10,13 @@
 [ext_resource type="Texture2D" uid="uid://bbypjag50exk1" path="res://assets/shell-bowl.png" id="6_1ld0s"]
 [ext_resource type="Script" path="res://scripts/caramel_sauce.gd" id="7_6rr1q"]
 [ext_resource type="Script" path="res://scripts/sea_foam.gd" id="9_nnfgs"]
-[ext_resource type="PackedScene" uid="uid://cbi1af05qxhv1" path="res://scenes/Cup-kelp-milk.tscn" id="10_m5bov"]
+[ext_resource type="PackedScene" uid="uid://b4e5ml1ft8jss" path="res://scenes/Cup-kelp-milk.tscn" id="10_m5bov"]
 [ext_resource type="Script" path="res://scripts/arrow1.gd" id="12_e2fc0"]
 [ext_resource type="Script" path="res://scenes/ink_sauce.gd" id="12_indvv"]
 [ext_resource type="Texture2D" uid="uid://d3xbvobd04h8u" path="res://assets/white-arrow.png" id="12_w4an3"]
 [ext_resource type="Texture2D" uid="uid://dojwwxrvge713" path="res://assets/locked-topping-1.PNG" id="13_7oucb"]
 [ext_resource type="Texture2D" uid="uid://dgthtmw0ua24j" path="res://assets/locked-topping-2.PNG" id="14_0j0ap"]
-[ext_resource type="Script" path="res://scripts/deep_sea_sauce (2).gd" id="14_62faf"]
+[ext_resource type="Script" path="res://scenes/deep_sea_sauce.gd" id="14_62faf"]
 
 [node name="ToppingStation" type="Node2D"]
 script = ExtResource("1_fltki")
