@@ -45,7 +45,7 @@ func show_order() -> void:
 	symbol_container.get_child(2).texture = third_symbol.order_symbol
 	order = [first_symbol, foam_symbol, third_symbol]
 	
-	currOrder = 
+	#currOrder = 
 	
 	# storing order idk what this is but you need to fix it
 	#var index = random_symbols.find(third_symbol)

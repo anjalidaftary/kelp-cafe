@@ -20,16 +20,16 @@ grow_vertical = 2
 script = ExtResource("1_ihvq1")
 
 [node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(148, 35)
+position = Vector2(39, 35)
 scale = Vector2(0.214952, 0.214952)
 texture = ExtResource("2_v8ikt")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 2.0
-offset_top = -4.0
-offset_right = 62.0
-offset_bottom = 40.0
+offset_left = 77.0
+offset_top = -2.0
+offset_right = 177.0
+offset_bottom = 70.0
 theme_override_fonts/font = SubResource("SystemFont_deocm")
 theme_override_font_sizes/font_size = 50
 text = "100"

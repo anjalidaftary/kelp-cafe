@@ -97,8 +97,8 @@ offset_right = 120.0
 offset_bottom = 213.0
 
 [node name="Arrow" type="Sprite2D" parent="."]
-position = Vector2(1033.5, 666.125)
-scale = Vector2(0.676323, 0.581311)
+position = Vector2(1046.49, 670.125)
+scale = Vector2(0.606878, 0.620146)
 texture = ExtResource("12_w4an3")
 script = ExtResource("12_e2fc0")
 
