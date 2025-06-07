@@ -32,3 +32,7 @@ func _on_deep_purchase_button_pressed() -> void:
 		seasaucecross.show()
 		deepbutton.disabled()
 	money.hide() # Replace with function body.
+
+
+func _on_sand_purchase_button_pressed() -> void:
+	print("button pressed") # Replace with function body.

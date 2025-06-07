@@ -105,3 +105,4 @@ offset_bottom = -171.0
 [connection signal="pressed" from="deepPurchaseButton" to="." method="_on_deep_purchase_button_pressed"]
 [connection signal="pressed" from="deepPurchaseButton" to="deepPurchaseButton" method="_on_pressed"]
 [connection signal="pressed" from="inkPurchaseButton" to="." method="_on_ink_purchase_button_pressed"]
+[connection signal="pressed" from="sandPurchaseButton" to="." method="_on_sand_purchase_button_pressed"]
