@@ -22,5 +22,5 @@ func _process(delta: float) -> void:
 	pass
 
 func _ready() -> void:
-	if (GlobalTopping.isKelp):
-		texture = 
+	pass
+	# had to edit this to open; fix

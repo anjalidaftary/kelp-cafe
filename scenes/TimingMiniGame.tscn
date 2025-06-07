@@ -29,7 +29,8 @@ func _process(delta: float) -> void:
 		direction = 1
 		
 func _input(event):
-	continue
+	pass
+	# had to edit this top open; fix
 	
 
 
