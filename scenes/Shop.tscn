@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ce73od5eae84"]
+[gd_scene load_steps=11 format=3 uid="uid://ce73od5eae84"]
 
 [ext_resource type="Script" path="res://scripts/shop.gd" id="1_ltbus"]
 [ext_resource type="Texture2D" uid="uid://cg4sr48cvfle5" path="res://assets/shop.PNG" id="1_qnws0"]
@@ -8,6 +8,8 @@
 [ext_resource type="Script" path="res://scenes/sand_cross.gd" id="6_dtu5a"]
 [ext_resource type="Script" path="res://scenes/ink_cross.gd" id="7_yw4th"]
 [ext_resource type="Script" path="res://scenes/moon_cross.gd" id="8_j2n76"]
+[ext_resource type="PackedScene" uid="uid://cey5rpfgqijdl" path="res://scenes/money.tscn" id="9_auxe8"]
+[ext_resource type="Script" path="res://scenes/deep_purchase_button.gd" id="9_bcgq0"]
 
 [node name="Shop" type="Control"]
 layout_mode = 3
@@ -64,34 +66,42 @@ script = ExtResource("8_j2n76")
 
 [node name="deepPurchaseButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 121.0
-offset_top = 120.0
-offset_right = 155.0
-offset_bottom = 137.0
-metadata/_edit_lock_ = true
+offset_left = 354.0
+offset_top = 288.0
+offset_right = 455.0
+offset_bottom = 340.0
+script = ExtResource("9_bcgq0")
 
 [node name="inkPurchaseButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 243.0
-offset_top = 109.0
-offset_right = 277.0
-offset_bottom = 126.0
-metadata/_edit_lock_ = true
+offset_left = 712.0
+offset_top = 265.0
+offset_right = 815.0
+offset_bottom = 314.0
 
 [node name="sandPurchaseButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 122.0
-offset_top = 184.0
-offset_right = 155.0
-offset_bottom = 201.0
-metadata/_edit_lock_ = true
+offset_left = 353.0
+offset_top = 462.0
+offset_right = 456.0
+offset_bottom = 516.0
 
 [node name="moonPurchaseButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 245.0
-offset_top = 190.0
-offset_right = 278.0
-offset_bottom = 204.0
-metadata/_edit_lock_ = true
+offset_left = 716.0
+offset_top = 474.0
+offset_right = 821.0
+offset_bottom = 527.0
+
+[node name="Money" parent="." instance=ExtResource("9_auxe8")]
+visible = false
+layout_mode = 1
+offset_left = -701.0
+offset_top = 442.0
+offset_right = -1749.0
+offset_bottom = -171.0
 
 [connection signal="pressed" from="CloseButton" to="CloseButton" method="_on_pressed"]
+[connection signal="pressed" from="deepPurchaseButton" to="." method="_on_deep_purchase_button_pressed"]
+[connection signal="pressed" from="deepPurchaseButton" to="deepPurchaseButton" method="_on_pressed"]
+[connection signal="pressed" from="inkPurchaseButton" to="." method="_on_ink_purchase_button_pressed"]

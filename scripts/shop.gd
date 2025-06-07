@@ -8,20 +8,27 @@ extends Control
 @onready var inkcross = $InkCross
 @onready var mooncross = $MoonCross
 @onready var deepbutton = $deepPurchaseButton
+@onready var inkbutton = $inkPurchaseButton
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	hide()
 
+func _on_ink_purchase_button_pressed() -> void:
+	print("button pressed")
+	if money.canPurchase(50):
+		money.remove(50)
+		GlobalUnlockables.inkUnlocked = true
+		inkcross.show()
+		inkbutton.disabled()
+
+
 func _on_deep_purchase_button_pressed() -> void:
-	if money.clams >= 50:
+	print("button pressed")
+	money.show()
+	if money.canPurchase(50):
 		money.remove(50)
 		GlobalUnlockables.deepUnlocked = true
 		seasaucecross.show()
 		deepbutton.disabled()
-		
-
-func _on_ink_purchase_button_pressed() -> void:
-	if money.clams >= 50:
-		money.remove(50)
-		GlobalUnlockables.inkUnlocked = true
+	money.hide() # Replace with function body.
