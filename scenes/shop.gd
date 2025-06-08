@@ -1,17 +1,13 @@
 extends Control
-#@onready var shop = get_node("Shop")
 
-#@onready var deepbutton = shop.get_node("seasaucebutton")
-#@onready var seasaucecross = shop.get_node("SeaSauceCross")
-@onready var inkbutton = $inkbutton
-@onready var sandbutton = $sandbutton
-@onready var moonbutton = $moonbutton
-
+@onready var inkbutton = $"../InkFudgeButton"
+@onready var sandbutton = $"../SandBaseButton"
+@onready var moonbutton = $"../JellyBaseButton"
+@onready var deepbutton = $"../SeaSauceButton"
 @onready var money = $Money
 
 
 var shop : Node = null
-var deepbutton : Node = null
 var seasaucecross : Node = null
 var inkcross : Node = null
 var mooncross : Node = null
@@ -20,13 +16,9 @@ var sandcross : Node = null
 func _ready():
 	shop = get_node_or_null("/root/Game/Shop")
 	if shop:
-		deepbutton = shop.get_node_or_null("seasaucebutton")
 		seasaucecross = shop.get_node_or_null("SeaSauceCross")
-		inkbutton = shop.get_node_or_null("inkbutton")
 		inkcross = shop.get_node_or_null("InkCross")
-		moonbutton = shop.get_node_or_null("moonbutton")
 		mooncross = shop.get_node_or_null("MoonCross")
-		sandbutton = shop.get_node_or_null("sandbutton")
 		sandcross = shop.get_node_or_null("SandCross")
 	visible = false
 
