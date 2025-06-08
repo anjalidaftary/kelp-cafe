@@ -41,11 +41,13 @@ func _on_sandbutton_pressed() -> void:
 
 func _on_inkbutton_pressed() -> void:
 	print("button pressed")
+	money.show()
 	if money.canPurchase(50):
 		money.remove(50)
 		GlobalUnlockables.inkUnlocked = true
 		inkcross.show()
 		inkbutton.disabled = true
+	money.hide()
 
 
 func _on_moonbutton_pressed() -> void:
