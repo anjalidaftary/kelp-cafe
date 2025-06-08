@@ -20,10 +20,9 @@ func _on_ink_purchase_button_pressed() -> void:
 		money.remove(50)
 		GlobalUnlockables.inkUnlocked = true
 		inkcross.show()
-		inkbutton.disabled()
+		inkbutton.disabled = true
 
-
-func _on_deep_purchase_button_pressed() -> void:
+func _on_seasaucebutton_pressed() -> void:
 	print("button pressed")
 	money.show()
 	if money.canPurchase(50):
@@ -32,7 +31,3 @@ func _on_deep_purchase_button_pressed() -> void:
 		seasaucecross.show()
 		deepbutton.disabled()
 	money.hide() # Replace with function body.
-
-
-func _on_sand_purchase_button_pressed() -> void:
-	print("button pressed") # Replace with function body.

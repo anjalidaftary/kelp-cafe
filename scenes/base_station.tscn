@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bi6nyd4hvg6cp"]
+[gd_scene load_steps=29 format=3 uid="uid://bi6nyd4hvg6cp"]
 
 [ext_resource type="Script" path="res://scripts/base_station.gd" id="1_2mmx2"]
 [ext_resource type="Texture2D" uid="uid://sefkxrvfcq2g" path="res://assets/ice-cream-background.PNG" id="1_m4ant"]
@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://ccgpsjwtkelqf" path="res://assets/Ice_cream_screen-2.png" id="20_ntomq"]
 [ext_resource type="Texture2D" uid="uid://bttjglxb7wqyn" path="res://assets/cup-jelly-milk.png" id="21_8kawm"]
 [ext_resource type="Script" path="res://scripts/jelly_milk_cup.gd" id="22_h68l2"]
+[ext_resource type="Texture2D" uid="uid://c7kj4dstf2qi3" path="res://assets/sold-out-symbol.PNG" id="28_bq51a"]
 
 [sub_resource type="GDScript" id="GDScript_434wb"]
 script/source = "extends Sprite2D
@@ -353,6 +354,18 @@ offset_right = 506.0
 offset_bottom = 194.0
 action_mode = 0
 metadata/_edit_lock_ = true
+
+[node name="sandcross" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(481, 208)
+scale = Vector2(0.251165, 0.203144)
+texture = ExtResource("28_bq51a")
+
+[node name="jellycross" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(618, 203)
+scale = Vector2(0.251165, 0.203144)
+texture = ExtResource("28_bq51a")
 
 [connection signal="focus_entered" from="SuccessZone" to="MovingBar" method="_on_success_zone_entered"]
 [connection signal="pressed" from="KelpButton" to="." method="_on_kelp_button_pressed"]

@@ -1,8 +1,20 @@
 extends Node2D
 
+@onready var sandcross = $sandcross
+@onready var jellycross = $jellycross
+@onready var sandbutton = $SandButton
+@onready var jellybutton = $JellyButton
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Music.play_music_level()
+	if(GlobalUnlockables.sandUnlocked):
+		sandcross.hide()
+	else: 
+		sandbutton.disabled = true
+	if(GlobalUnlockables.moonJellyUnlocked):
+		jellycross.hide()
+	else:
+		jellybutton.disabled = true
 	#var order_progress = get_tree().get_root().get_node("SpeechBubble").get("order_progress")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

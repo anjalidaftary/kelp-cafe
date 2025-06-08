@@ -9,7 +9,7 @@
 [ext_resource type="Script" path="res://scenes/ink_cross.gd" id="7_yw4th"]
 [ext_resource type="Script" path="res://scenes/moon_cross.gd" id="8_j2n76"]
 [ext_resource type="PackedScene" uid="uid://cey5rpfgqijdl" path="res://scenes/money.tscn" id="9_auxe8"]
-[ext_resource type="Script" path="res://scenes/deep_purchase_button.gd" id="9_bcgq0"]
+[ext_resource type="Script" path="res://scenes/seasaucebutton.gd" id="10_bbaxr"]
 
 [node name="Shop" type="Control"]
 layout_mode = 3
@@ -30,10 +30,10 @@ texture = ExtResource("1_qnws0")
 
 [node name="CloseButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 865.0
-offset_top = 65.0
-offset_right = 937.0
-offset_bottom = 140.0
+offset_left = 868.0
+offset_top = 63.0
+offset_right = 940.0
+offset_bottom = 138.0
 script = ExtResource("3_orbys")
 
 [node name="SeaSauceCross" type="Sprite2D" parent="."]
@@ -64,35 +64,6 @@ scale = Vector2(0.378154, 0.406707)
 texture = ExtResource("4_wm0gd")
 script = ExtResource("8_j2n76")
 
-[node name="deepPurchaseButton" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 354.0
-offset_top = 288.0
-offset_right = 455.0
-offset_bottom = 340.0
-script = ExtResource("9_bcgq0")
-
-[node name="inkPurchaseButton" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 712.0
-offset_top = 265.0
-offset_right = 815.0
-offset_bottom = 314.0
-
-[node name="sandPurchaseButton" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 353.0
-offset_top = 462.0
-offset_right = 456.0
-offset_bottom = 516.0
-
-[node name="moonPurchaseButton" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 716.0
-offset_top = 474.0
-offset_right = 821.0
-offset_bottom = 527.0
-
 [node name="Money" parent="." instance=ExtResource("9_auxe8")]
 visible = false
 layout_mode = 1
@@ -101,8 +72,18 @@ offset_top = 442.0
 offset_right = -1749.0
 offset_bottom = -171.0
 
+[node name="seasaucebutton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.305
+anchor_top = 0.43
+anchor_right = 0.406
+anchor_bottom = 0.516
+offset_left = -0.360016
+offset_top = 3.76999
+offset_right = -9.71204
+offset_bottom = -0.0760193
+script = ExtResource("10_bbaxr")
+
 [connection signal="pressed" from="CloseButton" to="CloseButton" method="_on_pressed"]
-[connection signal="pressed" from="deepPurchaseButton" to="." method="_on_deep_purchase_button_pressed"]
-[connection signal="pressed" from="deepPurchaseButton" to="deepPurchaseButton" method="_on_pressed"]
-[connection signal="pressed" from="inkPurchaseButton" to="." method="_on_ink_purchase_button_pressed"]
-[connection signal="pressed" from="sandPurchaseButton" to="." method="_on_sand_purchase_button_pressed"]
+[connection signal="pressed" from="seasaucebutton" to="." method="_on_seasaucebutton_pressed"]
