@@ -85,5 +85,47 @@ offset_right = -9.71204
 offset_bottom = -0.0760193
 script = ExtResource("10_bbaxr")
 
+[node name="sandbutton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.306
+anchor_top = 0.702
+anchor_right = 0.399
+anchor_bottom = 0.782
+offset_left = 0.487976
+offset_top = -0.0220032
+offset_right = 0.35199
+offset_bottom = 0.0979614
+script = ExtResource("10_bbaxr")
+
+[node name="inkbutton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.306
+anchor_top = 0.702
+anchor_right = 0.399
+anchor_bottom = 0.782
+offset_left = 359.488
+offset_top = -206.022
+offset_right = 359.352
+offset_bottom = -205.902
+script = ExtResource("10_bbaxr")
+
+[node name="moonbutton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.306
+anchor_top = 0.702
+anchor_right = 0.399
+anchor_bottom = 0.782
+offset_left = 361.488
+offset_top = 8.978
+offset_right = 361.352
+offset_bottom = 9.09796
+script = ExtResource("10_bbaxr")
+
 [connection signal="pressed" from="CloseButton" to="CloseButton" method="_on_pressed"]
 [connection signal="pressed" from="seasaucebutton" to="." method="_on_seasaucebutton_pressed"]
+[connection signal="pressed" from="sandbutton" to="." method="_on_sandbutton_pressed"]
+[connection signal="pressed" from="inkbutton" to="." method="_on_inkbutton_pressed"]
+[connection signal="pressed" from="moonbutton" to="." method="_on_moonbutton_pressed"]
