@@ -5,13 +5,13 @@ var unlocked = false
 @onready var topping = $"."
 @onready var drink = $"../Cup-kelp-milk"
 
-func unlock():
-	unlocked = true
-
-func _process(delta: float) -> void:
+func _ready() -> void:
 	if GlobalUnlockables.inkUnlocked:
 		texture = load("res://assets/ink-sauce.png")
-
+		position.y -= 22
+		position.x += 29
+		
+	
 func _on_ink_button_pressed() -> void:
 	if GlobalUnlockables.inkUnlocked:
 		if (toggled != true): 
