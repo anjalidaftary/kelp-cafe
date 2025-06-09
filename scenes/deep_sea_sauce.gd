@@ -5,11 +5,8 @@ var unlocked = false
 @onready var topping = $"."
 @onready var drink = $"../Cup-kelp-milk"
 
-func unlock():
-	unlocked = true
-
 func _on_deep_button_pressed() -> void:
-	if unlocked:
+	if (GlobalUnlockables.deepUnlocked):
 		if (toggled != true): 
 			toggled = true;
 			topping.position.y -= 50
