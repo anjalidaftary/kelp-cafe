@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dse46hk1lgs0x"]
+[gd_scene load_steps=26 format=3 uid="uid://dse46hk1lgs0x"]
 
 [ext_resource type="Script" path="res://scripts/counter.gd" id="1_f17y4"]
 [ext_resource type="Texture2D" uid="uid://c4e500lm4lncg" path="res://assets/order-background.PNG" id="1_tdlqi"]
@@ -23,10 +23,38 @@ script/source = "extends TextureButton
 
 [sub_resource type="Animation" id="Animation_ofusd"]
 resource_name = "PopUp"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-320, 110), Vector2(-320, -250)]
+}
+
+[sub_resource type="Animation" id="Animation_v3jry"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-320, 110)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yuimg"]
 _data = {
-"PopUp": SubResource("Animation_ofusd")
+"PopUp": SubResource("Animation_ofusd"),
+"RESET": SubResource("Animation_v3jry")
 }
 
 [sub_resource type="Animation" id="Animation_hhnim"]
@@ -104,7 +132,7 @@ position = Vector2(-2, 1)
 metadata/_edit_lock_ = true
 
 [node name="Squid" parent="." instance=ExtResource("3_ilavg")]
-position = Vector2(-326, -199)
+position = Vector2(-320, 110)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Squid"]
 libraries = {
@@ -120,7 +148,6 @@ script = ExtResource("3_ejy3u")
 libraries = {
 "": SubResource("AnimationLibrary_q1yw7")
 }
-autoplay = "pop-up"
 speed_scale = 0.91
 
 [node name="Bar" type="Sprite2D" parent="."]
