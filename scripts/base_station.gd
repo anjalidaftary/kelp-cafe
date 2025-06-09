@@ -8,11 +8,11 @@ extends Node2D
 func _ready() -> void:
 	Music.play_music_level()
 	if(GlobalUnlockables.sandUnlocked):
-		sandcross.hide()
+		pass
 	else: 
 		sandbutton.disabled = true
 	if(GlobalUnlockables.moonJellyUnlocked):
-		jellycross.hide()
+		pass
 	else:
 		jellybutton.disabled = true
 	#var order_progress = get_tree().get_root().get_node("SpeechBubble").get("order_progress")

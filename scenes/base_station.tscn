@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bi6nyd4hvg6cp"]
+[gd_scene load_steps=32 format=3 uid="uid://bi6nyd4hvg6cp"]
 
 [ext_resource type="Script" path="res://scripts/base_station.gd" id="1_2mmx2"]
 [ext_resource type="Texture2D" uid="uid://sefkxrvfcq2g" path="res://assets/ice-cream-background.PNG" id="1_m4ant"]
@@ -26,7 +26,10 @@
 [ext_resource type="Texture2D" uid="uid://ccgpsjwtkelqf" path="res://assets/Ice_cream_screen-2.png" id="20_ntomq"]
 [ext_resource type="Texture2D" uid="uid://bttjglxb7wqyn" path="res://assets/cup-jelly-milk.png" id="21_8kawm"]
 [ext_resource type="Script" path="res://scripts/jelly_milk_cup.gd" id="22_h68l2"]
-[ext_resource type="Texture2D" uid="uid://c7kj4dstf2qi3" path="res://assets/sold-out-symbol.PNG" id="28_bq51a"]
+[ext_resource type="Script" path="res://scenes/sand_cover.gd" id="25_tnfcl"]
+[ext_resource type="Script" path="res://scenes/sand_symbol.gd" id="27_xf1tw"]
+[ext_resource type="Script" path="res://scenes/jelly_cover.gd" id="28_oxr65"]
+[ext_resource type="Script" path="res://scenes/jelly_symbol.gd" id="30_c24da"]
 
 [sub_resource type="GDScript" id="GDScript_434wb"]
 script/source = "extends Sprite2D
@@ -314,6 +317,7 @@ offset_left = 284.0
 offset_top = 119.0
 offset_right = 366.0
 offset_bottom = 193.0
+script = ExtResource("25_tnfcl")
 metadata/_edit_lock_ = true
 
 [node name="SandSymbol" type="Sprite2D" parent="."]
@@ -321,6 +325,7 @@ z_index = 1
 position = Vector2(541, 354)
 scale = Vector2(0.438983, 0.475)
 texture = ExtResource("14_qeomv")
+script = ExtResource("27_xf1tw")
 metadata/_edit_lock_ = true
 
 [node name="SandButton" type="TextureButton" parent="."]
@@ -338,12 +343,14 @@ offset_left = 422.0
 offset_top = 117.0
 offset_right = 500.0
 offset_bottom = 189.0
+script = ExtResource("28_oxr65")
 metadata/_edit_lock_ = true
 
 [node name="JellySymbol" type="Sprite2D" parent="."]
 position = Vector2(542, 350)
 scale = Vector2(0.389917, 0.458637)
 texture = ExtResource("20_ntomq")
+script = ExtResource("30_c24da")
 metadata/_edit_lock_ = true
 
 [node name="JellyButton" type="TextureButton" parent="."]
@@ -354,18 +361,6 @@ offset_right = 506.0
 offset_bottom = 194.0
 action_mode = 0
 metadata/_edit_lock_ = true
-
-[node name="sandcross" type="Sprite2D" parent="."]
-z_index = 2
-position = Vector2(481, 208)
-scale = Vector2(0.251165, 0.203144)
-texture = ExtResource("28_bq51a")
-
-[node name="jellycross" type="Sprite2D" parent="."]
-z_index = 2
-position = Vector2(618, 203)
-scale = Vector2(0.251165, 0.203144)
-texture = ExtResource("28_bq51a")
 
 [connection signal="focus_entered" from="SuccessZone" to="MovingBar" method="_on_success_zone_entered"]
 [connection signal="pressed" from="KelpButton" to="." method="_on_kelp_button_pressed"]
