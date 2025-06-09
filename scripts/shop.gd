@@ -3,14 +3,14 @@ extends Control
 @onready var money = $"../Money"
 @onready var deep = $"Deep Sea Sauce"
 @onready var ink = $"Ink Sauce"
-@onready var seasaucecross = $SeaSauceCross
-@onready var sandcross = $SandCross
-@onready var inkcross = $InkCross
-@onready var mooncross = $MoonCross
-@onready var deepbutton = $seasaucebutton
-@onready var inkbutton = $inkbutton
-@onready var sandbutton = $sandbutton
-@onready var moonbutton = $moonbutton
+@onready var seasaucecross: Sprite2D = $SeaSauceCross
+@onready var sandcross: Sprite2D = $SandCross
+@onready var inkcross: Sprite2D = $InkCross
+@onready var mooncross: Sprite2D = $MoonCross
+@onready var deepbutton: TextureButton = $seasaucebutton
+@onready var inkbutton: TextureButton = $inkbutton
+@onready var sandbutton: TextureButton = $sandbutton
+@onready var moonbutton: TextureButton = $moonbutton
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

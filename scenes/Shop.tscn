@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ce73od5eae84"]
+[gd_scene load_steps=10 format=3 uid="uid://ce73od5eae84"]
 
 [ext_resource type="Script" path="res://scripts/shop.gd" id="1_ltbus"]
 [ext_resource type="Texture2D" uid="uid://cg4sr48cvfle5" path="res://assets/shop.PNG" id="1_qnws0"]
@@ -9,7 +9,6 @@
 [ext_resource type="Script" path="res://scenes/ink_cross.gd" id="7_yw4th"]
 [ext_resource type="Script" path="res://scenes/moon_cross.gd" id="8_j2n76"]
 [ext_resource type="PackedScene" uid="uid://cey5rpfgqijdl" path="res://scenes/money.tscn" id="9_auxe8"]
-[ext_resource type="Script" path="res://scenes/seasaucebutton.gd" id="10_bbaxr"]
 
 [node name="Shop" type="Control"]
 layout_mode = 3
@@ -83,7 +82,7 @@ offset_left = -0.360016
 offset_top = 3.76999
 offset_right = -9.71204
 offset_bottom = -0.0760193
-script = ExtResource("10_bbaxr")
+script = ExtResource("1_ltbus")
 
 [node name="sandbutton" type="TextureButton" parent="."]
 layout_mode = 1
@@ -96,7 +95,7 @@ offset_left = 0.487976
 offset_top = -0.0220032
 offset_right = 0.35199
 offset_bottom = 0.0979614
-script = ExtResource("10_bbaxr")
+script = ExtResource("1_ltbus")
 
 [node name="inkbutton" type="TextureButton" parent="."]
 layout_mode = 1
@@ -109,7 +108,7 @@ offset_left = 359.488
 offset_top = -206.022
 offset_right = 359.352
 offset_bottom = -205.902
-script = ExtResource("10_bbaxr")
+script = ExtResource("1_ltbus")
 
 [node name="moonbutton" type="TextureButton" parent="."]
 layout_mode = 1
@@ -122,7 +121,7 @@ offset_left = 361.488
 offset_top = 8.978
 offset_right = 361.352
 offset_bottom = 9.09796
-script = ExtResource("10_bbaxr")
+script = ExtResource("1_ltbus")
 
 [connection signal="pressed" from="CloseButton" to="CloseButton" method="_on_pressed"]
 [connection signal="pressed" from="seasaucebutton" to="." method="_on_seasaucebutton_pressed"]
