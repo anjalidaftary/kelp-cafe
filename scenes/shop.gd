@@ -71,3 +71,13 @@ func _on_jelly_base_button_pressed() -> void:
 		mooncross.show()
 		moonbutton.disabled = true
 	money.hide()
+
+func _process(delta: float) -> void:
+	if GlobalUnlockables.deepUnlocked:
+		seasaucecross.show()
+	if GlobalUnlockables.sandUnlocked:
+		sandcross.show()
+	if GlobalUnlockables.moonJellyUnlocked:
+		mooncross.show()
+	if GlobalUnlockables.inkUnlocked:
+		inkcross.show()
