@@ -18,7 +18,7 @@ func _ready() -> void:
 
 
 func _on_seasaucebutton_pressed() -> void:
-	print("button pressed")
+	print("sea sauce button pressed")
 	money.show()
 	if money.canPurchase(50):
 		money.remove(50)
@@ -29,7 +29,7 @@ func _on_seasaucebutton_pressed() -> void:
 
 
 func _on_sandbutton_pressed() -> void:
-	print("button pressed")
+	print("sand button pressed")
 	money.show()
 	if money.canPurchase(50):
 		money.remove(50)
@@ -40,16 +40,18 @@ func _on_sandbutton_pressed() -> void:
 
 
 func _on_inkbutton_pressed() -> void:
-	print("button pressed")
+	print("ink button pressed")
+	money.show()
 	if money.canPurchase(50):
 		money.remove(50)
 		GlobalUnlockables.inkUnlocked = true
 		inkcross.show()
 		inkbutton.disabled = true
+	money.hide()
 
 
 func _on_moonbutton_pressed() -> void:
-	print("button pressed")
+	print("moon button pressed")
 	money.show()
 	if money.canPurchase(50):
 		money.remove(50)

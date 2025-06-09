@@ -159,14 +159,6 @@ offset_right = 539.0
 offset_bottom = 305.0
 metadata/_edit_lock_ = true
 
-[node name="Shop" parent="." instance=ExtResource("14_pmqf2")]
-visible = false
-offset_left = -505.0
-offset_top = -335.0
-offset_right = -505.0
-offset_bottom = -335.0
-script = ExtResource("15_k6dew")
-
 [node name="Money" parent="." instance=ExtResource("12_pi2lv")]
 anchors_preset = 0
 anchor_right = 0.0
@@ -186,9 +178,51 @@ offset_top = 64.0
 offset_right = -221.0
 offset_bottom = 270.0
 
+[node name="Shop" parent="." instance=ExtResource("14_pmqf2")]
+top_level = true
+light_mask = 16
+z_index = 1
+offset_left = -505.0
+offset_top = -335.0
+offset_right = -505.0
+offset_bottom = -335.0
+script = ExtResource("15_k6dew")
+
+[node name="SeaSauceButton" type="TextureButton" parent="."]
+offset_left = -130.0
+offset_top = -39.0
+offset_right = -40.0
+offset_bottom = -1.0
+metadata/_edit_lock_ = true
+
+[node name="InkFudgeButton" type="TextureButton" parent="."]
+offset_left = 231.0
+offset_top = -64.0
+offset_right = 318.0
+offset_bottom = -27.0
+metadata/_edit_lock_ = true
+
+[node name="SandBaseButton" type="TextureButton" parent="."]
+offset_left = -130.0
+offset_top = 138.0
+offset_right = -39.0
+offset_bottom = 176.0
+metadata/_edit_lock_ = true
+
+[node name="JellyBaseButton" type="TextureButton" parent="."]
+offset_left = 233.0
+offset_top = 145.0
+offset_right = 323.0
+offset_bottom = 183.0
+metadata/_edit_lock_ = true
+
 [connection signal="pressed" from="Fish/FishButton2" to="Fish" method="_on_fish_button_2_pressed"]
 [connection signal="pressed" from="Fish/FishButton2" to="SpeechBubble" method="_on_fish_button_2_pressed"]
 [connection signal="pressed" from="Fish/FishButton2" to="Arrow" method="_on_fish_button_2_pressed"]
 [connection signal="ready" from="SpeechBubble" to="SpeechBubble" method="_on_ready"]
 [connection signal="pressed" from="ChangeSceneButton" to="Arrow" method="_on_change_scene_button_pressed"]
 [connection signal="pressed" from="ShopButton" to="Shop" method="_on_shop_button_pressed"]
+[connection signal="pressed" from="SeaSauceButton" to="Shop" method="_on_sea_sauce_button_pressed"]
+[connection signal="pressed" from="InkFudgeButton" to="Shop" method="_on_ink_fudge_button_pressed"]
+[connection signal="pressed" from="SandBaseButton" to="Shop" method="_on_sand_base_button_pressed"]
+[connection signal="pressed" from="JellyBaseButton" to="Shop" method="_on_jelly_base_button_pressed"]

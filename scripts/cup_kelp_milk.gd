@@ -6,7 +6,7 @@ var hasShell = false
 var hasCaramel = false
 var hasInk = false
 var hasDeep = false
-
+#
 @onready var toppings_node = $"Toppings node"
 
 func add_topping(texture: Texture, offset := Vector2.ZERO):

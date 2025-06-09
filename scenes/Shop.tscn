@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ce73od5eae84"]
+[gd_scene load_steps=11 format=3 uid="uid://ce73od5eae84"]
 
 [ext_resource type="Script" path="res://scripts/shop.gd" id="1_ltbus"]
 [ext_resource type="Texture2D" uid="uid://cg4sr48cvfle5" path="res://assets/shop.PNG" id="1_qnws0"]
@@ -9,8 +9,10 @@
 [ext_resource type="Script" path="res://scenes/ink_cross.gd" id="7_yw4th"]
 [ext_resource type="Script" path="res://scenes/moon_cross.gd" id="8_j2n76"]
 [ext_resource type="PackedScene" uid="uid://cey5rpfgqijdl" path="res://scenes/money.tscn" id="9_auxe8"]
+[ext_resource type="Script" path="res://scenes/seasaucebutton.gd" id="10_bbaxr"]
 
 [node name="Shop" type="Control"]
+visibility_layer = 16
 layout_mode = 3
 anchor_left = 0.013
 anchor_right = 0.482
@@ -20,6 +22,7 @@ offset_right = 600.736
 offset_bottom = 276.736
 grow_horizontal = 2
 grow_vertical = 2
+mouse_force_pass_scroll_events = false
 script = ExtResource("1_ltbus")
 
 [node name="background" type="Sprite2D" parent="."]
@@ -36,92 +39,95 @@ offset_bottom = 138.0
 script = ExtResource("3_orbys")
 
 [node name="SeaSauceCross" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(469, 350)
 scale = Vector2(0.378154, 0.406707)
 texture = ExtResource("4_wm0gd")
 script = ExtResource("5_7g4ed")
 
 [node name="SandCross" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(462, 542)
 scale = Vector2(0.378154, 0.406707)
 texture = ExtResource("4_wm0gd")
 script = ExtResource("6_dtu5a")
 
 [node name="InkCross" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(808, 354)
 scale = Vector2(0.378154, 0.406707)
 texture = ExtResource("4_wm0gd")
 script = ExtResource("7_yw4th")
 
 [node name="MoonCross" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(809, 545)
 scale = Vector2(0.378154, 0.406707)
 texture = ExtResource("4_wm0gd")
 script = ExtResource("8_j2n76")
 
 [node name="Money" parent="." instance=ExtResource("9_auxe8")]
-visible = false
 layout_mode = 1
 offset_left = -701.0
 offset_top = 442.0
 offset_right = -1749.0
 offset_bottom = -171.0
 
+[node name="background2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 123.0
+offset_right = 901.0
+offset_bottom = 575.0
+color = Color(1, 1, 1, 0)
+metadata/_edit_lock_ = true
+
 [node name="seasaucebutton" type="TextureButton" parent="."]
+top_level = true
+light_mask = 512
+visibility_layer = 512
+z_index = 3
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.305
-anchor_top = 0.43
-anchor_right = 0.406
-anchor_bottom = 0.516
-offset_left = -0.360016
-offset_top = 3.76999
-offset_right = -9.71204
-offset_bottom = -0.0760193
-script = ExtResource("1_ltbus")
+anchor_left = 0.321181
+anchor_top = 0.453704
+anchor_right = 0.389757
+anchor_bottom = 0.512346
+grow_vertical = 2
+mouse_force_pass_scroll_events = false
+action_mode = 0
+script = ExtResource("10_bbaxr")
 
 [node name="sandbutton" type="TextureButton" parent="."]
+top_level = true
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.306
-anchor_top = 0.702
-anchor_right = 0.399
-anchor_bottom = 0.782
-offset_left = 0.487976
-offset_top = -0.0220032
-offset_right = 0.35199
-offset_bottom = 0.0979614
-script = ExtResource("1_ltbus")
+anchor_left = 0.315104
+anchor_top = 0.726852
+anchor_right = 0.394097
+anchor_bottom = 0.782407
+offset_top = -3.05176e-05
+script = ExtResource("10_bbaxr")
+metadata/_edit_use_anchors_ = true
 
 [node name="inkbutton" type="TextureButton" parent="."]
+top_level = true
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.306
-anchor_top = 0.702
-anchor_right = 0.399
-anchor_bottom = 0.782
-offset_left = 359.488
-offset_top = -206.022
-offset_right = 359.352
-offset_bottom = -205.902
-script = ExtResource("1_ltbus")
+anchor_left = 0.630208
+anchor_top = 0.424383
+anchor_right = 0.701389
+anchor_bottom = 0.475309
+script = ExtResource("10_bbaxr")
+metadata/_edit_use_anchors_ = true
 
 [node name="moonbutton" type="TextureButton" parent="."]
+top_level = true
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.306
-anchor_top = 0.702
-anchor_right = 0.399
-anchor_bottom = 0.782
-offset_left = 361.488
-offset_top = 8.978
-offset_right = 361.352
-offset_bottom = 9.09796
-script = ExtResource("1_ltbus")
+anchor_left = 0.631944
+anchor_top = 0.740741
+anchor_right = 0.705729
+anchor_bottom = 0.796296
+offset_top = 3.05176e-05
+script = ExtResource("10_bbaxr")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="CloseButton" to="CloseButton" method="_on_pressed"]
 [connection signal="pressed" from="seasaucebutton" to="." method="_on_seasaucebutton_pressed"]
