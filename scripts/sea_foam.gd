@@ -16,6 +16,7 @@ func _on_foam_button_pressed() -> void:
 
 func _on_drink_button_pressed() -> void:
 	if (toggled):
+		GlobalTopping.toppingsAdded.append("seafoam")
 		var foamTexture = load("res://assets/sea-foam-topping.PNG")
 		drink.add_topping(foamTexture, Vector2(43, -10))
 		drink.hasFoam = true

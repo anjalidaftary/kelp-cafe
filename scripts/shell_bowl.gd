@@ -14,6 +14,7 @@ func _on_shell_button_pressed() -> void:
 
 func _on_drink_button_pressed() -> void:
 	if (toggled):
+		GlobalTopping.toppingsAdded.append("seashell")
 		var shellTexture = load("res://assets/seashells-topping.png")
 		drink.add_topping(shellTexture, Vector2(43, -5))
 		drink.hasShell = true

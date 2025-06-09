@@ -14,6 +14,7 @@ func _on_pearl_button_pressed() -> void:
 
 func _on_drink_button_pressed() -> void:
 	if (toggled):
+		GlobalTopping.toppingsAdded.append("pearl")
 		var pearlTexture = load("res://assets/pearls-topping.PNG")
 		drink.add_topping(pearlTexture, Vector2(43, -10))
 		toggled = false;

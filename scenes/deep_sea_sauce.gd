@@ -22,6 +22,7 @@ func _on_deep_button_pressed() -> void:
 
 func _on_drink_button_pressed() -> void:
 	if (toggled):
+		GlobalTopping.toppingsAdded.append("deep")
 		var sauce = load("res://assets/deep-sea-sauce-topping.png")
 		drink.add_topping(sauce, Vector2(43, -10))
 		toggled = false;

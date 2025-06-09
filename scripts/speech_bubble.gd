@@ -6,7 +6,6 @@ extends Panel
 var order
 
 @onready var order_success = []
-@onready var order_progress = ["idk", "idk", "idk"]
 
 @onready var foam_symbol = preload("res://items/seafoam.tres")
 
@@ -25,10 +24,14 @@ var order
 	preload("res://items/kelp.tres")
 ]
 
-@onready var random_symbols_string = [
+@onready var random_toppings_string = [
 	"pearl",
 	"seashell",
-	"caramel"
+	"caramel",
+]
+
+@onready var random_base_string = [
+	"kelp"
 ]
 
 func _on_ready() -> void:
@@ -40,12 +43,16 @@ func show_order() -> void:
 	
 	if(GlobalUnlockables.deepUnlocked):
 		random_toppings.append(deepsea)
+		random_toppings_string.append("deep")
 	if(GlobalUnlockables.inkUnlocked):
 		random_toppings.append(ink)
+		random_toppings_string.append("ink")
 	if(GlobalUnlockables.moonJellyUnlocked):
 		random_flavors.append(jelly)
+		random_base_string.append("jelly")
 	if(GlobalUnlockables.sandUnlocked):
 		random_flavors.append(sand)
+		random_base_string.append("sand")
 	var first_symbol = random_flavors.pick_random()
 	var third_symbol = random_toppings.pick_random()
 	
@@ -53,6 +60,11 @@ func show_order() -> void:
 	symbol_container.get_child(1).texture = foam_symbol.order_symbol
 	symbol_container.get_child(2).texture = third_symbol.order_symbol
 	var order: Array[Topping]  = [first_symbol, foam_symbol, third_symbol]
+	
+	GlobalTopping.base = random_base_string[random_flavors.find(first_symbol)]
+	print("base: " + GlobalTopping.base)
+	GlobalTopping.topping = random_toppings_string[random_toppings.find(third_symbol)]
+	print("topping: " + GlobalTopping.topping)
 	
 	Global.currOrder = order
 	

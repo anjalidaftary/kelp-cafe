@@ -14,4 +14,8 @@ func _process(delta: float) -> void:
 
 
 func _on_change_scene_button_pressed() -> void:
+	if (GlobalTopping.orderSuccess):
+		print("order is successful")
+	else:
+		print("order not successful")
 	get_tree().change_scene_to_file("res://scenes/Counter.tscn")
