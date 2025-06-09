@@ -38,6 +38,11 @@ func _on_ready() -> void:
 	hide()
 
 func show_order() -> void:
+	GlobalTopping.toppingsAdded = []
+	GlobalTopping.isJelly = false
+	GlobalTopping.isKelp = false
+	GlobalTopping.isSand = false
+	
 	for child in symbol_container.get_children():
 		child.texture = null
 	

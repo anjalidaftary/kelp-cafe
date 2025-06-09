@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmxaqjn2np7nw"]
+
+[ext_resource type="Texture2D" uid="uid://b02twuhjc7mw4" path="res://assets/squid.png" id="1_cvp35"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qcatm"]
+size = Vector2(403, 571)
+
+[node name="Squid" type="AnimatableBody2D"]
+position = Vector2(72, 54)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(281.75, 248.75)
+scale = Vector2(0.240479, 0.240479)
+texture = ExtResource("1_cvp35")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(288.5, 253)
+shape = SubResource("RectangleShape2D_qcatm")

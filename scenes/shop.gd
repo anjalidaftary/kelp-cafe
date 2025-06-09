@@ -21,6 +21,8 @@ func _ready():
 		mooncross = shop.get_node_or_null("MoonCross")
 		sandcross = shop.get_node_or_null("SandCross")
 	visible = false
+	
+	
 
 
 

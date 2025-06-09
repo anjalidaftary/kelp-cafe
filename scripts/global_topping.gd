@@ -18,18 +18,20 @@ func _process(delta: float) -> void:
 	pass
 
 func orderSuccess():
-	if (toppingsAdded.length != 2):
+	print(toppingsAdded)
+	var replace = []
+	if (toppingsAdded.size() != 2):
 		return false
-	if (isKelp and base.equals("kelp")):
-		if (toppingsAdded[0].equals("seafoam") and toppingsAdded[1].equals(topping)):
+	if (isKelp and base == "kelp"):
+		if (toppingsAdded[0] == "seafoam" and toppingsAdded[1] == topping):
 			return true
 		return false
-	elif (isJelly and base.equals("jelly")):
-		if (toppingsAdded[0].equals("seafoam") and toppingsAdded[1].equals(topping)):
+	elif (isJelly and base == "jelly"):
+		if (toppingsAdded[0] == "seafoam" and toppingsAdded[1] == topping):
 			return true
 		return false
-	elif (isSand and base.equals("sand")):
-		if (toppingsAdded[0].equals("seafoam") and toppingsAdded[1].equals(topping)):
+	elif (isSand and base == "sand"):
+		if (toppingsAdded[0] == "seafoam" and toppingsAdded[1] == topping):
 			return true
 		return false
 	return false

@@ -1,10 +1,11 @@
-[gd_scene load_steps=22 format=3 uid="uid://dse46hk1lgs0x"]
+[gd_scene load_steps=25 format=3 uid="uid://dse46hk1lgs0x"]
 
 [ext_resource type="Script" path="res://scripts/counter.gd" id="1_f17y4"]
 [ext_resource type="Texture2D" uid="uid://c4e500lm4lncg" path="res://assets/order-background.PNG" id="1_tdlqi"]
 [ext_resource type="PackedScene" uid="uid://0sk6su1p8mq5" path="res://scenes/Fish.tscn" id="1_uj3bm"]
 [ext_resource type="Texture2D" uid="uid://y71anfhbimva" path="res://assets/order-counter.PNG" id="3_cnauo"]
 [ext_resource type="Script" path="res://scripts/fish.gd" id="3_ejy3u"]
+[ext_resource type="PackedScene" uid="uid://bmxaqjn2np7nw" path="res://scenes/Squid.tscn" id="3_ilavg"]
 [ext_resource type="Script" path="res://scripts/speech_bubble.gd" id="4_dkpgr"]
 [ext_resource type="Texture2D" uid="uid://bmahanl3jhi7v" path="res://assets/Order_symbols-1.png" id="6_880uu"]
 [ext_resource type="Texture2D" uid="uid://djmxlmlkum6bi" path="res://assets/kelp-order-symbol.png" id="7_md0bu"]
@@ -15,6 +16,18 @@
 [ext_resource type="PackedScene" uid="uid://cey5rpfgqijdl" path="res://scenes/money.tscn" id="12_pi2lv"]
 [ext_resource type="PackedScene" uid="uid://ce73od5eae84" path="res://scenes/Shop.tscn" id="14_pmqf2"]
 [ext_resource type="Script" path="res://scenes/shop.gd" id="15_k6dew"]
+
+[sub_resource type="GDScript" id="GDScript_wh78x"]
+script/source = "extends TextureButton
+"
+
+[sub_resource type="Animation" id="Animation_ofusd"]
+resource_name = "PopUp"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yuimg"]
+_data = {
+"PopUp": SubResource("Animation_ofusd")
+}
 
 [sub_resource type="Animation" id="Animation_hhnim"]
 length = 0.001
@@ -68,14 +81,17 @@ _data = {
 "pop-up": SubResource("Animation_blqn8")
 }
 
-[sub_resource type="GDScript" id="GDScript_wh78x"]
-script/source = "extends TextureButton
-"
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_twxvo"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_f17y4")
+
+[node name="SpeechButton" type="TextureButton" parent="."]
+offset_left = -138.25
+offset_top = -68.0
+offset_right = -8.25
+offset_bottom = 92.0
+script = SubResource("GDScript_wh78x")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(-2, 22)
@@ -87,24 +103,25 @@ metadata/_edit_lock_ = true
 position = Vector2(-2, 1)
 metadata/_edit_lock_ = true
 
+[node name="Squid" parent="." instance=ExtResource("3_ilavg")]
+position = Vector2(-326, -199)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Squid"]
+libraries = {
+"": SubResource("AnimationLibrary_yuimg")
+}
+
 [node name="Fish" parent="." instance=ExtResource("1_uj3bm")]
 position = Vector2(0, 142)
 scale = Vector2(1.75, 1.75)
 script = ExtResource("3_ejy3u")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Fish"]
+[node name="PopUp" type="AnimationPlayer" parent="Fish"]
 libraries = {
 "": SubResource("AnimationLibrary_q1yw7")
 }
 autoplay = "pop-up"
 speed_scale = 0.91
-
-[node name="FishButton2" type="TextureButton" parent="Fish"]
-offset_left = -79.0
-offset_top = -120.0
-offset_right = 51.0
-offset_bottom = 40.0
-script = SubResource("GDScript_wh78x")
 
 [node name="Bar" type="Sprite2D" parent="."]
 position = Vector2(1, -31)
@@ -179,6 +196,7 @@ offset_right = -221.0
 offset_bottom = 270.0
 
 [node name="Shop" parent="." instance=ExtResource("14_pmqf2")]
+visible = false
 top_level = true
 light_mask = 16
 z_index = 1
@@ -216,9 +234,9 @@ offset_right = 323.0
 offset_bottom = 183.0
 metadata/_edit_lock_ = true
 
-[connection signal="pressed" from="Fish/FishButton2" to="Fish" method="_on_fish_button_2_pressed"]
-[connection signal="pressed" from="Fish/FishButton2" to="SpeechBubble" method="_on_fish_button_2_pressed"]
-[connection signal="pressed" from="Fish/FishButton2" to="Arrow" method="_on_fish_button_2_pressed"]
+[connection signal="pressed" from="SpeechButton" to="Fish" method="_on_fish_button_2_pressed"]
+[connection signal="pressed" from="SpeechButton" to="SpeechBubble" method="_on_fish_button_2_pressed"]
+[connection signal="pressed" from="SpeechButton" to="Arrow" method="_on_fish_button_2_pressed"]
 [connection signal="ready" from="SpeechBubble" to="SpeechBubble" method="_on_ready"]
 [connection signal="pressed" from="ChangeSceneButton" to="Arrow" method="_on_change_scene_button_pressed"]
 [connection signal="pressed" from="ShopButton" to="Shop" method="_on_shop_button_pressed"]
