@@ -133,10 +133,10 @@ texture = ExtResource("12_w4an3")
 script = ExtResource("12_e2fc0")
 
 [node name="ChangeSceneButton" type="TextureButton" parent="."]
-offset_left = 952.0
-offset_top = 650.0
-offset_right = 1134.0
-offset_bottom = 727.0
+offset_left = 957.0
+offset_top = 632.0
+offset_right = 1139.0
+offset_bottom = 709.0
 metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="Pearl/pearlButton" to="Pearl" method="_on_pearl_button_pressed"]

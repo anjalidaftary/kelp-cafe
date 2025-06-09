@@ -270,10 +270,10 @@ color = Color(1, 1, 1, 0)
 metadata/_edit_lock_ = true
 
 [node name="MilkButton" type="TextureButton" parent="."]
-offset_left = 794.0
-offset_top = 245.0
-offset_right = 883.0
-offset_bottom = 324.0
+offset_left = 786.0
+offset_top = 237.0
+offset_right = 887.0
+offset_bottom = 337.0
 action_mode = 0
 metadata/_edit_lock_ = true
 
@@ -299,8 +299,8 @@ script = ExtResource("22_h68l2")
 metadata/_edit_lock_ = true
 
 [node name="ChangeSceneButton" type="TextureButton" parent="."]
-offset_left = 971.0
-offset_top = 631.0
+offset_left = 918.0
+offset_top = 615.0
 offset_right = 1101.0
 offset_bottom = 689.0
 disabled = true
