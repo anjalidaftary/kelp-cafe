@@ -2,12 +2,10 @@ extends Sprite2D
 
 var toggled = false
 var unlocked = false
-var new_texture = load("res://assets/deep-sea-sauce.png")
 @onready var topping = $"."
 @onready var drink = $"../Cup-kelp-milk"
 
 func unlock():
-	texture = new_texture
 	unlocked = true
 
 func _on_deep_button_pressed() -> void:
@@ -26,3 +24,7 @@ func _on_drink_button_pressed() -> void:
 		drink.add_topping(sauce, Vector2(43, -10))
 		toggled = false;
 		topping.position.y += 50
+
+func _process(delta: float) -> void:
+	if GlobalUnlockables.deepUnlocked:
+		texture = load("res://assets/deep-sea-sauce.png")
