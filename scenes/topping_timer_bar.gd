@@ -3,7 +3,7 @@ extends Sprite2D
 @export var bar_speed := 10
 @export var left_limit := 393
 
-@onready var timer_bar: Sprite2D = $TimerBar
+@onready var timer_bar: Sprite2D = $"../TimerBar"
 @onready var starting_pos = Global.barPos
 @onready var bar_collision: ColorRect = $BarCollision
 @onready var yellow_zone: ColorRect = $"../YellowZone"
@@ -15,7 +15,7 @@ func _ready() -> void:
 	timer_bar.position.x = starting_pos
 	
 func _process(delta: float) -> void:
-	Global.barPos = timer_bar.positition.x
+	Global.barPos = timer_bar.position.x
 	if timer_bar.position.x >= left_limit:
 		timer_bar.position.x -= bar_speed * delta
 	
