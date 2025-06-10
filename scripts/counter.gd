@@ -57,7 +57,7 @@ func _ready() -> void:
 		if GlobalTopping.toppingsAdded.has("seashell"):
 			var shellTexture = load("res://assets/seashells-topping.png")
 			add_topping(shellTexture)
-		await get_tree().create_timer(5.0).timeout
+		await get_tree().create_timer(3.0).timeout
 		drink.hide()
 
 func add_topping(texture: Texture):

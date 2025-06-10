@@ -6,9 +6,9 @@ extends AnimatableBody2D
 
 func _ready():
 	if (Global.currSit == 1):
-		await get_tree().create_timer(5.0).timeout
+		await get_tree().create_timer(3.0).timeout
 		anim_player.play("exiting")
 	if (Global.currSit == 2):
-		await get_tree().create_timer(5.0).timeout
+		await get_tree().create_timer(3.0).timeout
 		anim_player.play("exiting")
 	Global.currSit = 0
