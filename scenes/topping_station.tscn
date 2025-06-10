@@ -152,8 +152,6 @@ position = Vector2(719, 662)
 scale = Vector2(0.240143, 0.334928)
 texture = ExtResource("19_4u0qr")
 script = ExtResource("20_70iyj")
-bar_speed = null
-left_limit = null
 
 [node name="BarCollision" type="ColorRect" parent="TimerBar"]
 offset_left = -19.0

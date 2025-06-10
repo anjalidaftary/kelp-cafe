@@ -9,6 +9,8 @@ extends Sprite2D
 @onready var yellow_zone: ColorRect = $"../YellowZone"
 @onready var red_zone: ColorRect = $"../RedZone"
 
+var zone = "green"
+
 func _ready() -> void:
 	timer_bar.position.x = starting_pos
 	

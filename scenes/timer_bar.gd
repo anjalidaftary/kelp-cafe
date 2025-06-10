@@ -16,7 +16,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	Global.barPos = timer_bar.positition.x
+	Global.barPos = timer_bar.position.x
 	if timer_bar.position.x >= left_limit:
 		timer_bar.position.x -= bar_speed * delta
 	
