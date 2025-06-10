@@ -58,7 +58,6 @@ var right_limit := 650
 
 @onready var arrow = $\"../Arrow\"
 @onready var sceneButton = $\"../ChangeSceneButton\"
-@onready var timer_bar: Sprite2D = $\"../TimerBar\"
 
 var kelpChosen = false
 var jellyChosen = false
@@ -136,9 +135,7 @@ func _on_move_to_milk_button_pressed() -> void:
 
 func _on_change_scene_button_pressed() -> void:
 	KelpMilkCup.queue_free()
-	get_tree().change_scene_to_file(\"res://scenes/topping_station.tscn\")
-	timer_bar.position.x
-	
+	get_tree().change_scene_to_file(\"res://scenes/topping_station.tscn\")	
 
 
 func _on_sand_button_pressed() -> void:
@@ -416,3 +413,4 @@ color = Color(1, 1, 1, 0)
 [connection signal="pressed" from="JellyButton" to="MovingBar" method="_on_moon_jelly_button_pressed"]
 [connection signal="pressed" from="JellyButton" to="JellyBaseCup" method="_on_jelly_button_pressed"]
 [connection signal="pressed" from="JellyButton" to="MilkBar" method="_on_jelly_button_pressed"]
+[connection signal="ready" from="TimerBar" to="TimerBar" method="_on_ready"]

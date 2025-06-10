@@ -1,20 +1,17 @@
 extends Sprite2D
+
 @export var bar_speed := 10
 @export var left_limit := 393
 
-@onready var timer_bar: Sprite2D = $"."
+@onready var timer_bar: Sprite2D = $TimerBar
+@onready var starting_pos = Global.barPos
 @onready var bar_collision: ColorRect = $BarCollision
 @onready var yellow_zone: ColorRect = $"../YellowZone"
 @onready var red_zone: ColorRect = $"../RedZone"
 
-var zone = "green"
-
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	timer_bar.position.x = 719
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+	timer_bar.position.x = starting_pos
+	
 func _process(delta: float) -> void:
 	Global.barPos = timer_bar.positition.x
 	if timer_bar.position.x >= left_limit:
@@ -28,4 +25,3 @@ func _process(delta: float) -> void:
 		zone = "yellow"
 	elif (bar_rect.intersects(red_zone_rect)):
 		zone = "red"
-		

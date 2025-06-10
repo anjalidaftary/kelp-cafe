@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://v2vpvfpoa45d"]
+[gd_scene load_steps=21 format=3 uid="uid://v2vpvfpoa45d"]
 
 [ext_resource type="Script" path="res://scripts/topping_station.gd" id="1_fltki"]
 [ext_resource type="Texture2D" uid="uid://cipw02sv1jmlt" path="res://assets/toppings-background.png" id="1_ytthe"]
@@ -17,6 +17,9 @@
 [ext_resource type="Texture2D" uid="uid://dojwwxrvge713" path="res://assets/locked-topping-1.PNG" id="13_7oucb"]
 [ext_resource type="Texture2D" uid="uid://dgthtmw0ua24j" path="res://assets/locked-topping-2.PNG" id="14_0j0ap"]
 [ext_resource type="Script" path="res://scenes/deep_sea_sauce.gd" id="14_62faf"]
+[ext_resource type="Texture2D" uid="uid://c12ikpq5mpyk1" path="res://assets/timer.png" id="18_j2c42"]
+[ext_resource type="Texture2D" uid="uid://bq82a1eqac57d" path="res://assets/timer-bar.png" id="19_4u0qr"]
+[ext_resource type="Script" path="res://scenes/topping_timer_bar.gd" id="20_70iyj"]
 
 [node name="ToppingStation" type="Node2D"]
 script = ExtResource("1_fltki")
@@ -139,6 +142,40 @@ offset_right = 1139.0
 offset_bottom = 709.0
 metadata/_edit_lock_ = true
 
+[node name="Timer" type="Sprite2D" parent="."]
+position = Vector2(559.455, 656.719)
+scale = Vector2(0.32761, 0.32761)
+texture = ExtResource("18_j2c42")
+
+[node name="TimerBar" type="Sprite2D" parent="."]
+position = Vector2(719, 662)
+scale = Vector2(0.240143, 0.334928)
+texture = ExtResource("19_4u0qr")
+script = ExtResource("20_70iyj")
+bar_speed = null
+left_limit = null
+
+[node name="BarCollision" type="ColorRect" parent="TimerBar"]
+offset_left = -19.0
+offset_top = -45.0
+offset_right = 18.0
+offset_bottom = 35.0
+color = Color(1, 1, 1, 0)
+
+[node name="YellowZone" type="ColorRect" parent="."]
+offset_left = 499.0
+offset_top = 647.0
+offset_right = 618.0
+offset_bottom = 673.0
+color = Color(1, 1, 1, 0)
+
+[node name="RedZone" type="ColorRect" parent="."]
+offset_left = 377.0
+offset_top = 646.0
+offset_right = 498.0
+offset_bottom = 674.0
+color = Color(1, 1, 1, 0)
+
 [connection signal="pressed" from="Pearl/pearlButton" to="Pearl" method="_on_pearl_button_pressed"]
 [connection signal="pressed" from="Shell-bowl/shellButton" to="Shell-bowl" method="_on_shell_button_pressed"]
 [connection signal="pressed" from="Caramel-sauce/caramelButton" to="Caramel-sauce" method="_on_caramel_button_pressed"]
@@ -152,3 +189,4 @@ metadata/_edit_lock_ = true
 [connection signal="pressed" from="Cup-kelp-milk/drinkButton" to="Ink Sauce" method="_on_drink_button_pressed"]
 [connection signal="pressed" from="Cup-kelp-milk/drinkButton" to="Deep Sea Sauce" method="_on_drink_button_pressed"]
 [connection signal="pressed" from="ChangeSceneButton" to="Arrow" method="_on_change_scene_button_pressed"]
+[connection signal="ready" from="TimerBar" to="TimerBar" method="_on_ready"]

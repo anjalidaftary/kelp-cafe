@@ -5,3 +5,5 @@ var toppingsAdded = [false, false, false]
 var currMoney = 50
 var currSit = 0
 var currChar = 0
+
+var barPos = 719
