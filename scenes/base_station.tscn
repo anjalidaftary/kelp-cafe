@@ -34,7 +34,7 @@
 [sub_resource type="GDScript" id="GDScript_434wb"]
 script/source = "extends Sprite2D
 
-var bar_speed := 500  # pixels per second
+var bar_speed := 800  # pixels per second
 var left_limit := 410
 var right_limit := 650
 
