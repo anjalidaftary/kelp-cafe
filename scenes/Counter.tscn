@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://dse46hk1lgs0x"]
+[gd_scene load_steps=29 format=3 uid="uid://dse46hk1lgs0x"]
 
 [ext_resource type="Script" path="res://scripts/counter.gd" id="1_f17y4"]
 [ext_resource type="Texture2D" uid="uid://c4e500lm4lncg" path="res://assets/order-background.PNG" id="1_tdlqi"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://scripts/fish.gd" id="3_ejy3u"]
 [ext_resource type="PackedScene" uid="uid://dn4a3ft5mpjb4" path="res://scenes/Squid.tscn" id="3_ilavg"]
 [ext_resource type="Script" path="res://scripts/speech_bubble.gd" id="4_dkpgr"]
+[ext_resource type="Script" path="res://scenes/squid.gd" id="4_f5qpc"]
 [ext_resource type="Texture2D" uid="uid://bmahanl3jhi7v" path="res://assets/Order_symbols-1.png" id="6_880uu"]
 [ext_resource type="Texture2D" uid="uid://djmxlmlkum6bi" path="res://assets/kelp-order-symbol.png" id="7_md0bu"]
 [ext_resource type="Texture2D" uid="uid://dehj5b7ncm5m8" path="res://assets/foam-order-symbol.png" id="8_b0lxp"]
@@ -50,26 +51,51 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(-320, 110)]
 }
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-250, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_r7ktl"]
+resource_name = "exiting"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-250, -0.25, 0, 0.25, 0, 196, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6)
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yuimg"]
 _data = {
 "PopUp": SubResource("Animation_ofusd"),
-"RESET": SubResource("Animation_v3jry")
+"RESET": SubResource("Animation_v3jry"),
+"exiting": SubResource("Animation_r7ktl")
 }
 
 [sub_resource type="Animation" id="Animation_hhnim"]
 length = 0.001
-tracks/0/type = "value"
+tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath(".:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.0005, 0, 0.0005, 0),
+"times": PackedFloat32Array(1.2)
 }
 
 [sub_resource type="Animation" id="Animation_n6g8e"]
@@ -93,10 +119,10 @@ tracks/1/path = NodePath(".:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.733333, 1),
-"transitions": PackedFloat32Array(1, 0.812252, 1),
+"times": PackedFloat32Array(0, 0.733333),
+"transitions": PackedFloat32Array(1, 0.812252),
 "update": 0,
-"values": [0.0, 0.698132, 0.0]
+"values": [0.0, 0.698132]
 }
 
 [sub_resource type="Animation" id="Animation_ltqjv"]
@@ -160,7 +186,8 @@ position = Vector2(-2, 1)
 metadata/_edit_lock_ = true
 
 [node name="Squid" parent="." instance=ExtResource("3_ilavg")]
-position = Vector2(-320, 110)
+position = Vector2(-320, -250)
+script = ExtResource("4_f5qpc")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Squid"]
 libraries = {
@@ -168,7 +195,7 @@ libraries = {
 }
 
 [node name="Fish" parent="." instance=ExtResource("1_uj3bm")]
-position = Vector2(0, 500)
+position = Vector2(0, 505)
 scale = Vector2(1.75, 1.75)
 script = ExtResource("3_ejy3u")
 
