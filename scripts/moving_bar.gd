@@ -51,18 +51,18 @@ func check_success1() -> void:
 			emptyCup.queue_free()
 			if (kelpPressed):
 				kelpBaseCup.visible = true
-				if(Global.currOrder[0].name == "kelp"):
-					Global.toppingsAdded[0] = true
-					print(Global.toppingsAdded[0])
+				#if(Global.currOrder[0].name == "kelp"):
+					#Global.toppingsAdded[0] = true
+					#print(Global.toppingsAdded[0])
 				
 			elif (sandPressed):
 				sandBaseCup.visible = true
-				if(Global.currOrder[0].name == "sand"):
-					Global.toppingsAdded[0] = true
+				#if(Global.currOrder[0].name == "sand"):
+					#Global.toppingsAdded[0] = true
 			elif (moonjellyPressed):
 				jellyBaseCup.visible = true
-				if(Global.currOrder[0].name == "jelly"):
-					Global.toppingsAdded[0] = true
+				#if(Global.currOrder[0].name == "jelly"):
+					#Global.toppingsAdded[0] = true
 			print("success")
 			successful = true
 			done = true

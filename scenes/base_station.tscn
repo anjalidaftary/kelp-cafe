@@ -58,6 +58,7 @@ var right_limit := 650
 
 @onready var arrow = $\"../Arrow\"
 @onready var sceneButton = $\"../ChangeSceneButton\"
+@onready var timer_bar: Sprite2D = $\"../TimerBar\"
 
 var kelpChosen = false
 var jellyChosen = false
@@ -136,6 +137,7 @@ func _on_move_to_milk_button_pressed() -> void:
 func _on_change_scene_button_pressed() -> void:
 	KelpMilkCup.queue_free()
 	get_tree().change_scene_to_file(\"res://scenes/topping_station.tscn\")
+	timer_bar.position.x
 	
 
 
@@ -371,10 +373,31 @@ scale = Vector2(0.32761, 0.32761)
 texture = ExtResource("31_o67ei")
 
 [node name="TimerBar" type="Sprite2D" parent="."]
-position = Vector2(711.455, 661.719)
-scale = Vector2(0.240143, 0.348236)
+position = Vector2(719, 662)
+scale = Vector2(0.240143, 0.334928)
 texture = ExtResource("32_nvkgi")
 script = ExtResource("33_cxcjt")
+
+[node name="BarCollision" type="ColorRect" parent="TimerBar"]
+offset_left = -19.0
+offset_top = -45.0
+offset_right = 18.0
+offset_bottom = 35.0
+color = Color(1, 1, 1, 0)
+
+[node name="YellowZone" type="ColorRect" parent="."]
+offset_left = 499.0
+offset_top = 647.0
+offset_right = 618.0
+offset_bottom = 673.0
+color = Color(1, 1, 1, 0)
+
+[node name="RedZone" type="ColorRect" parent="."]
+offset_left = 377.0
+offset_top = 646.0
+offset_right = 498.0
+offset_bottom = 674.0
+color = Color(1, 1, 1, 0)
 
 [connection signal="focus_entered" from="SuccessZone" to="MovingBar" method="_on_success_zone_entered"]
 [connection signal="pressed" from="KelpButton" to="." method="_on_kelp_button_pressed"]
