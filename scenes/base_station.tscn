@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://bi6nyd4hvg6cp"]
+[gd_scene load_steps=35 format=3 uid="uid://bi6nyd4hvg6cp"]
 
 [ext_resource type="Script" path="res://scripts/base_station.gd" id="1_2mmx2"]
 [ext_resource type="Texture2D" uid="uid://sefkxrvfcq2g" path="res://assets/ice-cream-background.PNG" id="1_m4ant"]
@@ -30,6 +30,9 @@
 [ext_resource type="Script" path="res://scenes/sand_symbol.gd" id="27_xf1tw"]
 [ext_resource type="Script" path="res://scenes/jelly_cover.gd" id="28_oxr65"]
 [ext_resource type="Script" path="res://scenes/jelly_symbol.gd" id="30_c24da"]
+[ext_resource type="Texture2D" uid="uid://c12ikpq5mpyk1" path="res://assets/timer.png" id="31_o67ei"]
+[ext_resource type="Texture2D" uid="uid://bq82a1eqac57d" path="res://assets/timer-bar.png" id="32_nvkgi"]
+[ext_resource type="Script" path="res://scenes/timer_bar.gd" id="33_cxcjt"]
 
 [sub_resource type="GDScript" id="GDScript_434wb"]
 script/source = "extends Sprite2D
@@ -361,6 +364,17 @@ offset_right = 506.0
 offset_bottom = 194.0
 action_mode = 0
 metadata/_edit_lock_ = true
+
+[node name="Timer" type="Sprite2D" parent="."]
+position = Vector2(559.455, 656.719)
+scale = Vector2(0.32761, 0.32761)
+texture = ExtResource("31_o67ei")
+
+[node name="TimerBar" type="Sprite2D" parent="."]
+position = Vector2(711.455, 661.719)
+scale = Vector2(0.240143, 0.348236)
+texture = ExtResource("32_nvkgi")
+script = ExtResource("33_cxcjt")
 
 [connection signal="focus_entered" from="SuccessZone" to="MovingBar" method="_on_success_zone_entered"]
 [connection signal="pressed" from="KelpButton" to="." method="_on_kelp_button_pressed"]
