@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dse46hk1lgs0x"]
+[gd_scene load_steps=30 format=3 uid="uid://dse46hk1lgs0x"]
 
 [ext_resource type="Script" path="res://scripts/counter.gd" id="1_f17y4"]
 [ext_resource type="Texture2D" uid="uid://c4e500lm4lncg" path="res://assets/order-background.PNG" id="1_tdlqi"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://cey5rpfgqijdl" path="res://scenes/money.tscn" id="12_pi2lv"]
 [ext_resource type="PackedScene" uid="uid://ce73od5eae84" path="res://scenes/Shop.tscn" id="14_pmqf2"]
 [ext_resource type="Script" path="res://scenes/shop.gd" id="15_k6dew"]
+[ext_resource type="PackedScene" uid="uid://cw8obid6t2tsq" path="res://scenes/finished_order.tscn" id="18_4e0xy"]
 
 [sub_resource type="GDScript" id="GDScript_wh78x"]
 script/source = "extends TextureButton
@@ -315,6 +316,9 @@ offset_top = 145.0
 offset_right = 323.0
 offset_bottom = 183.0
 metadata/_edit_lock_ = true
+
+[node name="FinishedOrder" parent="." instance=ExtResource("18_4e0xy")]
+position = Vector2(140, 151)
 
 [connection signal="pressed" from="SpeechButton" to="Fish" method="_on_fish_button_2_pressed"]
 [connection signal="pressed" from="SpeechButton" to="SpeechBubble" method="_on_fish_button_2_pressed"]

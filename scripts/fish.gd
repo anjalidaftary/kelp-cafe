@@ -10,8 +10,10 @@ func _on_fish_button_2_pressed() -> void:
 
 func _ready():
 	if (Global.currSit == 1):
+		await get_tree().create_timer(5.0).timeout
 		anim_player.play("exit")
 	if (Global.currSit == 2):
+		await get_tree().create_timer(5.0).timeout
 		$Sprite2D.texture = load("res://assets/fish_dead.png")
 		anim_player.play("die")
 	Global.currSit = 0
