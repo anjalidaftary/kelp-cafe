@@ -4,7 +4,10 @@ extends Sprite2D
 func _on_change_scene_button_pressed() -> void:
 	if (GlobalTopping.orderSuccess()):
 		print("order is successful")
-		Global.currMoney += 50
+		if(Timing.timeElapsed):
+			Global.currMoney += 50
+		elif(Timing.secElapsed):
+			Global.currMoney += int (Timing._getTime())
 		Global.currSit = 1
 	else:
 		print("order not successful")
