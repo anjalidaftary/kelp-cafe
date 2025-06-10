@@ -1,21 +1,17 @@
 extends Node2D
 @onready var squid: AnimatableBody2D = $Squid
 @onready var fish: AnimatableBody2D = $Fish
+@onready var squidPlayer = $Squid/AnimationPlayer
+@onready var fishPlayer = $Fish/PopUp
+
 
 var customer
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Music.play_music_level()
-	#if (Global.currSit == 0):
-		#fish.hide()
-		#fish.show()
-		#if randf() < 0.5:
-			#squid.show()
-		#else:
-			#fish.show()
-		# freak you guys i did all this hard work for nothing
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	if (Global.currSit == 0):
+		if randf() < 0.5:
+			squidPlayer.play("PopUp")
+		else:
+			fishPlayer.play("pop-up")
+			
