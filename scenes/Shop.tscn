@@ -45,22 +45,25 @@ texture = ExtResource("4_wm0gd")
 script = ExtResource("5_7g4ed")
 
 [node name="SandCross" type="Sprite2D" parent="."]
-position = Vector2(462, 542)
-scale = Vector2(0.378154, 0.406707)
+position = Vector2(476.5, 545)
+scale = Vector2(0.395339, 0.401219)
 texture = ExtResource("4_wm0gd")
 script = ExtResource("6_dtu5a")
+metadata/_edit_lock_ = true
 
 [node name="InkCross" type="Sprite2D" parent="."]
-position = Vector2(808, 354)
-scale = Vector2(0.378154, 0.406707)
+position = Vector2(823, 355)
+scale = Vector2(0.395339, 0.406707)
 texture = ExtResource("4_wm0gd")
 script = ExtResource("7_yw4th")
+metadata/_edit_lock_ = true
 
 [node name="MoonCross" type="Sprite2D" parent="."]
-position = Vector2(809, 545)
-scale = Vector2(0.378154, 0.406707)
+position = Vector2(822.5, 546.75)
+scale = Vector2(0.392797, 0.404573)
 texture = ExtResource("4_wm0gd")
 script = ExtResource("8_j2n76")
+metadata/_edit_lock_ = true
 
 [node name="Money" parent="." instance=ExtResource("9_auxe8")]
 layout_mode = 1
