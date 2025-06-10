@@ -72,6 +72,7 @@ func show_order() -> void:
 	print("topping: " + GlobalTopping.topping)
 	
 	Global.currOrder = order
+	Timing._startTimer()
 	
 	# storing order idk what this is but you need to fix it
 	#var index = random_symbols.find(third_symbol)
