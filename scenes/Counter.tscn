@@ -262,6 +262,7 @@ offset_bottom = -335.0
 script = ExtResource("15_k6dew")
 
 [node name="SeaSauceButton" type="TextureButton" parent="."]
+visible = false
 offset_left = -130.0
 offset_top = -39.0
 offset_right = -40.0
@@ -269,6 +270,7 @@ offset_bottom = -1.0
 metadata/_edit_lock_ = true
 
 [node name="InkFudgeButton" type="TextureButton" parent="."]
+visible = false
 offset_left = 231.0
 offset_top = -64.0
 offset_right = 318.0
@@ -276,6 +278,7 @@ offset_bottom = -27.0
 metadata/_edit_lock_ = true
 
 [node name="SandBaseButton" type="TextureButton" parent="."]
+visible = false
 offset_left = -130.0
 offset_top = 138.0
 offset_right = -39.0
@@ -283,6 +286,7 @@ offset_bottom = 176.0
 metadata/_edit_lock_ = true
 
 [node name="JellyBaseButton" type="TextureButton" parent="."]
+visible = false
 offset_left = 233.0
 offset_top = 145.0
 offset_right = 323.0

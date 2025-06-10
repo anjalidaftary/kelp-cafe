@@ -7,13 +7,14 @@ var customer
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Music.play_music_level()
-	if (Global.currSit == 0):
-		fish.hide()
-		fish.show()
-		if randf() < 0.5:
-			squid.show()
-		else:
-			fish.show()
+	#if (Global.currSit == 0):
+		#fish.hide()
+		#fish.show()
+		#if randf() < 0.5:
+			#squid.show()
+		#else:
+			#fish.show()
+		# freak you guys i did all this hard work for nothing
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

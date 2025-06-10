@@ -21,14 +21,15 @@ func _ready():
 		mooncross = shop.get_node_or_null("MoonCross")
 		sandcross = shop.get_node_or_null("SandCross")
 	visible = false
-	
-	
-
 
 
 func _on_shop_button_pressed() -> void:
 	print("shown")
 	show()
+	inkbutton.show()
+	sandbutton.show()
+	moonbutton.show()
+	deepbutton.show()
 
 
 func _on_sea_sauce_button_pressed() -> void:
