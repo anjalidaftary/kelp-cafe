@@ -21,6 +21,7 @@ Music="*res://scenes/Music.tscn"
 Global="*res://scripts/Global.gd"
 GlobalTopping="*res://scripts/global_topping.gd"
 GlobalUnlockables="*res://scripts/global_unlockables.gd"
+Timing="*res://scenes/Timing.tscn"
 
 [display]
 

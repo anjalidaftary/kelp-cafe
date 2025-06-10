@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://0sk6su1p8mq5" path="res://scenes/Fish.tscn" id="1_uj3bm"]
 [ext_resource type="Texture2D" uid="uid://y71anfhbimva" path="res://assets/order-counter.PNG" id="3_cnauo"]
 [ext_resource type="Script" path="res://scripts/fish.gd" id="3_ejy3u"]
-[ext_resource type="PackedScene" uid="uid://dn4a3ft5mpjb4" path="res://scenes/Squid.tscn" id="3_ilavg"]
+[ext_resource type="PackedScene" uid="uid://bmxaqjn2np7nw" path="res://scenes/Squid.tscn" id="3_ilavg"]
 [ext_resource type="Script" path="res://scripts/speech_bubble.gd" id="4_dkpgr"]
 [ext_resource type="Texture2D" uid="uid://bmahanl3jhi7v" path="res://assets/Order_symbols-1.png" id="6_880uu"]
 [ext_resource type="Texture2D" uid="uid://djmxlmlkum6bi" path="res://assets/kelp-order-symbol.png" id="7_md0bu"]
