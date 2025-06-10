@@ -20,5 +20,3 @@ texture = ExtResource("3_kuhql")
 position = Vector2(35, 23)
 scale = Vector2(0.223438, 0.223438)
 texture = ExtResource("2_1yqbb")
-
-[node name="ToppingsNode" type="Node2D" parent="."]
