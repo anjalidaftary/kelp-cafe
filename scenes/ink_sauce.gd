@@ -24,7 +24,7 @@ func _on_ink_button_pressed() -> void:
 func _on_drink_button_pressed() -> void:
 	if (toggled):
 		GlobalTopping.toppingsAdded.append("ink")
-		var sauce = load("res://assets/deep-sea-sauce-topping.png")
+		var sauce = load("res://assets/ink-sauce-topping.png")
 		drink.add_topping(sauce, Vector2(43, -10))
 		toggled = false;
 		topping.position.y += 50
