@@ -2,7 +2,7 @@ extends Sprite2D
 
 var toggled = false;
 @onready var topping = $"."
-var cup
+@onready var drink = $"../Cup-kelp-milk"
 
 func _on_caramel_button_pressed() -> void:
 	if (toggled != true): 
@@ -16,6 +16,6 @@ func _on_drink_button_pressed() -> void:
 	if (toggled):
 		GlobalTopping.toppingsAdded.append("caramel")
 		var caramelTexture = load("res://assets/caramel-sauce-topping.PNG")
-		cup.add_topping(caramelTexture, Vector2(43, -10))
+		drink.add_topping(caramelTexture, Vector2(43, -10))
 		toggled = false;
 		topping.position.y += 50

@@ -23,3 +23,6 @@ texture = ExtResource("3_l47hg")
 position = Vector2(60.75, 15)
 scale = Vector2(0.558263, 0.506707)
 texture = ExtResource("4_slvwl")
+
+[node name="Toppings node" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
