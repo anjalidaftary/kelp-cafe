@@ -4,7 +4,6 @@ extends Node2D
 @onready var squidPlayer = $Squid/AnimationPlayer
 @onready var fishPlayer = $Fish/PopUp
 
-
 var customer
 var cup
 @onready var drink: Node2D = $FinishedOrder
@@ -22,7 +21,26 @@ func _ready() -> void:
 	#if (Global.currSit == 0 and Global.isFish == false and Global.isSquid == false):
 		#Global.isFish = true
 		#fishPlayer.play("PopUp")
-	if Global.currSit == 1 || Global.currSit == 2:
+	if (Global.currSit == 1 || Global.currSit == 2):
+		if Global.isFish:
+			fish.show()
+		elif Global.isSquid:
+			squid.show()
+		
+
+
+func _process(delta: float) -> void:
+	pass
+
+func add_topping(texture: Texture):
+	var topping = Sprite2D.new()
+	topping.texture = texture
+	cup.add_child(topping)
+	cup.move_child(topping, cup.get_child_count() - 1)
+
+
+func _on_speech_button_pressed() -> void:
+	if (Global.currSit == 1 || Global.currSit == 2):
 		drink.show()
 		if GlobalTopping.isKelp:
 			cup = kelp
@@ -58,14 +76,5 @@ func _ready() -> void:
 		if GlobalTopping.toppingsAdded.has("seashell"):
 			var shellTexture = load("res://assets/seashells-topping.png")
 			add_topping(shellTexture)
-		await get_tree().create_timer(3.0).timeout
+		await get_tree().create_timer(2.0).timeout
 		drink.hide()
-
-func _process(delta: float) -> void:
-	pass
-
-func add_topping(texture: Texture):
-	var topping = Sprite2D.new()
-	topping.texture = texture
-	cup.add_child(topping)
-	cup.move_child(topping, cup.get_child_count() - 1)
