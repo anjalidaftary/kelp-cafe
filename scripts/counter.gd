@@ -83,5 +83,5 @@ func _on_speech_button_pressed() -> void:
 		if GlobalTopping.toppingsAdded.has("seashell"):
 			var shellTexture = load("res://assets/seashells-topping.png")
 			add_topping(shellTexture)
-		await get_tree().create_timer(2.0).timeout
+		await get_tree().create_timer(1.0).timeout
 		drink.hide()
