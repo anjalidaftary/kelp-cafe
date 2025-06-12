@@ -196,7 +196,8 @@ libraries = {
 }
 
 [node name="Fish" parent="." instance=ExtResource("1_uj3bm")]
-position = Vector2(0, 505)
+visible = false
+position = Vector2(0, 500)
 scale = Vector2(1.75, 1.75)
 script = ExtResource("3_ejy3u")
 

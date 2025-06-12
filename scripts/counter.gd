@@ -19,9 +19,9 @@ func _ready() -> void:
 	print("Global.currSit: ", Global.currSit)
 	drink.hide()
 	Music.play_music_level()
-	if (Global.currSit == 0 and Global.isFish == false and Global.isSquid == false):
-		Global.isFish = true
-		fishPlayer.play("PopUp")
+	#if (Global.currSit == 0 and Global.isFish == false and Global.isSquid == false):
+		#Global.isFish = true
+		#fishPlayer.play("PopUp")
 	if Global.currSit == 1 || Global.currSit == 2:
 		drink.show()
 		if GlobalTopping.isKelp:
