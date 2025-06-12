@@ -8,11 +8,11 @@ extends AnimatableBody2D
 @onready var fish_anim_player: AnimationPlayer = $"../Fish/PopUp"
 
 var hasOrdered = false
-
+#
 func _ready():
 	hasOrdered = false
-	if Global.isSquid:
-		anim_player.play("PopUp")
+	#if Global.isSquid:
+		#anim_player.play("PopUp")
 
 
 func _on_speech_button_pressed() -> void:
