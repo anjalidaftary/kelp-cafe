@@ -143,15 +143,17 @@ offset_bottom = 709.0
 metadata/_edit_lock_ = true
 
 [node name="Timer" type="Sprite2D" parent="."]
-position = Vector2(559.455, 656.719)
-scale = Vector2(0.32761, 0.32761)
+position = Vector2(575.955, 664.219)
+scale = Vector2(0.333007, 0.345925)
 texture = ExtResource("18_j2c42")
+metadata/_edit_group_ = true
 
 [node name="TimerBar" type="Sprite2D" parent="."]
-position = Vector2(719, 662)
+position = Vector2(739, 672)
 scale = Vector2(0.240143, 0.334928)
 texture = ExtResource("19_4u0qr")
 script = ExtResource("20_70iyj")
+metadata/_edit_group_ = true
 
 [node name="BarCollision" type="ColorRect" parent="TimerBar"]
 offset_left = -19.0
