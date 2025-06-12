@@ -33,6 +33,7 @@ func _on_speech_button_pressed() -> void:
 	if (Global.currSit == 2):
 		if (Global.isFish):
 			await get_tree().create_timer(2.0).timeout
+			#change sprite
 			fish_anim_player.play("die")
 			await get_tree().create_timer(0.5).timeout
 			show()
