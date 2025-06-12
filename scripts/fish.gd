@@ -4,21 +4,17 @@ extends AnimatableBody2D
 @onready var speech_bubble = $"../SpeechBubble"
 @onready var squidAnim = $"../Squid/AnimationPlayer"
 @onready var sprite = $Sprite2D
+@onready var drink = $FinishedOrder
 
 func _on_fish_button_2_pressed() -> void:
-	speech_bubble.show_order()
-
-func _ready():
-	hide()
-	if (Global.currSit == 0):
-		if (Global.isFish):
-			show()
-			anim_player.play("pop-up")
-	if (Global.currSit == 1):
+	if Global.currSit == 0:
+		speech_bubble.show_order()
+	elif (Global.currSit == 1):
 		if (Global.isFish):
 			# await get_tree().create_timer(3.0).timeout
 			show()
-			# $Sprite2D.texture = load("res://assets/fish_dead.png")
+			$Sprite2D.texture = load("res://assets/fish_dead.png")
+			await get_tree().create_timer(3.0).timeout
 			anim_player.play("exiting")
 			Global.isFish = false
 			Global.isSquid = true
@@ -28,7 +24,7 @@ func _ready():
 			anim_player.play("pop-up")
 			Global.isSquid = false
 			Global.isFish = true
-	if (Global.currSit == 2):
+	elif (Global.currSit == 2):
 		if (Global.isFish):
 			# await get_tree().create_timer(3.0).timeout
 			show()
@@ -43,3 +39,11 @@ func _ready():
 			Global.isSquid = false
 			Global.isFish = true
 	Global.currSit = 0
+	
+
+func _ready():
+	if (Global.isFish):
+		show()
+		if Global.currSit == 0:
+			anim_player.play("pop-up")
+	

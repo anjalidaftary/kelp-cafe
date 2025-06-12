@@ -22,7 +22,21 @@ func _ready() -> void:
 	#if (Global.currSit == 0 and Global.isFish == false and Global.isSquid == false):
 		#Global.isFish = true
 		#fishPlayer.play("PopUp")
-	if Global.currSit == 1 || Global.currSit == 2:
+		
+
+
+func _process(delta: float) -> void:
+	pass
+
+func add_topping(texture: Texture):
+	var topping = Sprite2D.new()
+	topping.texture = texture
+	cup.add_child(topping)
+	cup.move_child(topping, cup.get_child_count() - 1)
+
+
+func _on_speech_button_pressed() -> void:
+	if (Global.currSit == 1 || Global.currSit == 2):
 		drink.show()
 		if GlobalTopping.isKelp:
 			cup = kelp
@@ -60,12 +74,3 @@ func _ready() -> void:
 			add_topping(shellTexture)
 		await get_tree().create_timer(3.0).timeout
 		drink.hide()
-
-func _process(delta: float) -> void:
-	pass
-
-func add_topping(texture: Texture):
-	var topping = Sprite2D.new()
-	topping.texture = texture
-	cup.add_child(topping)
-	cup.move_child(topping, cup.get_child_count() - 1)
