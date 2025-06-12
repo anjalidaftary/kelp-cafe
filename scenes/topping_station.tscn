@@ -143,14 +143,14 @@ offset_bottom = 709.0
 metadata/_edit_lock_ = true
 
 [node name="Timer" type="Sprite2D" parent="."]
-position = Vector2(575.955, 664.219)
-scale = Vector2(0.333007, 0.345925)
+position = Vector2(563.5, 667)
+scale = Vector2(0.335389, 0.358974)
 texture = ExtResource("18_j2c42")
 metadata/_edit_group_ = true
 
 [node name="TimerBar" type="Sprite2D" parent="."]
-position = Vector2(739, 672)
-scale = Vector2(0.240143, 0.334928)
+position = Vector2(727, 675)
+scale = Vector2(0.240143, 0.315789)
 texture = ExtResource("19_4u0qr")
 script = ExtResource("20_70iyj")
 metadata/_edit_group_ = true
@@ -163,17 +163,17 @@ offset_bottom = 35.0
 color = Color(1, 1, 1, 0)
 
 [node name="YellowZone" type="ColorRect" parent="."]
-offset_left = 499.0
-offset_top = 647.0
-offset_right = 618.0
-offset_bottom = 673.0
+offset_left = 502.0
+offset_top = 657.0
+offset_right = 623.0
+offset_bottom = 686.0
 color = Color(1, 1, 1, 0)
 
 [node name="RedZone" type="ColorRect" parent="."]
-offset_left = 377.0
-offset_top = 646.0
-offset_right = 498.0
-offset_bottom = 674.0
+offset_left = 380.0
+offset_top = 656.0
+offset_right = 501.0
+offset_bottom = 686.0
 color = Color(1, 1, 1, 0)
 
 [connection signal="pressed" from="Pearl/pearlButton" to="Pearl" method="_on_pearl_button_pressed"]

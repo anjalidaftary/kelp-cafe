@@ -365,15 +365,17 @@ action_mode = 0
 metadata/_edit_lock_ = true
 
 [node name="Timer" type="Sprite2D" parent="."]
-position = Vector2(559.455, 656.719)
+position = Vector2(544.455, 656.719)
 scale = Vector2(0.32761, 0.32761)
 texture = ExtResource("31_o67ei")
+metadata/_edit_group_ = true
 
 [node name="TimerBar" type="Sprite2D" parent="."]
-position = Vector2(719, 662)
-scale = Vector2(0.240143, 0.334928)
+position = Vector2(704, 662)
+scale = Vector2(0.240143, 0.325359)
 texture = ExtResource("32_nvkgi")
 script = ExtResource("33_cxcjt")
+metadata/_edit_group_ = true
 
 [node name="BarCollision" type="ColorRect" parent="TimerBar"]
 offset_left = -19.0
@@ -383,18 +385,20 @@ offset_bottom = 35.0
 color = Color(1, 1, 1, 0)
 
 [node name="YellowZone" type="ColorRect" parent="."]
-offset_left = 499.0
+offset_left = 484.0
 offset_top = 647.0
-offset_right = 618.0
+offset_right = 603.0
 offset_bottom = 673.0
 color = Color(1, 1, 1, 0)
+metadata/_edit_group_ = true
 
 [node name="RedZone" type="ColorRect" parent="."]
-offset_left = 377.0
+offset_left = 362.0
 offset_top = 646.0
-offset_right = 498.0
+offset_right = 483.0
 offset_bottom = 674.0
 color = Color(1, 1, 1, 0)
+metadata/_edit_group_ = true
 
 [connection signal="focus_entered" from="SuccessZone" to="MovingBar" method="_on_success_zone_entered"]
 [connection signal="pressed" from="KelpButton" to="." method="_on_kelp_button_pressed"]
