@@ -3,6 +3,8 @@ extends Node2D
 @onready var fish: AnimatableBody2D = $Fish
 @onready var squidPlayer = $Squid/AnimationPlayer
 @onready var fishPlayer = $Fish/PopUp
+@onready var anim_player: AnimationPlayer = $Squid/AnimationPlayer
+@onready var fish_anim_player: AnimationPlayer = $Fish/PopUp
 
 var customer
 var cup
@@ -21,11 +23,16 @@ func _ready() -> void:
 	#if (Global.currSit == 0 and Global.isFish == false and Global.isSquid == false):
 		#Global.isFish = true
 		#fishPlayer.play("PopUp")
-	if (Global.currSit == 1 || Global.currSit == 2):
-		if Global.isFish:
-			fish.show()
-		elif Global.isSquid:
-			squid.show()
+	squid.hide()
+	fish.hide()
+	if (Global.isSquid):
+		squid.show()
+		if Global.currSit == 0:
+			anim_player.play("PopUp")
+	if (Global.isFish):
+		fish.show()
+		if (Global.currSit == 0):
+			fish_anim_player.play("pop-up")
 		
 
 

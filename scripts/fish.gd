@@ -42,8 +42,9 @@ extends AnimatableBody2D
 	
 
 func _ready():
-	if (Global.isFish):
-		show()
-		if Global.currSit == 0:
-			anim_player.play("pop-up")
+	pass
+	#if (Global.isFish):
+		#show()
+		#if Global.currSit == 0:
+			#anim_player.play("pop-up")
 	
