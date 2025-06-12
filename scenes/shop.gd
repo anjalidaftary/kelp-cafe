@@ -25,6 +25,7 @@ func _ready():
 
 func _on_shop_button_pressed() -> void:
 	print("shown")
+	Global.isShopOpen = true
 	show()
 	inkbutton.show()
 	sandbutton.show()
@@ -34,46 +35,50 @@ func _on_shop_button_pressed() -> void:
 
 func _on_sea_sauce_button_pressed() -> void:
 	print("sea sauce button pressed")
-	money.show()
-	if money.canPurchase(50):
-		money.remove(50)
-		GlobalUnlockables.deepUnlocked = true
-		seasaucecross.show()
-		deepbutton.disabled = true
-	money.hide()
+	if Global.isShopOpen:
+		money.show()
+		if money.canPurchase(50):
+			money.remove(50)
+			GlobalUnlockables.deepUnlocked = true
+			seasaucecross.show()
+			deepbutton.disabled = true
+		money.hide()
 
 
 func _on_ink_fudge_button_pressed() -> void:
 	print("ink button pressed")
-	money.show()
-	if money.canPurchase(50):
-		money.remove(50)
-		GlobalUnlockables.inkUnlocked = true
-		inkcross.show()
-		inkbutton.disabled = true
-	money.hide()
+	if Global.isShopOpen:
+		money.show()
+		if money.canPurchase(50):
+			money.remove(50)
+			GlobalUnlockables.inkUnlocked = true
+			inkcross.show()
+			inkbutton.disabled = true
+		money.hide()
 
 
 func _on_sand_base_button_pressed() -> void:
 	print("sand button pressed")
-	money.show()
-	if money.canPurchase(50):
-		money.remove(50)
-		GlobalUnlockables.sandUnlocked = true
-		sandcross.show()
-		sandbutton.disabled = true
-	money.hide()
+	if Global.isShopOpen:
+		money.show()
+		if money.canPurchase(50):
+			money.remove(50)
+			GlobalUnlockables.sandUnlocked = true
+			sandcross.show()
+			sandbutton.disabled = true
+		money.hide()
 
 
 func _on_jelly_base_button_pressed() -> void:
 	print("moon button pressed")
-	money.show()
-	if money.canPurchase(50):
-		money.remove(50)
-		GlobalUnlockables.moonJellyUnlocked = true
-		mooncross.show()
-		moonbutton.disabled = true
-	money.hide()
+	if Global.isShopOpen:
+		money.show()
+		if money.canPurchase(50):
+			money.remove(50)
+			GlobalUnlockables.moonJellyUnlocked = true
+			mooncross.show()
+			moonbutton.disabled = true
+		money.hide()
 
 func _process(delta: float) -> void:
 	if GlobalUnlockables.deepUnlocked:

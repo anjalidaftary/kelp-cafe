@@ -18,6 +18,7 @@ func _process(delta: float) -> void:
 
 
 func _on_pressed() -> void:
+	Global.isShopOpen = false
 	shop.hide()
 	inkbutton.hide()
 	deepbutton.hide()
