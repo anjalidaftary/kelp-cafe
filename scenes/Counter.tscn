@@ -170,10 +170,10 @@ _data = {
 script = ExtResource("1_f17y4")
 
 [node name="SpeechButton" type="TextureButton" parent="."]
-offset_left = -150.0
-offset_top = -104.0
-offset_right = 59.0
-offset_bottom = 175.0
+offset_left = -138.25
+offset_top = -68.0
+offset_right = -8.25
+offset_bottom = 92.0
 script = SubResource("GDScript_wh78x")
 
 [node name="Background" type="Sprite2D" parent="."]
@@ -321,8 +321,6 @@ metadata/_edit_lock_ = true
 [node name="FinishedOrder" parent="." instance=ExtResource("18_4e0xy")]
 position = Vector2(140, 151)
 
-[connection signal="pressed" from="SpeechButton" to="." method="_on_speech_button_pressed"]
-[connection signal="pressed" from="SpeechButton" to="Squid" method="_on_speech_button_pressed"]
 [connection signal="pressed" from="SpeechButton" to="Fish" method="_on_fish_button_2_pressed"]
 [connection signal="pressed" from="SpeechButton" to="SpeechBubble" method="_on_fish_button_2_pressed"]
 [connection signal="pressed" from="SpeechButton" to="Arrow" method="_on_fish_button_2_pressed"]
