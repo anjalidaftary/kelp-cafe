@@ -5,10 +5,31 @@ extends AnimatableBody2D
 @onready var fish = $"../Fish"
 
 func _ready():
+	if (Global.currSit == 0):
+		if (Global.isSquid):
+			show()
 	if (Global.currSit == 1):
-		await get_tree().create_timer(3.0).timeout
-		anim_player.play("exiting")
+		if (Global.isFish):
+			show()
+			await get_tree().create_timer(4.0).timeout
+			anim_player.play("PopUp")
+			Global.isFish = false
+			Global.isSquid = true
+		elif (Global.isSquid):
+			await get_tree().create_timer(3.0).timeout
+			anim_player.play("exiting")
+			Global.isSquid = false
+			Global.isFish = true
+			
 	if (Global.currSit == 2):
-		await get_tree().create_timer(3.0).timeout
-		anim_player.play("exiting")
+		if (Global.isFish):
+			await get_tree().create_timer(4.0).timeout
+			anim_player.play("PopUp")
+			Global.isFish = false
+			Global.isSquid = true
+		elif (Global.isSquid):
+			await get_tree().create_timer(3.0).timeout
+			anim_player.play("exiting")
+			Global.isSquid = false
+			Global.isFish = true
 	Global.currSit = 0

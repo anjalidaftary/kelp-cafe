@@ -4,6 +4,7 @@ extends Node2D
 @onready var squidPlayer = $Squid/AnimationPlayer
 @onready var fishPlayer = $Fish/PopUp
 
+
 var customer
 var cup
 @onready var drink: Node2D = $FinishedOrder
@@ -12,15 +13,15 @@ var cup
 @onready var jelly: Sprite2D = $FinishedOrder/Jelly
 
 func _ready() -> void:
+	#if (Global.currSit == 0):
+		#fish.hide()
+		#squid.hide()
 	print("Global.currSit: ", Global.currSit)
 	drink.hide()
 	Music.play_music_level()
-	if (Global.currSit == 0):
-		if randf() < 0.5:
-			squidPlayer.play("PopUp")
-		else:
-			fishPlayer.play("pop-up")
-			
+	if (Global.currSit == 0 and Global.isFish == false and Global.isSquid == false):
+		Global.isFish = true
+		fishPlayer.play("PopUp")
 	if Global.currSit == 1 || Global.currSit == 2:
 		drink.show()
 		if GlobalTopping.isKelp:
@@ -59,6 +60,9 @@ func _ready() -> void:
 			add_topping(shellTexture)
 		await get_tree().create_timer(3.0).timeout
 		drink.hide()
+
+func _process(delta: float) -> void:
+	pass
 
 func add_topping(texture: Texture):
 	var topping = Sprite2D.new()
