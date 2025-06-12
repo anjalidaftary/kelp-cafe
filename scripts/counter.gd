@@ -21,14 +21,16 @@ func _ready() -> void:
 	#if (Global.currSit == 0 and Global.isFish == false and Global.isSquid == false):
 		#Global.isFish = true
 		#fishPlayer.play("PopUp")
-	squid.hide()
-	fish.hide()
+	#squid.hide()
+	#fish.hide()
 	if (Global.isSquid):
-		squid.show()
+		#squid.show()
+		if Global.currSit == 1 || Global.currSit == 2:
+			squid.position.y = -250
 		if Global.currSit == 0:
 			anim_player.play("PopUp")
 	if (Global.isFish):
-		fish.show()
+		#fish.show()
 		if Global.currSit == 1 || Global.currSit == 2:
 			fish.position.y = 142
 		if (Global.currSit == 0):
