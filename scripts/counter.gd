@@ -21,14 +21,16 @@ func _ready() -> void:
 	#if (Global.currSit == 0 and Global.isFish == false and Global.isSquid == false):
 		#Global.isFish = true
 		#fishPlayer.play("PopUp")
-	squid.hide()
-	fish.hide()
+	#squid.hide()
+	#fish.hide()
 	if (Global.isSquid):
-		squid.show()
+		#squid.show()
+		if Global.currSit == 1 || Global.currSit == 2:
+			squid.position.y = -250
 		if Global.currSit == 0:
 			anim_player.play("PopUp")
 	if (Global.isFish):
-		fish.show()
+		#fish.show()
 		if Global.currSit == 1 || Global.currSit == 2:
 			fish.position.y = 142
 		if (Global.currSit == 0):
@@ -83,5 +85,5 @@ func _on_speech_button_pressed() -> void:
 		if GlobalTopping.toppingsAdded.has("seashell"):
 			var shellTexture = load("res://assets/seashells-topping.png")
 			add_topping(shellTexture)
-		await get_tree().create_timer(2.0).timeout
+		await get_tree().create_timer(1.0).timeout
 		drink.hide()

@@ -7,12 +7,19 @@ extends AnimatableBody2D
 @onready var speech_bubble = $"../SpeechBubble"
 @onready var fish_anim_player: AnimationPlayer = $"../Fish/PopUp"
 
+var hasOrdered = false
+#
 func _ready():
-	pass
+	hasOrdered = false
+	#if Global.isSquid:
+		#anim_player.play("PopUp")
+
 
 func _on_speech_button_pressed() -> void:
-	if Global.currSit == 0:
-		speech_bubble.show_order()
+	if !hasOrdered:
+		if Global.currSit == 0:
+			speech_bubble.show_order()
+			hasOrdered = true
 	if (Global.currSit == 1):
 		if (Global.isFish):
 			await get_tree().create_timer(1.0).timeout
