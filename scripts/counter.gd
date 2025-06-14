@@ -3,7 +3,7 @@ extends Node2D
 @onready var fish: AnimatableBody2D = $Fish
 @onready var anim_player: AnimationPlayer = $Squid/AnimationPlayer
 @onready var fish_anim_player: AnimationPlayer = $Fish/PopUp
-
+@onready var confetti: Node2D = $Confetti
 var customer
 var cup
 @onready var drink: Node2D = $FinishedOrder
@@ -17,6 +17,7 @@ func _ready() -> void:
 		#squid.hide()
 	print("Global.currSit: ", Global.currSit)
 	drink.hide()
+	confetti.hide()
 	Music.play_music_level()
 	#if (Global.currSit == 0 and Global.isFish == false and Global.isSquid == false):
 		#Global.isFish = true
@@ -49,6 +50,8 @@ func add_topping(texture: Texture):
 
 
 func _on_speech_button_pressed() -> void:
+	if(Global.currSit == 1):
+		confetti.show()
 	if (Global.currSit == 1 || Global.currSit == 2):
 		drink.show()
 		if GlobalTopping.isKelp:
@@ -87,3 +90,5 @@ func _on_speech_button_pressed() -> void:
 			add_topping(shellTexture)
 		await get_tree().create_timer(1.0).timeout
 		drink.hide()
+		await get_tree().create_timer(1.0).timeout
+		confetti.hide()
