@@ -42,7 +42,7 @@ func _on_speech_button_pressed() -> void:
 	if (Global.currSit == 2):
 		if (Global.isFish):
 			await get_tree().create_timer(0.5).timeout
-			fish_sprite.texture = preload("res://assets/fish_dead.png")
+			fish_sprite.texture = preload("res://assets/better_dead_fish.png")
 			fish_anim_player.play("exit")
 			await get_tree().create_timer(0.5).timeout
 			show()
